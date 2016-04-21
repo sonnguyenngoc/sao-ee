@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "home#index"
+    get "home" => "home#sao", as: :sao
+    get "contact" => "contact#index", as: :contact
+    get "about_us" => "about_us#index", as: :about_us
+    get "project" => "project#index", as: :project
+    get "project/detail" => "project#detail", as: :detail
+    get "news" => "news#index", as: :news
+    get "news/detail" => "news#detail", as: :news_detail
     
     # resources
     resources :newsletters

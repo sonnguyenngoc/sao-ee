@@ -1,0 +1,55 @@
+<header id="header">
+ 
+	<div id="trueHeader">
+    
+	<div class="wrapper">
+    
+     <div class="container">
+    
+		<!-- Logo -->
+		<div class="logo_main"><a href="<%= root_path %>" id="logo"></a></div>
+		
+        <!-- Menu -->
+        <div class="menu_main">
+        
+        	<div class="joosa top_links">Hãy gọi chúng tôi: <strong>+84 8 6682 2233</strong> <a href="<%= url_for(controller: 'contact', action: 'index') %>" class="makeap_but">Gửi tin</a></div>
+           
+           <nav id="access" class="access" role="navigation">
+           
+            <div id="menu" class="menu">
+                
+                <ul id="tiny">
+                
+                    <li><a href="<%= root_path %>" class="active">Trang chủ</a></li>  
+                    
+                    <li><%= link_to "Công trình", { controller: "project", action: "index" } %>
+                    
+                    </li>
+                    
+                    <li><%= link_to "Tin tức", { controller: "news", action: "index" } %>
+                        
+                    </li>
+                    
+                    <li><%= link_to "Về chúng tôi", { controller: "about_us", action: "index" } %>
+                        
+                    </li>
+  
+                    <li><%= link_to "Liên hệ", { controller: "contact", action: "index" } %>
+                    
+                    </li>
+                    
+                </ul>
+                
+            </div>
+            
+        </nav>
+      
+        </div><!-- end nav menu -->
+              
+	</div>
+		
+	</div>
+    
+	</div>
+    
+</header>

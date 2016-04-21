@@ -1,0 +1,129 @@
+<div class="site_wrapper">
+   
+
+<!-- HEADER -->
+<header id="header">
+ 
+	<%= render 'home/header' %>
+    
+</header><!-- end header -->
+
+<div class="clearfix"></div>
+
+<div class="page_title">
+
+	<div class="container">
+		<div class="title"><h1>S-A-O</h1></div>
+        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Trang chủ</a> <i>/</i> S-A-O</div>
+	</div>
+</div><!-- end page title --> 
+
+
+<!-- Contant
+======================================= -->
+
+<div class="container">
+
+	<div class="content_fullwidth">
+
+		<div class="two_third" style="width: 100%; text-align: justify;">
+		
+			<img src="/frontend/layout2/images/image-01.png" alt="" class="image_left1" />
+			
+			<h2><strong>Mô phỏng – Phân tích – Tối ưu</strong></h2>
+			
+			<p><strong>Giới thiệu:</strong></p>
+			<br />
+            <p>Thiết kế, xây dựng và quản lý một tòa nhà tiết kiệm năng lượng có thể là một nhiệm vụ phức tạp và khó khăn. Mô phỏng năng lượng có thể giúp bạn phân tích chuyển động ra vào của năng lượng thông qua không gian và khối tích trong mô hình. Thông tin này có thể giúp các nhà thiết kế đưa ra quyết định tốt hơn làm giảm chi phí, cải thiện hiệu quả, hiệu suất và giảm thiểu tác động môi trường của các tòa nhà.</p>
+            <p>Xét toàn vòng đời trong khoảng 30 năm, các chi phí ban đầu cho thiết kế và xây dựng công trình chỉ chiếm khoảng 36% trên tổng chi phí, trong khi đó các chi phí về vận hành và bảo trì tương đương 64%</p>
+            <p>Các chi phí về vận hành và bảo trì quan trọng hơn gấp 2 lần so với tổng các chi phí về thiết kế và thi công cộng lại.</p>
+            <p>Điều này chứng minh một cách rõ ràng về tầm quan trọng của việc thiết kế và quản lý tòa nhà tiết kiệm năng lượng.</p>
+		
+		</div><!-- end section -->
+		
+	
+	</div><!-- progress bars section -->
+    
+    <div class="clearfix"></div>
+    <div class="divider_line2"></div>
+    
+		<div class="our_team_box_big">
+            <div class="forcefullwidth_wrapper_tp_banner">
+              
+              <img src="/frontend/layout2/images/SAOV-255x1024.jpg" alt="" height="1024" width="255" class="our_team_box_big" style="height: 100%;margin-top: -20%;"/>
+              
+            </div>
+                        
+        </div><!-- end our team -->
+
+</div><!-- end content area -->
+
+
+<div class="clearfix mar_top5"></div>
+
+<!-- Footer
+======================================= -->
+
+<%= render 'home/footer' %>
+
+    
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<script type="text/javascript" src="/frontend/layout2/js/universal/jquery.js"></script>
+
+<!-- style switcher -->
+<script src="/frontend/layout2/js/style-switcher/jquery-1.js"></script>
+<script src="/frontend/layout2/js/style-switcher/styleselector.js"></script>
+
+<!-- main menu -->
+<script type="text/javascript" src="/frontend/layout2/js/mainmenu/ddsmoothmenu.js"></script>
+
+<script type="text/javascript" src="/frontend/layout2/js/mainmenu/selectnav.js"></script>
+
+<!-- progress bar -->
+<script src="/frontend/layout2/js/progressbar/progress.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-374977-27']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<!-- jquery jcarousel -->
+<script type="text/javascript" src="/frontend/layout2/js/jcarousel/jquery.jcarousel.min.js"></script>
+
+<script type="text/javascript" src="/frontend/layout2/js/mainmenu/scripts.js"></script>
+
+<!-- scroll up -->
+<script type="text/javascript">
+    $(document).ready(function(){
+ 
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+ 
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+ 
+    });
+</script>
+
+<!-- accordion -->
+<script type="text/javascript" src="/frontend/layout2/js/accordion/custom.js"></script>
+
+<script type="text/javascript" src="/frontend/layout2/js/sticky-menu/core.js"></script>
+<script type="text/javascript" src="/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js"></script>

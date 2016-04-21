@@ -1,0 +1,131 @@
+<div class="site_wrapper">
+   
+
+<!-- HEADER -->
+<header id="header">
+ 
+	<%= render 'home/header' %>
+    
+</header><!-- end header -->
+
+<div class="clearfix"></div>
+
+<div class="page_title">
+
+	<div class="container">
+		<div class="title"><h1>Tin tức</h1></div>
+        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Home</a> <i>/</i> <a href="#">Tin tức</a> <i>/</i> Tiết kiệm nước tiết kiệm năng lượng</div>
+	</div>
+</div><!-- end page title --> 
+
+
+<!-- Contant
+======================================= -->
+
+<div class="container">
+
+<div class="content_left">
+        	
+    <div class="blog_post">	
+        <div class="blog_postcontent">
+        <div class="image_frame"><a href="#"><img src="/frontend/layout2/images/news_img_01.jpg" alt="810x360" /></a></div>
+        <a href="#" class="date"><strong>18</strong><i>October</i></a>
+        <h3><a href="#">Tiết kiệm nước tiết kiệm năng lượng</a></h3>
+         
+        <div class="post_info_content" style="text-align: justify;">
+        
+        <p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một khu vực tiêu thụ năng lượng đáng kể.</p>
+        <p>Có nhiều giải pháp để tiết kiệm nước như thay thế hệ thống vòi sen thế hệ cũ với lưu lượng nước tiêu tốn 10 lít/phút bằng loại vòi tắm công nghệ mới (sử dụng cơ chế hòa trộn các bọt khí nhỏ vào trong nước làm cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ giúp tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế bàn cầu có dung tích bồn xả là 12 lít/phút bằng bằng bàn cầu ứng dụng hệ thống xả tiết kiệm và hiệu quả sẽ không chỉ giúp giảm tiếng ồn mà còn tiết kiệm đến 20% lượng nước sử dụng.</p>
+        <p>Ngoài ra, một trong những cách tiết kiệm nước cũng rất hiệu quả là việc tái sử dụng nước hoặc tận dụng nguồn nước mưa.</p>
+        <p>Sơ đồ hình bên dưới là 1 ý tưởng dùng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu và tưới cây ngoài vườn.</p>
+        
+        </div>
+        </div>
+    </div><!-- /# end post -->
+            
+    <div class="clearfix divider_line"></div>
+            
+</div><!-- end content left side area -->
+
+
+<!-- right sidebar starts -->
+<div class="right_sidebar">
+
+	<%= render 'right_sidebar' %>
+    
+	<div class="clearfix mar_top5"></div>
+
+</div>
+
+</div><!-- end content area -->
+
+<div class="clearfix mar_top4"></div>
+
+<!-- Footer
+======================================= -->
+
+<%= render 'home/footer' %>
+
+    
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<%= javascript_include_tag '/frontend/layout2/js/universal/jquery.js' %>
+
+<!-- style switcher -->
+<%= javascript_include_tag '/frontend/layout2/js/style-switcher/jquery-1.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/style-switcher/styleselector.js' %>
+
+<!-- main menu -->
+<%= javascript_include_tag '/frontend/layout2/js/mainmenu/ddsmoothmenu.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/mainmenu/selectnav.js' %>
+
+<!-- jquery jcarousel -->
+<%= javascript_include_tag '/frontend/layout2/js/jcarousel/jquery.jcarousel.min.js' %>
+
+<!-- tab widget -->
+<%= javascript_include_tag '/frontend/layout2/js/tabs/tabwidget/tabwidget.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/mainmenu/scripts.js' %>
+
+<!-- scroll up -->
+<script type="text/javascript">
+    $(document).ready(function(){
+ 
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+ 
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+ 
+    });
+</script>
+
+<!-- jquery jcarousel -->
+<script type="text/javascript">
+
+	jQuery(document).ready(function() {
+			jQuery('#mycarousel').jcarousel();
+	});
+	
+	jQuery(document).ready(function() {
+			jQuery('#mycarouseltwo').jcarousel();
+	});
+	
+	jQuery(document).ready(function() {
+			jQuery('#mycarouselthree').jcarousel();
+	});
+	
+	jQuery(document).ready(function() {
+			jQuery('#mycarouselfour').jcarousel();
+	});
+	
+</script>
+
+<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/core.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js' %>

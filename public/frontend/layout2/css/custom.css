@@ -1,0 +1,72 @@
+.contactpage_section {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    margin-top: -21px;
+}
+.contact_info {
+    float: left;
+    width: 100%;
+    padding: 70px 0px;
+}
+.container {
+    width: 1170px;
+    margin: auto auto auto auto;
+}
+.one_half {
+    width: 48%;
+}
+.one_half, .one_third, .one_fourth, .two_third, .three_fourth, .one_fifth {
+    position: relative;
+    margin-right: 4%;
+    float: left;
+}
+.contact_info h1 {
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 34px;
+}
+.contact_info h1 {
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 34px;
+}
+.one_full {
+    width: 100%;
+}
+.one_half {
+    width: 48%;
+}
+.one_half, .one_third, .one_fourth, .two_third, .three_fourth, .one_fifth {
+    position: relative;
+    margin-right: 4%;
+    float: left;
+}
+
+.contact_info ul.address {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contact_info .address li {
+    padding: 0px 0px 20px 0px;
+    margin: 0px;
+}
+
+.last {
+    margin-right: 0 !important;
+    clear: right;
+}
+.contact_info .map {
+    float: left;
+    width: 100%;
+    height: 200px;
+}
+.google-map {
+    width: 99%;
+    height: 180px;
+    border: 5px solid #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
