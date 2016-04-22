@@ -25,57 +25,38 @@
 <div class="container">
 
 <div class="content_left">
+  
+	<% @news.each do |item| %>
         	
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive" class="date"><strong>18</strong><i>October</i></a>
-        <h3><a href="<%= url_for(controller: 'news', action: 'detail') %>">Tiết kiệm nước tiết kiệm năng lượng</a></h3>
-            
-         <div class="clearfix"></div>
-        
-        <p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một [..]</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="blog-archive" class="date"><strong>17</strong><i>October</i></a>
-        <h3><a href="<%= url_for(controller: 'news', action: 'detail') %>">Tiết kiệm nước tiết kiệm năng lượng</a></h3>
-            
-         <div class="clearfix"></div>
-        
-        <p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một [..]</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
-    
-    <div class="blog_post">	
-        <div class="blog_postcontent">
-        <div class="image_frame small"><a href="#"><img src="http://placehold.it/810x360" alt="" /></a></div>
-        <div class="post_info_content_small">
-        <a href="#" class="date"><strong>16</strong><i>October</i></a>
-        <h3><a href="<%= url_for(controller: 'news', action: 'detail') %>">Tiết kiệm nước tiết kiệm năng lượng</a></h3>
-            
-         <div class="clearfix"></div>
-        
-        <p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một [..]</p>
-        
-        </div>
-        </div>
-    </div><!-- /# end post -->
-    
-    <div class="clearfix divider_line3"></div>
+		<div class="blog_post">	
+		   
+			<div class="blog_postcontent">
+			  
+				<div class="image_frame small">
+					
+					<a href="#"><img src="<%= item.image_url.medium_rectangle_image %>" alt="" /></a>
+				
+				</div>
+				
+				<div class="post_info_content_small">
+				
+					<a href="blog-archive" class="date"><strong><%= item.created_at.strftime("%d") %></strong><i><%= item.created_at.strftime("%B") %></i></a>
+				
+					<h3><%= link_to item.title, { controller: 'news', action: 'detail' } %></h3>
+					
+					<div class="clearfix"></div>
+				
+					<p class="text-justifly"><%= truncate(strip_tags(item.content.html_safe), length: 150) %></p>
+				
+				</div>
+			
+			</div>
+		
+		</div><!-- /# end post -->
+		
+		<div class="clearfix divider_line3"></div>
+	  
+	<% end %>
     
     <div class="pagination">
     <b>Page 2 of 18</b>

@@ -61,6 +61,7 @@ COPY article_categories (id, name, description, created_at, updated_at, level) F
 COPY article_categories_articles (id, article_id, article_category_id, created_at, updated_at) FROM stdin;
 4	3	5	2016-04-22 03:48:29.758633	2016-04-22 03:48:29.758633
 5	4	5	2016-04-22 03:50:29.447831	2016-04-22 03:50:29.447831
+6	5	2	2016-04-22 04:31:53.43976	2016-04-22 04:31:53.43976
 \.
 
 
@@ -68,7 +69,7 @@ COPY article_categories_articles (id, article_id, article_category_id, created_a
 -- Name: article_categories_articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nguyenngocson0811
 --
 
-SELECT pg_catalog.setval('article_categories_articles_id_seq', 5, true);
+SELECT pg_catalog.setval('article_categories_articles_id_seq', 6, true);
 
 
 --
@@ -85,6 +86,7 @@ SELECT pg_catalog.setval('article_categories_id_seq', 5, true);
 COPY articles (id, image_url, title, content, tags, article_category_id, created_at, updated_at, code) FROM stdin;
 3	003.jpg	Công trình nhà máy Heineken – Phnom Penh – Cambodia		\N	\N	2016-04-22 03:48:29.752415	2016-04-22 03:48:29.752415	\N
 4	001.jpg	Công trình nhà máy Heineken – Phnom Penh – Cambodia		\N	\N	2016-04-22 03:50:29.44626	2016-04-22 03:50:29.44626	\N
+5	09072015081038-0001.jpg	Saving water saves energy	<p style="text-align: justify;">When talking about saving energy for building, hotel&hellip; most of us will think about the system which consume a lot of energy like HVAC system or Lighting system &hellip; but almost forgot that plumbing system also consumes a considerable amount of energy too.<br />\r\nThere were many solutions for saving water like change old genration valve/shower system (consuming flow about 2.642gallon/min) to the newer generation (which using mechanism that mix small air bubbles into water and make user still feel fully water impulsiveness) that saving 35% amount of water; or change the toilet has flush tank(cap. 3.17 gallon/min) to water-efficient toilet that help reduce the noise and save 20% amount of water.<br />\r\nMoreover, one of saving water solutions is recycling water or utilizing rainwater.<br />\r\nThe diagram below show a solution that use underground rainwater storage tank for toilet, unrinal and watering plants.</p>\r\n\r\n<p style="text-align: center;"><img alt="" src="https://farm2.staticflickr.com/1681/25559352733_eb0a248ba2_z.jpg" style="border-style:solid; border-width:1px; height:474px; width:640px" /></p>\r\n	\N	\N	2016-04-22 04:31:53.437525	2016-04-22 04:31:53.437525	\N
 \.
 
 
@@ -92,7 +94,7 @@ COPY articles (id, image_url, title, content, tags, article_category_id, created
 -- Name: articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nguyenngocson0811
 --
 
-SELECT pg_catalog.setval('articles_id_seq', 4, true);
+SELECT pg_catalog.setval('articles_id_seq', 5, true);
 
 
 --
@@ -117,6 +119,7 @@ SELECT pg_catalog.setval('articles_products_id_seq', 1, false);
 COPY carts (id, created_at, updated_at) FROM stdin;
 1	2016-04-22 01:30:22.034456	2016-04-22 01:30:22.034456
 2	2016-04-22 03:13:31.660223	2016-04-22 03:13:31.660223
+3	2016-04-22 05:57:26.270265	2016-04-22 05:57:26.270265
 \.
 
 
@@ -124,7 +127,7 @@ COPY carts (id, created_at, updated_at) FROM stdin;
 -- Name: carts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nguyenngocson0811
 --
 
-SELECT pg_catalog.setval('carts_id_seq', 2, true);
+SELECT pg_catalog.setval('carts_id_seq', 3, true);
 
 
 --
@@ -164,6 +167,7 @@ SELECT pg_catalog.setval('categories_products_id_seq', 1, false);
 COPY compares (id, created_at, updated_at) FROM stdin;
 1	2016-04-22 01:30:22.064469	2016-04-22 01:30:22.064469
 2	2016-04-22 03:13:31.693141	2016-04-22 03:13:31.693141
+3	2016-04-22 05:57:26.325486	2016-04-22 05:57:26.325486
 \.
 
 
@@ -171,7 +175,7 @@ COPY compares (id, created_at, updated_at) FROM stdin;
 -- Name: compares_id_seq; Type: SEQUENCE SET; Schema: public; Owner: nguyenngocson0811
 --
 
-SELECT pg_catalog.setval('compares_id_seq', 2, true);
+SELECT pg_catalog.setval('compares_id_seq', 3, true);
 
 
 --
