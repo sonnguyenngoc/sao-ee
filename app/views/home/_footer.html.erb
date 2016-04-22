@@ -1,49 +1,57 @@
 <div class="footer">
 	<div class="container">
     
-   		<div class="one_fourth" style="width: 29%;">
+   		<div class="one_fourth footer_left">
             
             <div class="footer_logo"><img src="/frontend/layout2/images/footer-logo.png" alt="" /></div><!-- end footer logo -->
             
             <ul class="contact_address">
                 <li><i></i>CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO</li>
                 <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; P. 901, Lầu 9, 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</li>
-                <li><i class="fa fa-phone"></i>&nbsp; +84 8 668 222 33</li>
-                <li><i class="fa fa-print"></i>&nbsp; </li>
-                <li><img src="/frontend/layout2/images/footer-wmap.png" alt="" /></li>
+                <li><i class="fa fa-phone"></i>&nbsp; +84 8 6682 2233</li>
+                <li><i class="fa fa-print"></i>&nbsp; +84 8 6682 2233</li>
+                <!--<li><img src="/frontend/layout2/images/footer-wmap.png" alt="" /></li>-->
             </ul>
             
         </div><!-- end address section -->
         
-        <div class="one_fourth" style="width: 29%;">
+        <div class="one_fourth">
         	
             <h2>Thông tin <i></i></h2>
             
-            <ul class="list">
+            <ul class="list footer_info">
                 <li><a href="<%= root_path %>"><i class="fa fa-angle-right"></i> Trang chủ</a></li>
-                <li><a href="<%= url_for(controller: 'about_us', action: 'index') %>"><i class="fa fa-angle-right"></i> Giới thiệu</a></li>
-                <li><a href="<%= url_for(controller: 'project', action: 'index') %>"><i class="fa fa-angle-right"></i> Công trình</a></li>
-                <li><a href="<%= url_for(controller: 'news', action: 'index') %>"><i class="fa fa-angle-right"></i> Tin tức</a></li>
-                <li><a href="<%= url_for(controller: 'contact', action: 'index') %>"><i class="fa fa-angle-right"></i> Liên hệ</a></li>
+                <li><a href="<%= url_for(controller: 'home', action: 'sao') %>"><i class="fa fa-angle-right"></i> S-A-O</a></li>
             </ul>
+			<ul class="list footer_info">
+				<li><a href="<%= url_for(controller: 'about_us', action: 'index') %>"><i class="fa fa-angle-right"></i> Giới thiệu</a></li>
+                <li><a href="<%= url_for(controller: 'project', action: 'index') %>"><i class="fa fa-angle-right"></i> Công trình</a></li>
+			</ul>
+			<ul class="list footer_info">
+				<li><a href="<%= url_for(controller: 'news', action: 'index') %>"><i class="fa fa-angle-right"></i> Tin tức</a></li>
+                <li><a href="<%= url_for(controller: 'contact', action: 'index') %>"><i class="fa fa-angle-right"></i> Liên hệ</a></li>
+			</ul>
             
         </div><!-- end useful links -->
          
-        <div class="one_fourth" style="width: 29%;">
+        <div class="one_fourth footer_right">
         	
             <div class="twitter_feed">
             
             	<h2>Tin tức mới <i></i></h2>
                 
-                <div class="left"><i class="fa fa-twitter fa-lg"></i></div>
-                <div class="right"><a href="https://twitter.com/gsrthemes9" target="_blank">gsrthemes9</a>: Avira - Responsive html5 Professional and Brand New Look Template on ThemeForest.<br />
-				<a href="#" class="small">.9 days ago</a> .<a href="#" class="small">reply</a> .<a href="#" class="small">retweet</a> .<a href="#" class="small">favorite</a></div>
-                
-                <div class="clearfix divider_line4"></div>
-                
-                <div class="left"><i class="fa fa-twitter fa-lg"></i></div>
-                <div class="right"><a href="https://twitter.com/gsrthemes9" target="_blank">gsrthemes9</a>: Kinvexy - Responsive HTML5 / CSS3, Professional Corporate Theme.<br />
-				<a href="#" class="small">.10 days ago</a> .<a href="#" class="small">reply</a> .<a href="#" class="small">retweet</a> .<a href="#" class="small">favorite</a></div>
+				<ul class="recent_posts_list">
+					<li>
+						<span><a href="#"><img src="/frontend/layout2/images/news-tiet-kiem-nang-luong.jpg" alt="50x50" /></a></span>
+						<a href="#">Tiết kiệm nước tiết kiệm năng lượng</a>
+						 <i>January 13, 2014</i> 
+					</li>
+					<li class="last">
+						<span><a href="#"><img src="/frontend/layout2/images/news-tiet-kiem-nang-luong.jpg" alt="50x50" /></a></span>
+						<a href="#">Tiết kiệm nước tiết kiệm năng lượng</a>
+						 <i>January 11, 2014</i> 
+					</li>
+				</ul>
                 
             </div>
             
