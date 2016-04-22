@@ -2,53 +2,99 @@
  
 	<div id="trueHeader">
     
-	<div class="wrapper">
-    
-     <div class="container">
-    
-		<!-- Logo -->
-		<div class="logo_main"><a href="<%= root_path %>" id="logo"></a></div>
+		<div class="wrapper">
 		
-        <!-- Menu -->
-        <div class="menu_main">
-        
-        	<div class="joosa top_links">Hãy gọi chúng tôi: <strong>+84 8 6682 2233</strong> <a href="<%= url_for(controller: 'contact', action: 'index') %>" class="makeap_but">Gửi tin</a></div>
-           
-           <nav id="access" class="access" role="navigation">
-           
-            <div id="menu" class="menu">
-                
-                <ul id="tiny">
-                
-                    <li><a href="<%= root_path %>" class="active">Trang chủ</a></li>  
-                    
-                    <li><%= link_to "Công trình", { controller: "project", action: "index" } %>
-                    
-                    </li>
-                    
-                    <li><%= link_to "Tin tức", { controller: "news", action: "index" } %>
-                        
-                    </li>
-                    
-                    <li><%= link_to "Về chúng tôi", { controller: "about_us", action: "index" } %>
-                        
-                    </li>
-  
-                    <li><%= link_to "Liên hệ", { controller: "contact", action: "index" } %>
-                    
-                    </li>
-                    
-                </ul>
-                
-            </div>
-            
-        </nav>
-      
-        </div><!-- end nav menu -->
-              
-	</div>
-		
-	</div>
+			<div class="container">
+		   
+			   <!-- Logo -->
+			   <div class="logo_main"><%= link_to "", root_path, id: "logo" %></div>
+			   
+			   <!-- Menu -->
+			   <div class="menu_main">
+			   
+					<div class="joosa top_links">
+						
+						<%= t(:call_us) %><strong>+84 8 6682 2233</strong>
+						
+						<% if params[:locale] == "en" %>
+									
+							<a href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/flags/vn.png" class="img-flags" ></a>
+						
+						<% else %>
+						
+							<a href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/flags/gb.png" class="img-flags" ></a>
+						
+						<% end %>
+						
+					</div>
+				  
+					<nav id="access" class="access" role="navigation">
+					
+						<div id="menu" class="menu">
+						 
+							<ul id="tiny">
+								
+								<% if ["home"].include?(params[:controller]) %>
+							
+									<li><%= link_to t(:home), root_path, class: "active" %></li>
+									
+								<% else %>
+									
+									<li><%= link_to t(:home), root_path %></li>
+								
+								<% end %>
+							
+								<% if ["project"].include?(params[:controller]) %>
+								
+									<li><%= link_to t(:projects), { controller: "project", action: "index" }, class: "active" %></li>
+										
+								<% else %>
+										
+									<li><%= link_to t(:projects), { controller: "project", action: "index" } %></li>
+									
+								<% end %>
+							
+								<% if ["news"].include?(params[:controller]) %>
+								
+									<li><%= link_to t(:news), { controller: "news", action: "index" }, class: "active" %></li>
+									
+								<% else %>
+									
+									<li><%= link_to t(:news), { controller: "news", action: "index" } %></li>
+									
+								<% end %>
+							
+								<% if ["about_us"].include?(params[:controller]) %>
+								
+									<li><%= link_to t(:about_us), { controller: "about_us", action: "index" }, class: "active" %></li>
+									
+								<% else %>
+									
+									<li><%= link_to t(:about_us), { controller: "about_us", action: "index" } %></li>
+									
+								<% end %>
+							
+								<% if ["contact"].include?(params[:controller]) %>
+							
+									<li><%= link_to t(:contact), { controller: "contact", action: "index" }, class: "active" %></li>
+									
+								<% else %>
+									
+									<li><%= link_to t(:contact), { controller: "contact", action: "index" } %></li>
+								
+								<% end %>
+								
+							</ul>
+						 
+						</div>
+					 
+					</nav>
+			 
+				</div><!-- end nav menu -->
+					 
+		   </div>
+			
+		</div>
     
 	</div>
     

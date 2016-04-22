@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<div class="title"><h1>Tin tức</h1></div>
-        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Trang chủ</a> <i>/</i> <a href="#">Bài viết</a> <i>/</i> Tin tức</div>
+        <div class="pagenation">&nbsp;<%= link_to t(:home), root_path %> <i>/</i> <%= t(:news) %></div>
 	</div>
 </div><!-- end page title --> 
 
@@ -107,27 +107,26 @@
 ======================================= -->
 
 <%= render 'home/footer' %>
-
     
 <!-- ######### JS FILES ######### -->
 <!-- get jQuery from the google apis -->
-<%= javascript_include_tag '/frontend/layout2/js/universal/jquery.js' %>
+<%= javascript_include_tag '/frontend/js/universal/jquery.js' %>
 
 <!-- style switcher -->
-<%= javascript_include_tag '/frontend/layout2/js/style-switcher/jquery-1.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/style-switcher/styleselector.js' %>
+<%= javascript_include_tag '/frontend/js/style-switcher/jquery-1.js' %>
+<%= javascript_include_tag '/frontend/js/style-switcher/styleselector.js' %>
 
 <!-- main menu -->
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/ddsmoothmenu.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/selectnav.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/ddsmoothmenu.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/selectnav.js' %>
 
 <!-- jquery jcarousel -->
-<%= javascript_include_tag '/frontend/layout2/js/jcarousel/jquery.jcarousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/jcarousel/jquery.jcarousel.min.js' %>
 
 <!-- tab widget -->
-<%= javascript_include_tag '/frontend/layout2/js/tabs/tabwidget/tabwidget.js' %>
+<%= javascript_include_tag '/frontend/js/tabs/tabwidget/tabwidget.js' %>
 
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/scripts.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/scripts.js' %>
 
 <!-- scroll up -->
 <script type="text/javascript">
@@ -170,5 +169,5 @@
 	
 </script>
 
-<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/core.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js' %>
+<%= javascript_include_tag '/frontend/js/sticky-menu/core.js' %>
+<%= javascript_include_tag '/frontend/js/sticky-menu/modernizr.custom.75180.js' %>

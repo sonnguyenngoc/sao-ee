@@ -1,5 +1,4 @@
 class Article < ActiveRecord::Base
-  validates :code, uniqueness: true
   
   mount_uploader :image_url, ArticleUploader
   has_and_belongs_to_many :article_categories
@@ -19,6 +18,60 @@ class Article < ActiveRecord::Base
     
     return records
   end
+  
+  ##get artilce
+  
+    #slider
+      def self.get_all_slides
+        records = self.all
+        records = records.joins(:article_categories).where(article_categories: {name: "Slideshow"})
+        records.order("created_at DESC")
+        
+        return records
+      end
+    #slider
+    
+    #projects
+      def self.get_all_projects
+        records = self.all
+        records = records.joins(:article_categories).where(article_categories: {name: "Projects"})
+        records.order("created_at DESC")
+        
+        return records
+      end
+    #projects
+    
+    #news
+      def self.get_all_news
+        records = self.all
+        records = records.joins(:article_categories).where(article_categories: {name: "News"})
+        records.order("created_at DESC")
+        
+        return records
+      end
+    #news
+    
+    #about_us
+      def self.get_about_us
+        records = self.all
+        records = records.joins(:article_categories).where(article_categories: {name: "About Us"})
+        records.order("created_at DESC").first
+        
+        return records
+      end
+    #about_us
+    
+    #intro
+      def self.get_intro
+        records = self.all
+        records = records.joins(:article_categories).where(article_categories: {name: "Intro"})
+        records.order("created_at DESC").first
+        
+        return records
+      end
+    #intro
+  
+  ##get article
   
   def get_related_blogs
     cat_ids = []

@@ -13,8 +13,8 @@
 <div class="page_title">
 
 	<div class="container">
-		<div class="title"><h1>Tin tức</h1></div>
-        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Home</a> <i>/</i> <a href="#">Tin tức</a> <i>/</i> Tiết kiệm nước tiết kiệm năng lượng</div>
+		<div class="title"><h1><%= t(:news) %></h1></div>
+        <div class="pagenation">&nbsp;<%= link_to t(:home), root_path %> <i>/</i> <%= link_to t(:news), { controller: "news", action: "index" } %> <i>/</i> Tiết kiệm nước tiết kiệm năng lượng</div>
 	</div>
 </div><!-- end page title --> 
 
@@ -28,7 +28,7 @@
         	
     <div class="blog_post">	
         <div class="blog_postcontent">
-        <div class="image_frame"><a href="#"><img src="/frontend/layout2/images/news_img_01.jpg" alt="810x360" /></a></div>
+        <div class="image_frame"><a href="#"><img src="/frontend/images/news_img_01.jpg" alt="810x360" /></a></div>
         <a href="#" class="date"><strong>18</strong><i>October</i></a>
         <h3><a href="#">Tiết kiệm nước tiết kiệm năng lượng</a></h3>
          
@@ -69,22 +69,22 @@
     
 <!-- ######### JS FILES ######### -->
 <!-- get jQuery from the google apis -->
-<%= javascript_include_tag '/frontend/layout2/js/universal/jquery.js' %>
+<%= javascript_include_tag '/frontend/js/universal/jquery.js' %>
 
 <!-- style switcher -->
-<%= javascript_include_tag '/frontend/layout2/js/style-switcher/jquery-1.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/style-switcher/styleselector.js' %>
+<%= javascript_include_tag '/frontend/js/style-switcher/jquery-1.js' %>
+<%= javascript_include_tag '/frontend/js/style-switcher/styleselector.js' %>
 
 <!-- main menu -->
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/ddsmoothmenu.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/selectnav.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/ddsmoothmenu.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/selectnav.js' %>
 
 <!-- jquery jcarousel -->
-<%= javascript_include_tag '/frontend/layout2/js/jcarousel/jquery.jcarousel.min.js' %>
+<%= javascript_include_tag '/frontend/js/jcarousel/jquery.jcarousel.min.js' %>
 
 <!-- tab widget -->
-<%= javascript_include_tag '/frontend/layout2/js/tabs/tabwidget/tabwidget.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/scripts.js' %>
+<%= javascript_include_tag '/frontend/js/tabs/tabwidget/tabwidget.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/scripts.js' %>
 
 <!-- scroll up -->
 <script type="text/javascript">
@@ -127,5 +127,5 @@
 	
 </script>
 
-<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/core.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js' %>
+<%= javascript_include_tag '/frontend/js/sticky-menu/core.js' %>
+<%= javascript_include_tag '/frontend/js/sticky-menu/modernizr.custom.75180.js' %>

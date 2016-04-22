@@ -1,6 +1,22 @@
 vi:
   #-------------------------------------
+  call_us: "Gọi cho chúng tôi: "
   home: "Trang chủ"
+  projects: "Công trình"
+  news: "Tin tức"
+  about_us: "Về chúng tôi"
+  contact: "Liên hệ"
+  information: "Thông tin"
+  lastest_news: "Tin tức mới"
+  company_name: "CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO"
+  company_address: "P.901, Lầu 9, 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh"
+  related_blogs: "Bài viết liên quan"
+  contact_info: "Thông tin liên hệ"
+  find_the_address: "Tìm địa chỉ"
+  message_us: "Gửi tin cho chúng tôi"
+  send: "Gửi"
+  
+  #translate backend
   dashboard: "Bảng điều khiển"
   welcome: "CHÀO MỪNG QUẢN TRỊ VIÊN"
   admin: "Quản trị viên"

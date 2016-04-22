@@ -1,6 +1,21 @@
 en:
   #-------------------------------------
+  call_us: "Call Us: "
   home: "Home"
+  projects: "Projects"
+  news: "News"
+  about_us: "About Us"
+  contact: "Contact"
+  information: "Information"
+  lastest_news: "Lastest News"
+  company_name: "SAO DESIGN CONSULTANCY JOINT STOCK COMPANY"
+  company_address: "Room No.901, 9th Floor, 68 Nguyen Hue Street, Ben Nghe Ward, District 1, Ho Chi Minh City"
+  related_blogs: "Related Blogs"
+  contact_info: "Contact Info"
+  find_the_address: "Find the Address"
+  message_us: "Send Us A Message"
+  
+  #translate backend
   dashboard: "Dashboard"
   welcome: "WELCOME TO ADMINISTRATOR"
   admin: "Administrator"
@@ -23,6 +38,7 @@ en:
   placeholder_filter: "Search by name..."
   sort_by: "Sort By"
   sort_order: "Sort Order"
+  send: "Send"
   
   #table
   list_image: "Image"

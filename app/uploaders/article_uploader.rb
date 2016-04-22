@@ -35,17 +35,23 @@ class ArticleUploader < CarrierWave::Uploader::Base
   # version :thumb do
   #   process :resize_to_fit => [50, 50]
   # end
-  version :big_image do
-    process :resize_to_fit => [808, 511]
+  version :slider_image do
+    process :resize_to_fit => [1920, 500]
   end
-  version :medium_image do
-    process :resize_to_fill => [202, 128]
+  version :large_rectangle_image do
+    process :resize_to_fit => [800, 450]
   end
-  version :small_image do
-    process :resize_to_fill => [83, 83]
+  version :medium_rectangle_image do
+    process :resize_to_fill => [370, 250]
   end
-  version :smaller_image do
-    process :resize_to_fill => [83, 53]
+  version :smaller_rectangle_image do
+    process :resize_to_fill => [275, 300]
+  end
+  version :smaller_rectangle_image do
+    process :resize_to_fill => [200, 250]
+  end
+  version :small_square_image do
+    process :resize_to_fill => [50, 50]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
