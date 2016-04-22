@@ -1,72 +1,76 @@
 <div class="site_wrapper">
    
 
-<!-- HEADER -->
-<header id="header">
- 
-	<%= render 'home/header' %>
-    
-</header><!-- end header -->
-
-<div class="clearfix"></div>
-
-<div class="page_title">
-
-	<div class="container">
-		<div class="title"><h1>Về chúng tôi</h1></div>
-        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Trang chủ</a> <i>/</i> <a href="#">Thông tin</a> <i>/</i> Về chúng tôi</div>
-	</div>
-</div><!-- end page title --> 
-
-
-<!-- Contant
-======================================= -->
-
-<div class="container">
-
-	<div class="content_fullwidth">
-
-		<div class="two_third" style="width: 100%; text-transform: capitalize;">
+	<!-- HEADER -->
+	<header id="header">
+	 
+		<%= render 'home/header' %>
 		
-			<img src="http://placehold.it/275x250" alt="" class="image_left1" />
-			
-			<h2>Giới thiệu<strong> Về chúng tôi</strong></h2>
-			
-			<p><strong>Lorem Ipsum which looks reasonable generated prempsum is therefore always free from repetition injected words.</strong></p>
-			<br />
-			<p>Praesent vestibulum molestie lacus. Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit sociis natoque penatibus et magnis dis parturient montes, nascetur suscipit varius penatibus et magnis dis nascetur ridiculus mus Fusce feugiat malesuada odio. Morbi nunc odio, gravida ate cursus alteration some form montes.</p>
-		
-		</div><!-- end section -->
-		
+	</header><!-- end header -->
 	
-	</div><!-- progress bars section -->
+	<div class="clearfix"></div>
+	
+	<div class="page_title">
+	
+		<div class="container">
+			
+			<div class="title"><h1><%= t(:about_us) %></h1></div>
+			
+			<div class="pagenation">&nbsp;<%= link_to t(:home), root_path %> <i>/</i> <%= t(:about_us) %></div>
+		
+		</div>
+	
+	</div><!-- end page title --> 
+	
+	
+	<!-- Contant
+	======================================= -->
+	
+	<div class="container">
+	
+		<div class="content_fullwidth">
+	
+			<div class="two_third" style="width: 100%; text-transform: capitalize;">
+			
+				<img src="http://placehold.it/275x250" alt="" class="image_left1" />
+				
+				<h2>Giới thiệu<strong> Về chúng tôi</strong></h2>
+				
+				<p><strong>Lorem Ipsum which looks reasonable generated prempsum is therefore always free from repetition injected words.</strong></p>
+				
+				<br />
+				
+				<p>Praesent vestibulum molestie lacus. Aenean nony hendrerit mauris. Phasellus porta. Fusce suscipit sociis natoque penatibus et magnis dis parturient montes, nascetur suscipit varius penatibus et magnis dis nascetur ridiculus mus Fusce feugiat malesuada odio. Morbi nunc odio, gravida ate cursus alteration some form montes.</p>
+			
+			</div><!-- end section -->
+			
+		
+		</div><!-- progress bars section -->
+	
+	</div><!-- end content area -->
 
-</div><!-- end content area -->
+	<div class="clearfix mar_top5"></div>
 
-
-<div class="clearfix mar_top5"></div>
-
-<!-- Footer
-======================================= -->
-
-<%= render 'home/footer' %>
-
-    
-<!-- ######### JS FILES ######### -->
+	<!-- Footer
+	======================================= -->
+	
+		<%= render 'home/footer' %>
+		
+	<!-- ######### JS FILES ######### -->
 <!-- get jQuery from the google apis -->
-<script type="text/javascript" src="/frontend/layout2/js/universal/jquery.js"></script>
+<script type="text/javascript" src="/frontend/js/universal/jquery.js"></script>
 
 <!-- style switcher -->
-<script src="/frontend/layout2/js/style-switcher/jquery-1.js"></script>
-<script src="/frontend/layout2/js/style-switcher/styleselector.js"></script>
+<script src="/frontend/js/style-switcher/jquery-1.js"></script>
+<script src="/frontend/js/style-switcher/styleselector.js"></script>
 
 <!-- main menu -->
-<script type="text/javascript" src="/frontend/layout2/js/mainmenu/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="/frontend/js/mainmenu/ddsmoothmenu.js"></script>
 
-<script type="text/javascript" src="/frontend/layout2/js/mainmenu/selectnav.js"></script>
+<script type="text/javascript" src="/frontend/js/mainmenu/selectnav.js"></script>
 
 <!-- progress bar -->
-<script src="/frontend/layout2/js/progressbar/progress.js" type="text/javascript" charset="utf-8"></script>
+<script src="/frontend/js/progressbar/progress.js" type="text/javascript" charset="utf-8"></script>
   
   <script type="text/javascript">
 
@@ -83,9 +87,9 @@
 </script>
 
 <!-- jquery jcarousel -->
-<script type="text/javascript" src="/frontend/layout2/js/jcarousel/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/frontend/js/jcarousel/jquery.jcarousel.min.js"></script>
 
-<script type="text/javascript" src="/frontend/layout2/js/mainmenu/scripts.js"></script>
+<script type="text/javascript" src="/frontend/js/mainmenu/scripts.js"></script>
 
 <!-- scroll up -->
 <script type="text/javascript">
@@ -108,7 +112,7 @@
 </script>
 
 <!-- accordion -->
-<script type="text/javascript" src="/frontend/layout2/js/accordion/custom.js"></script>
+<script type="text/javascript" src="/frontend/js/accordion/custom.js"></script>
 
-<script type="text/javascript" src="/frontend/layout2/js/sticky-menu/core.js"></script>
-<script type="text/javascript" src="/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js"></script>
+<script type="text/javascript" src="/frontend/js/sticky-menu/core.js"></script>
+<script type="text/javascript" src="/frontend/js/sticky-menu/modernizr.custom.75180.js"></script>

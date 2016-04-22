@@ -1,44 +1,42 @@
 <div class="footer">
+	
 	<div class="container">
     
    		<div class="one_fourth footer_left">
             
-            <div class="footer_logo"><img src="/frontend/layout2/images/footer-logo.png" alt="" /></div><!-- end footer logo -->
-            
             <ul class="contact_address">
-                <li><i></i>CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO</li>
-                <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; P. 901, Lầu 9, 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</li>
-                <li><i class="fa fa-phone"></i>&nbsp; +84 8 6682 2233</li>
-                <li><i class="fa fa-print"></i>&nbsp; +84 8 6682 2233</li>
-                <!--<li><img src="/frontend/layout2/images/footer-wmap.png" alt="" /></li>-->
-            </ul>
+				<li><i></i><%= t(:company_name) %></li>
+                <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; <%= t(:company_address) %></li>
+                <li><i class="fa fa-phone"></i>&nbsp; +84 8 668 222 33</li>
+                <li><i class="fa fa-print"></i>&nbsp; </li>
+			</ul>
             
         </div><!-- end address section -->
         
         <div class="one_fourth">
         	
-            <h2>Thông tin <i></i></h2>
-            
+            <h2><%= t(:information) %> <i></i></h2>
+
             <ul class="list footer_info">
-                <li><a href="<%= root_path %>"><i class="fa fa-angle-right"></i> Trang chủ</a></li>
-                <li><a href="<%= url_for(controller: 'home', action: 'sao') %>"><i class="fa fa-angle-right"></i> S-A-O</a></li>
+                <li><a href="<%= root_path %>"><i class="fa fa-angle-right"></i> <%= t(:home) %></a></li>
+				<li><a href="<%= url_for(controller: 'home', action: 'sao') %>"><i class="fa fa-angle-right"></i> <%= t(:sao) %></a></li>
             </ul>
 			<ul class="list footer_info">
-				<li><a href="<%= url_for(controller: 'about_us', action: 'index') %>"><i class="fa fa-angle-right"></i> Giới thiệu</a></li>
-                <li><a href="<%= url_for(controller: 'project', action: 'index') %>"><i class="fa fa-angle-right"></i> Công trình</a></li>
+				<li><a href="<%= url_for(controller: 'about_us', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:about_us) %></a></li>
+                <li><a href="<%= url_for(controller: 'project', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:projects) %></a></li>
 			</ul>
 			<ul class="list footer_info">
-				<li><a href="<%= url_for(controller: 'news', action: 'index') %>"><i class="fa fa-angle-right"></i> Tin tức</a></li>
-                <li><a href="<%= url_for(controller: 'contact', action: 'index') %>"><i class="fa fa-angle-right"></i> Liên hệ</a></li>
+				<li><a href="<%= url_for(controller: 'news', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:news) %></a></li>
+                <li><a href="<%= url_for(controller: 'contact', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:contact) %></a></li>
 			</ul>
-            
+			
         </div><!-- end useful links -->
          
         <div class="one_fourth footer_right">
         	
             <div class="twitter_feed">
             
-            	<h2>Tin tức mới <i></i></h2>
+            	<h2><%= t(:lastest_news) %> <i></i></h2>
                 
 				<ul class="recent_posts_list">
 					<li>
@@ -68,10 +66,10 @@
     <div class="container">
     
         <div class="one_half">
-        
-            <b>Copyright © 2016 SAO-EE.VN - All rights reserved.  Developed by <a href="http://hoangkhang.com.vn/"><i style="text-decoration: underline;">Hoang Khang Incotech</i></a></b>
-            
-        </div>
+
+			<b>Copyright © 2016 SAO-EE.VN - All rights reserved.  Developed by <a href="http://hoangkhang.com.vn/"><i style="text-decoration: underline;">Hoang Khang Incotech</i></a></b>
+		
+		</div>
     
     	<div class="one_half last">
      		
@@ -89,8 +87,6 @@
     
 </div><!-- end copyright info -->
 
-<a href="#" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
+	<a href="#" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
 
-
- 
 </div>

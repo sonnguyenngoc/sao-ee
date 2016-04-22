@@ -13,8 +13,8 @@
 <div class="page_title">
 
 	<div class="container">
-		<div class="title"><h1>Liên hệ</h1></div>
-        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Trang chủ</a> <i>/</i> <a href="#">Thông tin</a> <i>/</i> Liên hệ</div>
+		<div class="title"><h1><%= t(:contact) %></h1></div>
+        <div class="pagenation">&nbsp;<%= link_to t(:home), root_path %> <i>/</i> <%= t(:contact) %></div>
 	</div>
 </div><!-- end page title --> 
 
@@ -35,7 +35,7 @@
     <strong>Phone General Inquiries: 1-888-123-4567-8900</strong></p>
 
     <br />
-    <h3><strong>Nhắn tin cho chúng tôi!</strong></h3>
+    <h3><strong><%= t(:message_us) %></strong></h3>
 
     <form action="" method="post">
     
@@ -54,14 +54,14 @@
         
         
         <label for="message" class="blocklabel">Your Message*</label>
-        <p class=""><textarea name="message" class="textarea_bg" id="message" cols="20" rows="7">Your Message</textarea></p>
+        <p class=""><textarea name="message" class="textarea_bg" id="message" cols="20" rows="7" placeholder="Your Message"></textarea></p>
         
         
         <p>
         <input type="hidden" id="myemail" name="myemail" value="<?php echo $email_adress_reciever; ?>" />
         <input type="hidden" id="myblogname" name="myblogname" value="<?php echo $name_of_your_site; ?>" />
         <div class="clearfix"></div>
-        <input name="Send" type="submit" value="Gửi tin" class="comment_submit" id="send"/></p>
+        <input name="Send" type="submit" value="<%= t(:send) %>" class="comment_submit" id="send"/></p>
         
         <!--<div class="success">
             <div class="message-box-wrap">
@@ -77,21 +77,21 @@
     <div class="one_half last">
     
         <div class="address-info">
-            <h3><strong>Thông tin liên hệ</strong></h3>
+            <h3><strong><%= t(:contact_info) %></strong></h3>
                 <ul>
                 <li>
-                <strong>CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO</strong><br />
-                P. 901, Lầu 9, 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh<br />
+                <strong><%= t(:company_name) %></strong><br />
+                <%= t(:company_address) %><br />
                 Điện thoại: +84 8 6682 2233<br />
-                Fax: +84 8 6682 2233<br />
+                Fax: <br />
                 E-mail: <a href="mailto:mail@companyname.com">mail@companyname.com</a><br />
                 Website: <%= link_to "sao-ee.vn", root_path %>
                 </li>
             </ul>
         </div>
 
-         <h3>Find the <strong>Address</strong></h3>
-            <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4767990932887!2d106.70126231480079!3d10.774746992322692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46fac17665%3A0xd5ea4e1ebf992ba3!2zNjggTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1461258161064"></iframe>
+        <h3><strong><%= t(:find_the_address) %></strong></h3>
+        <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4767990932887!2d106.70126231480079!3d10.774746992322692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46fac17665%3A0xd5ea4e1ebf992ba3!2zNjggTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1461258161064"></iframe>
     </div>
             
 </div>
@@ -109,18 +109,18 @@
    
 <!-- ######### JS FILES ######### -->
 <!-- get jQuery from the google apis -->
-<%= javascript_include_tag '/frontend/layout2/js/universal/jquery.js' %>
+<%= javascript_include_tag '/frontend/js/universal/jquery.js' %>
 
 <!-- style switcher -->
-<%= javascript_include_tag '/frontend/layout2/js/style-switcher/jquery-1.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/style-switcher/styleselector.js' %>
+<%= javascript_include_tag '/frontend/js/style-switcher/jquery-1.js' %>
+<%= javascript_include_tag '/frontend/js/style-switcher/styleselector.js' %>
 
 <!-- main menu -->
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/ddsmoothmenu.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/mainmenu/selectnav.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/ddsmoothmenu.js' %>
+<%= javascript_include_tag '/frontend/js/mainmenu/selectnav.js' %>
 
 <!-- progress bar -->
-<%= javascript_include_tag '/frontend/layout2/js/progressbar/progress.js' %>
+<%= javascript_include_tag '/frontend/js/progressbar/progress.js' %>
   
   <script type="text/javascript">
 
@@ -158,5 +158,5 @@
     });
 </script>
 
-<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/core.js' %>
-<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js' %>
+<%= javascript_include_tag '/frontend/js/sticky-menu/core.js' %>
+<%= javascript_include_tag '/frontend/js/sticky-menu/modernizr.custom.75180.js' %>
