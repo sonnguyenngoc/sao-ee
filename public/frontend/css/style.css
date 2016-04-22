@@ -1062,8 +1062,8 @@ a.button_slider_02:hover {
 }
 .footer .one_fourth{
 	float: left;
-	width: 22%;
-	margin-right: 4%;
+	width: 30%;
+	/*margin-right: 4%;*/
 }
 
 .footer h2 {
@@ -1097,7 +1097,7 @@ a.button_slider_02:hover {
 	float: left;
 	padding: 0px;
 	margin: 10px 0px 0px 0px;
-	width: 100%;
+	width: 85%;
 }
 .footer .contact_address li {
 	padding: 0px;
