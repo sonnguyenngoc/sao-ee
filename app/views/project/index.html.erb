@@ -26,185 +26,184 @@
 	======================================= -->
 	
 	<div class="container">
-	
-		<div class="clearfix mar_top7"></div>
-	
-		<div class="portfolio_page">
+
+		<div class="title"><h1>Công trình</h1></div>
 		
-			<div class="portfolioFilter">
-			
-				<a href="#" data-filter="*" class="current">Tất cả</a>
-			   
-				<a href="#" data-filter=".places">Nhà máy Heineken - Phnom Penh</a>
-				
-				<a href="#" data-filter=".people">Nhà phố Đà Nẵng</a>
-				
-				<a href="#" data-filter=".objects">Objects</a>
-			
-			</div>
-	
-			<div class="clearfix mar_top5"></div>
-	
-			<div class="portfolioContainer">
-			
-				<div class="objects">
-					
-					<a class="fancybox" href="/frontend/images/heineken-001.jpg" data-fancybox-group="gallery" title="Publishing has packages and More text can be use here - 800x450"><div class="imgWrap"><img src="/frontend/images/heineken-001.jpg" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Publishing has packages</h3></div></a>
-				
-				</div>	
-			
-				<div class="people">
-					
-					<a class="fancybox" href="/frontend/images/heineken-002.jpg" data-fancybox-group="gallery" title="Typesetting industry and More text can be use here"><div class="imgWrap"><img src="/frontend/images/heineken-002.jpg" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Typesetting industry</h3></div></a>
-				
-				</div>
-				
-				<div class="places">
-					
-					<a class="fancybox" href="/frontend/images/heineken-003.jpg" data-fancybox-group="gallery" title="Standard dummy text and More text can be use here"><div class="imgWrap"><img src="/frontend/images/heineken-003.jpg" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Standard dummy text</h3></div></a>
-				
-				</div>
-			
-				<div class="people">
-					<a class="fancybox" href="/frontend/images/NPDN1.jpg" data-fancybox-group="gallery" title="Passages more recently and More text can be use here"><div class="imgWrap"><img src="/frontend/images/NPDN1.jpg" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Passages more recently</h3></div></a>
-				</div>
-			
-				<div class="places">
-					
-					<a class="fancybox" href="/frontend/images/NPDN2.jpg" data-fancybox-group="gallery" title="Letrasets containing and More text can be use here"><div class="imgWrap"><img src="/frontend/images/NPDN2.jpg" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Letrasets containing</h3></div></a>
-				
-				</div>
-			
-				<div class="places">
-					<a class="fancybox" href="/frontend/images/NPDN3.jpg" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="/frontend/images/NPDN3.jpg" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Sentence structures</h3></div></a>
-				</div>
-				
-				<div class="people objects">
-					
-					<a class="fancybox" href="/frontend/images/NPDN4.png" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="/frontend/images/NPDN4.png" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Professor structures</h3></div></a>
-				
-				</div>
-				  
-				<div class="objects">
-					
-					<a class="fancybox" href="/frontend/images/heineken-004.png" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="/frontend/images/heineken-004.png" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Classical literature</h3></div></a>
-				
-				</div>
-				   
-				<div class="people">
-					
-					<a class="fancybox" href="/frontend/images/heineken-005.png" data-fancybox-group="gallery" title="sentence structures and More text can be use here"><div class="imgWrap"><img src="/frontend/images/heineken-005.png" alt="" /><p class="imgDescription"><i class="fa fa-search fa-4x"></i></p><h3>Many web sites</h3></div></a>
-				
-				</div>
-				
-			</div>
-		   
-		</div>
-	
-	</div><!-- end content area -->
-	
+        <div class="pagenation">&nbsp;<a href="<%= root_path %>">Trang chủ</a> <i>/</i> Công trình</div>
+		
+	</div>
+</div><!-- end page title --> 
+
+
+<!-- Contant
+======================================= -->
+
+<div class="container">
+
+	<div class="content_fullwidth">
+    
+		<h2><strong>Công trình</strong></h2>
+        
+		<div class="one_third">
+        	<div class="portfolio_image">
+            <a class="fancybox" href="<%= url_for(controller: 'project', action: 'detail') %>" data-fancybox-group="gallery" title="Publishing has packages">
+				<img src="/frontend/layout2/images/heineken-project.jpg" alt="800x450" /></a>
+            <div class="title"><%= link_to('Công trình nhà máy Heineken', {controller: 'project', action: 'detail'}) %></div>
+            </div>
+        </div><!-- end section -->
+        
+        <div class="one_third">
+        	<div class="portfolio_image">
+            <a class="fancybox" href="<%= url_for(controller: 'project', action: 'detail') %>" data-fancybox-group="gallery" title="Publishing has packages">
+				<img src="/frontend/layout2/images/heineken-project.jpg" alt="800x450" /></a>
+            <div class="title"><%= link_to('Công trình nhà máy Heineken', {controller: 'project', action: 'detail'}) %></div>
+            </div>
+        </div><!-- end section -->
+        
+        <div class="one_third last">
+        	<div class="portfolio_image">
+            <a class="fancybox" href="<%= url_for(controller: 'project', action: 'detail') %>" data-fancybox-group="gallery" title="Publishing has packages">
+				<img src="/frontend/layout2/images/heineken-project.jpg" alt="800x450" /></a>
+            <div class="title"><%= link_to('Công trình nhà máy Heineken', {controller: 'project', action: 'detail'}) %></div>
+            </div>
+        </div><!-- end section -->
+        
+        <div class="clearfix mar_top5"></div>
+        
+        <div class="one_third">
+        	<div class="portfolio_image">
+            <a class="fancybox" href="<%= url_for(controller: 'project', action: 'detail') %>" data-fancybox-group="gallery" title="Publishing has packages">
+				<img src="/frontend/layout2/images/heineken-project.jpg" alt="800x450" /></a>
+            <div class="title"><%= link_to('Công trình nhà phố', {controller: 'project', action: 'detail'}) %></div>
+            </div>
+        </div><!-- end section -->
+        
+        <div class="one_third">
+        	<div class="portfolio_image">
+            <a class="fancybox" href="<%= url_for(controller: 'project', action: 'detail') %>" data-fancybox-group="gallery" title="Publishing has packages">
+				<img src="/frontend/layout2/images/heineken-project.jpg" alt="800x450" /></a>
+            <div class="title"><%= link_to('Công trình nhà phố', {controller: 'project', action: 'detail'}) %></div>
+            </div>
+        </div><!-- end section -->
+    
+	</div>
 	
 	<div class="clearfix mar_top4"></div>
-	
-	<!-- Footer
-	======================================= -->
-	
-	<%= render 'home/footer' %>
-	
-		
-	<!-- ######### JS FILES ######### -->
-	<!-- get jQuery from the google apis -->
-	<%= javascript_include_tag '/frontend/js/universal/jquery.js' %>
-	
-	<!-- style switcher -->
-	<%= javascript_include_tag '/frontend/js/style-switcher/jquery-1.js' %>
-	<%= javascript_include_tag '/frontend/js/style-switcher/styleselector.js' %>
-	
-	<!-- main menu -->
-	<%= javascript_include_tag '/frontend/js/mainmenu/ddsmoothmenu.js' %>
-	
-	<%= javascript_include_tag '/frontend/js/mainmenu/selectnav.js' %>
-	
-	<%= javascript_include_tag '/frontend/js/mainmenu/scripts.js' %>
-	
-	<!-- scroll up -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-	 
-			$(window).scroll(function(){
-				if ($(this).scrollTop() > 100) {
-					$('.scrollup').fadeIn();
-				} else {
-					$('.scrollup').fadeOut();
-				}
-			});
-	 
-			$('.scrollup').click(function(){
-				$("html, body").animate({ scrollTop: 0 }, 500);
-				return false;
-			});
-	 
-		});
-	</script>
-	
-	<%= javascript_include_tag '/frontend/js/sticky-menu/core.js' %>
-	<%= javascript_include_tag '/frontend/js/sticky-menu/modernizr.custom.75180.js' %>
-	
-	<!-- fancyBox -->
-	<%= javascript_include_tag '/frontend/js/portfolio/lib/jquery-1.9.0.min.js' %>
-	<%= javascript_include_tag '/frontend/js/portfolio/source/jquery.fancybox.js' %>
-	<%= javascript_include_tag '/frontend/js/portfolio/source/helpers/jquery.fancybox-media.js' %>
-	
-	<!-- isotope -->
-	<%= javascript_include_tag '/frontend/js/portfolio/jquery.isotope.js' %>
-	
-	<!-- isotope -->
-	<script type="text/javascript">
-	$(window).load(function(){
-		var $container = $('.portfolioContainer');
-		$container.isotope({
-			filter: '*',
-			animationOptions: {
-				duration: 750,
-				easing: 'linear',
-				queue: false
-			}
-		});
-	 
-		$('.portfolioFilter a').click(function(){
-			$('.portfolioFilter .current').removeClass('current');
-			$(this).addClass('current');
-	 
-			var selector = $(this).attr('data-filter');
-			$container.isotope({
-				filter: selector,
-				animationOptions: {
-					duration: 750,
-					easing: 'linear',
-					queue: false
-				}
-			 });
-			 return false;
-		}); 
-	});
-	</script>
-	
-	<!-- fancyBox -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/* Simple image gallery. Uses default settings */
-			$('.fancybox').fancybox();
-	
-			/* media effects*/  
-			$(document).ready(function() {
-				$('.fancybox-media').fancybox({
-					openEffect  : 'none',
-					closeEffect : 'none',
-					helpers : {
-						media : {}
-					}
-				});
-			});
-	
-		});
-	</script>
+    
+    <div class="pagination">
+    <b>Trang 2 / 18</b>
+    <a href="#" class="navlinks">&lt; Trước</a>
+        <a href="#" class="navlinks">1</a>
+        <a href="#" class="navlinks current">2</a>
+        <a href="#" class="navlinks">3</a>
+        <a href="#" class="navlinks">4</a>
+        <a href="#" class="navlinks">Sau ></a>
+    </div><!-- end pagination -->
+
+</div><!-- end content area -->
+
+
+<div class="clearfix mar_top4"></div>
+
+<!-- Footer
+======================================= -->
+
+<%= render 'home/footer' %>
+
+    
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<%= javascript_include_tag '/frontend/layout2/js/universal/jquery.js' %>
+
+<!-- style switcher -->
+<%= javascript_include_tag '/frontend/layout2/js/style-switcher/jquery-1.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/style-switcher/styleselector.js' %>
+
+<!-- main menu -->
+<%= javascript_include_tag '/frontend/layout2/js/mainmenu/ddsmoothmenu.js' %>
+
+<%= javascript_include_tag '/frontend/layout2/js/mainmenu/selectnav.js' %>
+
+<%= javascript_include_tag '/frontend/layout2/js/mainmenu/scripts.js' %>
+
+<!-- scroll up -->
+<script type="text/javascript">
+    $(document).ready(function(){
+ 
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+ 
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+ 
+    });
+</script>
+
+<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/core.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/sticky-menu/modernizr.custom.75180.js' %>
+
+<!-- fancyBox -->
+<%= javascript_include_tag '/frontend/layout2/js/portfolio/lib/jquery-1.9.0.min.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/portfolio/source/jquery.fancybox.js' %>
+<%= javascript_include_tag '/frontend/layout2/js/portfolio/source/helpers/jquery.fancybox-media.js' %>
+
+<!-- isotope -->
+<%= javascript_include_tag '/frontend/layout2/js/portfolio/jquery.isotope.js' %>
+
+<!-- isotope -->
+<script type="text/javascript">
+$(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    }); 
+});
+</script>
+
+<!-- fancyBox -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /* Simple image gallery. Uses default settings */
+        $('.fancybox').fancybox();
+
+        /* media effects*/  
+        $(document).ready(function() {
+            $('.fancybox-media').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                helpers : {
+                    media : {}
+                }
+            });
+        });
+
+    });
+</script>
