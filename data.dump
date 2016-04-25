@@ -1,0 +1,521 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+--
+-- Data for Name: areas; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY areas (id, name, level, description, created_at, updated_at, parent_id) FROM stdin;
+\.
+
+
+--
+-- Name: areas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('areas_id_seq', 1, false);
+
+
+--
+-- Data for Name: areas_products; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY areas_products (id, area_id, product_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: areas_products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('areas_products_id_seq', 1, false);
+
+
+--
+-- Data for Name: article_categories; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY article_categories (id, name, description, created_at, updated_at, level) FROM stdin;
+1	Projects		2016-04-22 03:19:49.63532	2016-04-22 03:19:50.919262	1
+2	News		2016-04-22 03:19:55.284682	2016-04-22 03:19:56.318239	1
+3	About Us		2016-04-22 03:20:07.813214	2016-04-22 03:20:09.038108	1
+4	Intro		2016-04-22 03:20:58.399486	2016-04-22 03:21:00.15553	1
+5	Slideshow		2016-04-22 03:21:34.114513	2016-04-22 03:21:35.558661	1
+\.
+
+
+--
+-- Data for Name: article_categories_articles; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY article_categories_articles (id, article_id, article_category_id, created_at, updated_at) FROM stdin;
+5	4	5	2016-04-22 03:50:29.447831	2016-04-22 03:50:29.447831
+14	7	3	2016-04-22 08:27:19.366135	2016-04-22 08:27:19.366135
+21	3	1	2016-04-23 02:42:38.995905	2016-04-23 02:42:38.995905
+22	3	5	2016-04-23 02:42:39.020016	2016-04-23 02:42:39.020016
+29	5	2	2016-04-23 03:52:30.836709	2016-04-23 03:52:30.836709
+30	11	1	2016-04-23 04:18:58.185769	2016-04-23 04:18:58.185769
+31	11	2	2016-04-23 04:18:58.206508	2016-04-23 04:18:58.206508
+\.
+
+
+--
+-- Name: article_categories_articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('article_categories_articles_id_seq', 31, true);
+
+
+--
+-- Name: article_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('article_categories_id_seq', 6, true);
+
+
+--
+-- Data for Name: articles; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY articles (id, image_url, title, content, tags, article_category_id, created_at, updated_at, code, location) FROM stdin;
+4	001.jpg	Công trình nhà máy Heineken – Phnom Penh – Cambodia		\N	\N	2016-04-22 03:50:29.44626	2016-04-22 03:50:29.44626	\N	\N
+3	003.jpg	Công trình nhà máy Heineken		\N	\N	2016-04-22 03:48:29.752415	2016-04-23 02:15:04.539373	\N	 Phnom Penh – Cambodia
+11	NPDN-150x150.jpg	Công trình nhà phố	<p>nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;nội dung&nbsp;</p>\r\n	\N	\N	2016-04-23 03:18:25.304408	2016-04-23 03:47:17.026094	\N	Đà Nẵng - Việt Nam
+7	logo.png	Về chúng tôi	<p>Nội dung</p>\r\n	\N	\N	2016-04-22 08:27:19.35031	2016-04-22 08:27:19.35031	\N	\N
+5	71f1849cb_anh_03.jpg	Tiết kiệm nước tiết kiệm năng lượng	<p style="text-align:justify">Khi n&oacute;i đến tiềm năng tiết kiệm năng lượng tại c&aacute;c t&ograve;a nh&agrave;, kh&aacute;ch sạn, ch&uacute;ng ta thường nghĩ ngay đến c&aacute;c hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu s&aacute;ng, &hellip; m&agrave; &iacute;t ai biết rằng hệ thống sử dụng nước cũng l&agrave; một khu vực ti&ecirc;u thụ năng lượng đ&aacute;ng kể.<br />\r\nC&oacute; nhiều giải ph&aacute;p để tiết kiệm nước như thay thế hệ thống v&ograve;i sen thế hệ cũ với lưu lượng nước ti&ecirc;u tốn 10 l&iacute;t/ph&uacute;t bằng loại v&ograve;i tắm c&ocirc;ng nghệ mới (sử dụng cơ chế h&ograve;a trộn c&aacute;c bọt kh&iacute; nhỏ v&agrave;o trong nước l&agrave;m cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ gi&uacute;p tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế b&agrave;n cầu c&oacute; dung t&iacute;ch bồn xả l&agrave; 12 l&iacute;t/ph&uacute;t bằng bằng b&agrave;n cầu ứng dụng hệ thống xả tiết kiệm v&agrave; hiệu quả sẽ kh&ocirc;ng chỉ gi&uacute;p giảm tiếng ồn m&agrave; c&ograve;n tiết kiệm đến 20% lượng nước sử dụng.<br />\r\nNgo&agrave;i ra, một trong những c&aacute;ch tiết kiệm nước cũng rất hiệu quả l&agrave; việc t&aacute;i sử dụng nước hoặc tận dụng nguồn nước mưa.<br />\r\nSơ đồ h&igrave;nh b&ecirc;n dưới l&agrave; 1 &yacute; tưởng d&ugrave;ng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu v&agrave; tưới c&acirc;y ngo&agrave;i vườn.</p>\r\n\r\n<p style="text-align:justify">&nbsp;</p>\r\n\r\n<p style="text-align:center"><img alt="^7E6D64F902D172C5C866291360ACB6B16907661DFC1DAC9181^pimgpsh_fullsize_distr" src="http://sao-ee.vn/wp-content/uploads/2015/07/%5E7E6D64F902D172C5C866291360ACB6B16907661DFC1DAC9181%5Epimgpsh_fullsize_distr-300x281.jpg" style="height:481px; width:500px" /></p>\r\n	\N	\N	2016-04-22 04:31:53.437525	2016-04-23 03:52:30.860646	\N	
+\.
+
+
+--
+-- Name: articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('articles_id_seq', 11, true);
+
+
+--
+-- Data for Name: articles_products; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY articles_products (id, article_id, product_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: articles_products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('articles_products_id_seq', 1, false);
+
+
+--
+-- Data for Name: carts; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY carts (id, created_at, updated_at) FROM stdin;
+1	2016-04-22 01:30:22.034456	2016-04-22 01:30:22.034456
+2	2016-04-22 03:13:31.660223	2016-04-22 03:13:31.660223
+3	2016-04-22 05:57:26.270265	2016-04-22 05:57:26.270265
+4	2016-04-22 06:55:13.682416	2016-04-22 06:55:13.682416
+5	2016-04-22 15:18:03.200933	2016-04-22 15:18:03.200933
+6	2016-04-22 17:26:21.161082	2016-04-22 17:26:21.161082
+7	2016-04-22 17:40:27.317551	2016-04-22 17:40:27.317551
+8	2016-04-22 17:40:45.468678	2016-04-22 17:40:45.468678
+9	2016-04-22 17:41:27.722741	2016-04-22 17:41:27.722741
+10	2016-04-23 01:22:12.992032	2016-04-23 01:22:12.992032
+11	2016-04-23 03:34:23.952939	2016-04-23 03:34:23.952939
+12	2016-04-25 02:05:20.284047	2016-04-25 02:05:20.284047
+\.
+
+
+--
+-- Name: carts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('carts_id_seq', 12, true);
+
+
+--
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY categories (id, name, level, description, created_at, updated_at, ordered) FROM stdin;
+\.
+
+
+--
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('categories_id_seq', 1, false);
+
+
+--
+-- Data for Name: categories_products; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY categories_products (id, product_id, category_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: categories_products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('categories_products_id_seq', 1, false);
+
+
+--
+-- Data for Name: compares; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY compares (id, created_at, updated_at) FROM stdin;
+1	2016-04-22 01:30:22.064469	2016-04-22 01:30:22.064469
+2	2016-04-22 03:13:31.693141	2016-04-22 03:13:31.693141
+3	2016-04-22 05:57:26.325486	2016-04-22 05:57:26.325486
+4	2016-04-22 06:55:13.722407	2016-04-22 06:55:13.722407
+5	2016-04-22 15:18:03.353133	2016-04-22 15:18:03.353133
+6	2016-04-22 17:26:21.255117	2016-04-22 17:26:21.255117
+7	2016-04-22 17:40:27.363003	2016-04-22 17:40:27.363003
+8	2016-04-22 17:40:45.507868	2016-04-22 17:40:45.507868
+9	2016-04-22 17:41:27.774671	2016-04-22 17:41:27.774671
+10	2016-04-23 01:22:13.049567	2016-04-23 01:22:13.049567
+11	2016-04-23 03:34:23.981698	2016-04-23 03:34:23.981698
+12	2016-04-25 02:05:20.595537	2016-04-25 02:05:20.595537
+\.
+
+
+--
+-- Name: compares_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('compares_id_seq', 12, true);
+
+
+--
+-- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY contacts (id, name, email, message, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('contacts_id_seq', 1, false);
+
+
+--
+-- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY customers (id, first_name, last_name, email, phone, company, address, city, zip_code, country, province, created_at, updated_at, order_id) FROM stdin;
+\.
+
+
+--
+-- Name: customers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('customers_id_seq', 1, false);
+
+
+--
+-- Data for Name: delivery_methods; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY delivery_methods (id, title, description, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: delivery_methods_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('delivery_methods_id_seq', 1, false);
+
+
+--
+-- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY products (id, name, code, quantity, unit, price, short_description, description, manufacturer_id, product_image_id, created_at, updated_at, tags, status) FROM stdin;
+\.
+
+
+--
+-- Data for Name: line_item_compares; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY line_item_compares (id, product_id, compare_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: line_item_compares_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('line_item_compares_id_seq', 1, false);
+
+
+--
+-- Data for Name: line_items; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY line_items (id, product_id, cart_id, created_at, updated_at, quantity) FROM stdin;
+\.
+
+
+--
+-- Name: line_items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('line_items_id_seq', 1, false);
+
+
+--
+-- Data for Name: manufacturers; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY manufacturers (id, image_url, name, address, description, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: manufacturers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('manufacturers_id_seq', 1, false);
+
+
+--
+-- Data for Name: newsletters; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY newsletters (id, email, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: newsletters_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('newsletters_id_seq', 1, false);
+
+
+--
+-- Data for Name: order_deliveries; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY order_deliveries (id, first_name, last_name, company, address, city, zip_code, country, province, delivery_method_id, payment_method_id, message, created_at, updated_at, order_id, email, phone) FROM stdin;
+\.
+
+
+--
+-- Name: order_deliveries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('order_deliveries_id_seq', 1, false);
+
+
+--
+-- Data for Name: order_details; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY order_details (id, order_id, product_id, quantity, price, created_at, updated_at, product_name) FROM stdin;
+\.
+
+
+--
+-- Name: order_details_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('order_details_id_seq', 1, false);
+
+
+--
+-- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY orders (id, created_at, updated_at, user_id, status, different_delivery) FROM stdin;
+\.
+
+
+--
+-- Name: orders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('orders_id_seq', 1, false);
+
+
+--
+-- Data for Name: parent_article_categories; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY parent_article_categories (id, parent_id, article_category_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: parent_article_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('parent_article_categories_id_seq', 1, false);
+
+
+--
+-- Data for Name: parent_categories; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY parent_categories (id, parent_id, category_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: parent_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('parent_categories_id_seq', 1, false);
+
+
+--
+-- Data for Name: payment_methods; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY payment_methods (id, title, description, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: payment_methods_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('payment_methods_id_seq', 1, false);
+
+
+--
+-- Data for Name: product_images; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY product_images (id, product_id, image_url, created_at, updated_at, is_main) FROM stdin;
+\.
+
+
+--
+-- Name: product_images_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('product_images_id_seq', 1, false);
+
+
+--
+-- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('products_id_seq', 1, false);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY schema_migrations (version) FROM stdin;
+20160406035423
+20160406060729
+20160406061501
+20160406072632
+20160406090918
+20160406093710
+20160407021915
+20160407022242
+20160407033416
+20160407034556
+20160407040834
+20160407041811
+20160407063600
+20160407071755
+20160407073929
+20160407090029
+20160407092753
+20160411022035
+20160411070126
+20160411090637
+20160412090455
+20160412091031
+20160412091620
+20160412092036
+20160413013557
+20160414070432
+20160414071647
+20160414071935
+20160414072251
+20160414072336
+20160414111647
+20160415024108
+20160415034338
+20160415045331
+20160415070403
+20160418084816
+20160419063009
+20160419063732
+20160419073354
+20160419084034
+20160419084328
+20160420021407
+20160420025319
+20160420031013
+20160420035639
+20160420071851
+20160420083852
+20160420083904
+20160423020338
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY users (id, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, created_at, updated_at, first_name, last_name, phone, fax, company, address_1, address_2, zip_code, country, province, city) FROM stdin;
+1	admin@hoangkhang.com.vn	$2a$10$Th9rqNct8nNgqZFhsI0kpON1jVcKUkdK8sx.4FNZpjfvlfY4lgM0.	\N	\N	\N	4	2016-04-23 02:28:28.726312	2016-04-23 02:08:06.199804	192.168.1.91	192.168.1.91	2016-04-22 01:29:59.233163	2016-04-23 02:28:28.734781	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('users_id_seq', 1, true);
+
+
+--
+-- Data for Name: wish_lists; Type: TABLE DATA; Schema: public; Owner: hungnt
+--
+
+COPY wish_lists (id, product_id, user_id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: wish_lists_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
+--
+
+SELECT pg_catalog.setval('wish_lists_id_seq', 1, false);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
