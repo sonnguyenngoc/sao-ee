@@ -22,7 +22,7 @@
 				<li><a href="<%= url_for(controller: 'home', action: 'sao') %>"><i class="fa fa-angle-right"></i> <%= t(:sao) %></a></li>
             </ul>
 			<ul class="list footer_info">
-				<li><a href="<%= url_for(controller: 'about_us', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:about_us) %></a></li>
+				<li><a href="<%= url_for(controller: 'about_us', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:about) %></a></li>
                 <li><a href="<%= url_for(controller: 'project', action: 'index') %>"><i class="fa fa-angle-right"></i> <%= t(:projects) %></a></li>
 			</ul>
 			<ul class="list footer_info">
@@ -39,16 +39,13 @@
             	<h2><%= t(:lastest_news) %> <i></i></h2>
                 
 				<ul class="recent_posts_list">
-					<li>
-						<span><a href="#"><img src="/frontend/layout2/images/news-tiet-kiem-nang-luong.jpg" alt="50x50" /></a></span>
-						<a href="#">Tiết kiệm nước tiết kiệm năng lượng</a>
-						 <i>January 13, 2014</i> 
-					</li>
-					<li class="last">
-						<span><a href="#"><img src="/frontend/layout2/images/news-tiet-kiem-nang-luong.jpg" alt="50x50" /></a></span>
-						<a href="#">Tiết kiệm nước tiết kiệm năng lượng</a>
-						 <i>January 11, 2014</i> 
-					</li>
+					<% @lastest_news.limit(2).each_with_index do |item, index| %>
+						<li class="<%= "last" if item == @lastest_news.limit(2).last %>">
+							<span><a href="#"><img src="<%= item.image_url.small_square_image %>" alt="50x50" /></a></span>
+							<%= link_to item.title, { controller: "news", action: "detail", article_id: item.id } %>
+							 <i><%= item.created_at.strftime("%B %d, %Y") %></i> 
+						</li>
+					<% end %>
 				</ul>
                 
             </div>

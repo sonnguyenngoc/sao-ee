@@ -118,7 +118,11 @@
                                       <%= item.title %><br/>
                                     </td>
                                     <td><%= truncate(strip_tags(item.content.html_safe), length: 150) %></td>
-                                    <td></td>
+                                    <td>
+                                        <span class="label label-info">
+                                            <%= item.article_categories.map(&:name).join("<br/>").html_safe %>
+                                        </span>
+                                    </td>
                                     <td><%= item.created_at.strftime("%d/%m/%Y") %></td>
                                     <td class="text-center">
                                         <ul class="icons-list">

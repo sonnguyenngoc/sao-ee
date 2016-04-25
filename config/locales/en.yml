@@ -1,10 +1,12 @@
 en:
   #-------------------------------------
+  location_title: "Location"
   call_us: "Call Us: "
   home: "Home"
   projects: "Projects"
   news: "News"
   about_us: "About Us"
+  about: "About Us"
   contact: "Contact"
   information: "Information"
   lastest_news: "Lastest News"

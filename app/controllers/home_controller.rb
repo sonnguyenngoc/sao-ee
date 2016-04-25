@@ -3,5 +3,10 @@ class HomeController < ApplicationController
     @title_head = "Trang chủ"
     @lastest_blog_posts = Article.get_lastest_blog_posts
     @slides = Article.get_all_slides
+    @lastest_news = Article.get_all_news
+    @projects = Article.get_all_projects
+  end
+  def sao
+    @lastest_news = Article.get_all_news
   end
 end

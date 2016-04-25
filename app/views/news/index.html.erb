@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag '/frontend/css/inspector-stylesheet.css' %>
 <div class="site_wrapper">
    
 
@@ -42,11 +43,11 @@
 				
 					<a href="blog-archive" class="date"><strong><%= item.created_at.strftime("%d") %></strong><i><%= item.created_at.strftime("%B") %></i></a>
 				
-					<h3><%= link_to item.title, { controller: 'news', action: 'detail' } %></h3>
+					<h3><%= link_to item.title, { controller: 'news', action: 'detail', article_id: item.id } %></h3>
 					
 					<div class="clearfix"></div>
 				
-					<p class="text-justifly"><%= truncate(strip_tags(item.content.html_safe), length: 150) %></p>
+					<p class="text-justifly"><%= truncate(strip_tags(item.content.html_safe), length: 177, omission: ' [..]') %></p>
 				
 				</div>
 			
@@ -58,15 +59,7 @@
 	  
 	<% end %>
     
-    <div class="pagination">
-    <b>Page 2 of 18</b>
-    <a href="#" class="navlinks">&lt; Previous</a>
-        <a href="#" class="navlinks">1</a>
-        <a href="#" class="navlinks current">2</a>
-        <a href="#" class="navlinks">3</a>
-        <a href="#" class="navlinks">4</a>
-        <a href="#" class="navlinks">Next ></a>
-    </div><!-- end pagination -->
+	<%= will_paginate @news, previous_label: '&lt; Previous', next_label: 'Next >', renderer: BootstrapPagination::Rails, class: 'span_pagi' %>
 
 </div><!-- end content left side area -->
 

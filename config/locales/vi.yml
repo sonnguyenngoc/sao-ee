@@ -1,10 +1,12 @@
 vi:
   #-------------------------------------
+  location_title: "Vị trí"
   call_us: "Gọi cho chúng tôi: "
   home: "Trang chủ"
   projects: "Công trình"
   news: "Tin tức"
   about_us: "Về chúng tôi"
+  about: "Giới thiệu"
   contact: "Liên hệ"
   information: "Thông tin"
   lastest_news: "Tin tức mới"

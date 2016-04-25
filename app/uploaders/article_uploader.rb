@@ -38,6 +38,15 @@ class ArticleUploader < CarrierWave::Uploader::Base
   version :slider_image do
     process :resize_to_fit => [1920, 500]
   end
+  version :post_image do
+    process :resize_to_fit => [810, 360]
+  end
+  version :medium_project_image do
+    process :resize_to_fit => [275, 250]
+  end
+  version :large_project_image do
+    process :resize_to_fit => [275, 300]
+  end
   version :larger_rectangle_image do
     process :resize_to_fit => [800, 450]
   end

@@ -1,24 +1,13 @@
-<div class="site-search-area">
-    
-    <form method="get" id="site-searchform" action="blog.html">
-    <div>
-    <input class="input-text" name="s" id="s" placeholder="Nhập từ khoá tìm kiếm..."s type="text" />
-    <input id="searchsubmit" value="Search" type="submit" />
-    </div>
-    </form>
-    
-</div><!-- end site search -->
-
-<div class="clearfix mar_top4"></div>
 
 <div class="sidebar_widget">
 
     <div class="sidebar_title"><h3><i><%= t(:lastest_news) %></i></h3></div>
     <ul class="recent_posts_list">
-        <% @news.limit(3).each do |item| %>
+
+        <% @lastest_news.limit(3).each do |item| %>
             <li>
                 <span><a href="#"><img src="<%= item.image_url.small_square_image %>" alt="50x50" /></a></span>
-                <a href="#"><%= item.title %></a>
+                <%= link_to item.title, { controller: "news", action: "detail", article_id: item.id } %>
                  <i><%= item.created_at.strftime("%B %d, %Y") %></i> 
             </li>	
         <% end %>
@@ -35,60 +24,32 @@
     <div class="portfolio_sidebar_widget">
     
         <ul id="mycarouseltwo" class="jcarousel-skin-tango">
-      
-        <li>
-            <div class="item">                        
-            <div class="fresh_projects_list">
-                <section class="cheapest">
-                    <div class="display">                  
-                        <div class="small-group">        
-                            <div class="small money">
-                                    <img src="http://placehold.it/275x250" alt="">
-                                    <div class="info">
-                                        <div class="title">Nhà máy Heineken <br /><em>Phnom Penh – Cambodia</em></div>
-                                        <div class="additionnal">
-                                            There are many variations pasages
-                                            lpsum available but in the majority
-                                            have suffered alteration [...]<br /><br />
-                                            <b><a href="#">chi tiết ></a></b>
-                                        </div>
-                                    </div>
-                                    <div class="hover"></div> 
-                            </div>        
-                        </div>     
+            <% @projects.each do |item| %>
+                <li>
+                    <div class="item">                        
+                        <div class="fresh_projects_list">
+                            <section class="cheapest">
+                                <div class="display">                  
+                                    <div class="small-group">        
+                                        <div class="small money">
+                                                <img src="<%= item.image_url.medium_project_image %>" alt="275x250">
+                                                <div class="info">
+                                                    <div class="title"><%= item.title %> <br /><em><%= item.location %></em></div>
+                                                    <div class="additionnal" style="text-align: justify">
+                                                        <%= truncate(strip_tags(item.content.html_safe), length: 130, omission: ' [..]') %><br /><br />
+                                                        <b><%= link_to 'chi tiết >', { controller: "project", action: "detail", article_id: item.id } %></b>
+                                                    </div>
+                                                </div>
+                                                <div class="hover"></div> 
+                                        </div>        
+                                    </div>     
+                                </div>
+                            </section>
+                        </div>
                     </div>
-                </section>
-            </div>
-            </div>
-        </li><!-- end item -->
-        
-        <li>
-            <div class="item">                        
-            <div class="fresh_projects_list">
-                <section class="cheapest">
-                    <div class="display">                  
-                        <div class="small-group">        
-                            <div class="small money">
-                                    <img src="http://placehold.it/275x250" alt="">
-                                    <div class="info">
-                                        <div class="title">Nhà phố <br /><em>Đà Nẵng – Việt Nam</em></div>
-                                        <div class="additionnal">
-                                            There are many variations pasages
-                                            lpsum available but in the majority
-                                            have suffered alteration [...]<br /><br />
-                                            <b><a href="#">chi tiết ></a></b>
-                                        </div>
-                                    </div>
-                                    <div class="hover"></div> 
-                            </div>        
-                        </div>     
-                    </div>
-                </section>
-            </div>
-            </div>
-        </li><!-- end item -->
-             
-      </ul>
+                </li><!-- end item -->
+            <% end %>
+        </ul>
       
     </div>
               

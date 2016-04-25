@@ -30,7 +30,7 @@
         </h1>
         
         <ul id="mycarouseltwo" class="jcarousel-skin-tango">
-          
+          <% @projects.each do |item| %>
             <li>
                 <div class="item">                        
                 <div class="fresh_projects_list">
@@ -38,14 +38,12 @@
                         <div class="display">                  
                             <div class="small-group">        
                                 <div class="small money">
-                                        <img src="/frontend/images/HF1-150x150.jpg" alt="275x300">
+                                        <img src="<%= item.image_url.large_project_image %>" alt="275x300">
                                         <div class="info">
-                                            <div class="title">Công trình nhà máy Heineken <br /><em>Phnom Penh – Cambodia</em>
+                                            <div class="title"><%= item.title %><br /><em><%= item.location %></em>
 											</div>
                                             <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
+                                            	<%= truncate(strip_tags(item.content.html_safe), length: 130, omission: ' [..]') %><br /><br />
                                                 <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
                                             </div>
                                         </div>
@@ -57,168 +55,7 @@
                 </div>
                 </div>
             </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="/frontend/images/NPDN2-150x150.jpg" alt="275x300">
-                                        <div class="info">
-                                            <div class="title">Công trình nhà phố <br /><em>Đà Nẵng – Việt Nam</em>
-											</div>
-                                            <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div> 
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="http://placehold.it/275x300" alt="">
-                                        <div class="info">
-                                            <div class="title">Công trình ABC <br /><em>TP. Hồ Chí Minh</em>
-											</div>
-                                            <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="http://placehold.it/275x300" alt="">
-                                        <div class="info">
-                                            <div class="title">Công trình nhà phố <br /><em>Đà Nẵng – Việt Nam</em>
-											</div>
-                                            <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>  
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="http://placehold.it/275x300" alt="">
-                                        <div class="info">
-                                            <div class="title">Công trình nhà máy Heineken <br /><em>Phnom Penh – Cambodia</em>
-											</div>
-                                            <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="http://placehold.it/275x300" alt="">
-                                        <div class="info">
-										  <div class="title">Công trình nhà máy Heineken <em>Phnom Penh – Cambodia</em>
-										  </div>
-                                            <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-            
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="http://placehold.it/275x300" alt="">
-                                        <div class="info">
-                                            <div class="title">Công trình nhà máy Heineken <br /><em>Phnom Penh – Cambodia</em>
-											</div>
-                                            <div class="additionnal">
-                                            	There are many variations pasages
-                                                lpsum available but in the majority
-                                                have suffered alteration [...]<br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div>   
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
+		  <% end %>
                
           </ul>
         
@@ -238,48 +75,21 @@
 	<h1><i></i>
     <strong><%= t(:news) %></strong>
 	</h1>
-
-	<div class="one_third">
-    	
-        <div class="left">
-        
-        	<h4>Tiết kiệm nước tiết kiệm nă[..]</h4>
-			<p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thườ [..]</p>
-            <a href="<%= url_for(controller: 'news', action: 'detail') %>"><i class="fa fa-plus-square"></i>&nbsp; Đọc tiếp</a>
-		
-        </div>
-        
-        <div class="right one"><img src="/frontend/layout2/images/news-home-tiet-kiem-nang-luong.jpg" alt="200x250" /></div>
-
-    </div><!-- end section -->
-    
-    <div class="one_third">
-    	
-        <div class="left">
-        
-        	<h4>Tiết kiệm nước tiết kiệm nă[..]</h4>
-			<p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thườ [..]</p>
-            <a href="<%= url_for(controller: 'news', action: 'detail') %>"><i class="fa fa-plus-square"></i>&nbsp; Đọc tiếp</a>
-		
-        </div>
-        
-        <div class="right one"><img src="/frontend/layout2/images/news-home-tiet-kiem-nang-luong.jpg" alt="200x250" /></div>
-
-    </div><!-- end section -->
-    
-    <div class="one_third last">
-    	
-        <div class="left">
-        
-        	<h4>Tiết kiệm nước tiết kiệm nă[..]</h4>
-			<p>Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thườ [..]</p>
-            <a href="<%= url_for(controller: 'news', action: 'detail') %>"><i class="fa fa-plus-square"></i>&nbsp; Đọc tiếp</a>
-		
-        </div>
-        
-        <div class="right one"><img src="/frontend/layout2/images/news-home-tiet-kiem-nang-luong.jpg" alt="200x250" /></div>
-
-    </div><!-- end section -->
+	<% @lastest_news.limit(3).each_with_index do |item, index| %>
+	  <div class="one_third <%= "last" if item == @lastest_news.limit(3).last %>">
+		  
+		  <div class="left">
+		  
+			  <h4><%= item.title %></h4>
+			  <p><%= truncate(strip_tags(item.content), :length => 65) %></p>
+			  <a href="<%= url_for(controller: 'news', action: 'detail', article_id: item.id) %>"><i class="fa fa-plus-square"></i>&nbsp; Đọc tiếp</a>
+		  
+		  </div>
+		  
+		  <div class="right one"><img src="/frontend/layout2/images/news-home-tiet-kiem-nang-luong.jpg" alt="200x250" /></div>
+  
+	  </div><!-- end section -->
+	<% end %>
        
 </div>
 </div><!-- end features section 1 -->
