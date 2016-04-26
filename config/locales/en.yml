@@ -141,3 +141,17 @@ en:
   
   #-------------------------------------
   voucher_coupon: "Voucher/Coupon"
+  
+  
+  
+  
+  #frontend
+  fr_home: "Home"
+  fr_about: "About Us"
+  fr_project: "Projects"
+  fr_news: "News"
+  fr_contact: "Contact"
+  
+  fr_project_image: "Pictures of Projects"
+  fr_project_title: "PICTURES OF PROJECTS IMPLEMENTED"
+  fr_company: "Simulation-Analysis-Optimization Energy Efficiency"

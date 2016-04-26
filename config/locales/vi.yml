@@ -141,3 +141,17 @@ vi:
   
   #-------------------------------------
   voucher_coupon: "Phiếu mua hàng/Quà tặng"
+  
+  
+  
+  
+  #frontend
+  fr_home: "Trang chủ"
+  fr_about: "Về chúng tôi"
+  fr_project: "Dự án"
+  fr_news: "Tin tức"
+  fr_contact: "Liên hệ"
+  
+  fr_project_image: "Hình ảnh dự án"
+  fr_project_title: "HÌNH ẢNH VỀ CÁC DỰ ÁN CÔNG TY ĐÃ THỰC HIỆN"
+  fr_company: "CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO"

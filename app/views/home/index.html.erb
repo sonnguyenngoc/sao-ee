@@ -25,15 +25,15 @@
 
 						<ul id="fixed-nav">
 
-							<li class="current"><a href="#home">Trang chủ</a></li>
+							<li class="current"><a href="#home"><%= t(:fr_home) %></a></li>
 
-							<li><a href="#about_us">Về chúng tôi</a></li>
+							<li><a href="#about_us"><%= t(:fr_about) %></a></li>
 
-							<li><a href="#portfolio">Dự án</a></li>
+							<li><a href="#portfolio"><%= t(:fr_project) %></a></li>
 
-							<li><a href="#news">Tin tức</a></li>
+							<li><a href="#news"><%= t(:fr_news) %></a></li>
 
-							<li><a href="#contact">Liên hệ</a></li>
+							<li><a href="#contact"><%= t(:fr_contact) %></a></li>
 
 							<li>
 								<% if params[:locale] == "en" %>
@@ -165,8 +165,8 @@
 
 						<p class="font-content"><%= @about_us.display_content(params[:locale]).html_safe %></p><br /><br />
 
-						<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; Hình ảnh dự án</a>
-						<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; Liên hệ</a>
+						<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; <%= t(:fr_project_image) %></a>
+						<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; <%= t(:fr_contact) %></a>
 
 					</div>
 					<!-- end right -->
@@ -253,9 +253,9 @@
 
 				<div class="portfolio_page">
 
-					<h1>DỰ ÁN</strong>
+					<h1><%= t(:fr_project) %></strong>
 					<br />
-					<i>HÌNH ẢNH VỀ CÁC DỰ ÁN CÔNG TY ĐÃ THỰC HIỆN</i>
+					<i><%= t(:fr_project_title) %></i>
 					</h1>
 
 					<div class="portfolioFilter">
@@ -339,7 +339,7 @@
 
 					<div class="one_half">
 
-						<h3>CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO</h3>
+						<h3><%= t(:fr_company) %></h3>
 
 						<div class="clearfix"></div>
 
