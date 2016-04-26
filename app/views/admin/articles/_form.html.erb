@@ -15,6 +15,7 @@
         <ul class="nav nav-tabs bg-primary">
             <li class="active"><a href="#control-tab1" data-toggle="tab">English</a></li>
             <li><a href="#control-tab2" data-toggle="tab">Tiếng Việt </a></li>
+            <li><a href="#listing_images" data-toggle="tab">Listing Images </a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane has-padding active" id="control-tab1">
@@ -73,6 +74,36 @@
                 </div>
                 <div class="mb-15">
                     <%= f.text_area :content_vi, rows: "4", cols: "4", id: "editor-full-vi" %>
+                </div>
+            </div>
+            
+            <div class="tab-pane has-padding" id="listing_images">
+                <div class="form-group">
+                    <%= f.label "Listing Images: ", class: "col-lg-2 control-label" %>
+                    <div class="col-lg-10">
+                        <% index = 0 %>
+                        <%= f.fields_for :article_list_images do |ff| %>
+                            <% g = @article.article_list_images[index] %>
+                            <%= ff.hidden_field :id %>
+                            
+                            <div class="col-lg-8 padding-bottom">
+                                <%= ff.file_field :image_url, class: "file-styled margin-bottom" %>
+                                <br /><br />
+                            </div>
+                            <% if g.image_url? %>
+                              <div class="col-lg-3 padding-bottom">
+                                  <img style="width: 100%; margin-bottom: 10px;" src="<%= g.image_url.medium_project_image if g.image_url? %>" />
+                              </div>
+                            <% end %>
+                            <% if g.image_url? %>
+                              <div class="col-lg-1 padding-bottom">
+                                  <%= ff.check_box :_destroy %>
+                                  <%= ff.label :_destroy, 'Remove' %>
+                              </div>
+                            <% end %>
+                          <% index += 1 %>
+                        <% end %>
+                    </div>
                 </div>
             </div>
         </div>
