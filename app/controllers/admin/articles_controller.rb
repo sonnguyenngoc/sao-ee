@@ -22,12 +22,18 @@ class Admin::ArticlesController < ApplicationController
     @article = Article.new
     @article_categories = ArticleCategory.all
     @products = Product.all
+    20.times do
+      @article.article_list_images.build
+    end
   end
 
   # GET /articles/1/edit
   def edit
     @article_categories = ArticleCategory.all
     @products = Product.all
+    (20-@article.article_list_images.count).times do
+      @article.article_list_images.build
+    end
   end
 
   # POST /articles
@@ -106,6 +112,6 @@ class Admin::ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:image_url, :title, :content, :tags, :article_category_id, :code, :location, :title_vi, :content_vi)
+      params.require(:article).permit(:image_url, :title, :content, :tags, :article_category_id, :code, :location, :title_vi, :content_vi, article_list_images_attributes: [:id, :image_url, :article_id, :_destroy])
     end
 end
