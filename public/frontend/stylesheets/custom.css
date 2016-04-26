@@ -12,7 +12,7 @@
 }
 @media only screen and (max-width: 479px){
 	#top-nav #fixed-nav li a {
-		height: 28px;
+		height: 40px;
 	    line-height: 50px;
 	    padding: 0 3px;
 	    font-size: 12px;
@@ -32,4 +32,57 @@
 }
 .iosSlider .slide_one {
 	padding-top: 0 !important;
+}
+.blocklabel {
+    float: left;
+    width: 22%;
+    display: block;
+    margin-top: 10px;
+}
+.input_bg {
+    float: left;
+    width: 75%;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    padding: 0px 0px 0px 10px;
+    border-top: 2px solid #e1e1e1;
+    border-left: 2px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.textarea_bg {
+    float: left;
+    width: 73%;
+    height: 100px;
+    padding: 7px 10px 0px 10px;
+    margin-bottom: 20px;
+    border-top: 2px solid #e1e1e1;
+    border-left: 2px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.input-contact {
+	width: 100%;
+	margin-bottom: 0.8em;
+	height: 32px;
+}
+.comment_submit {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 9px 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #333;
+    text-transform: uppercase;
+	float: right;
 }

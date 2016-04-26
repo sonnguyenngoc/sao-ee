@@ -71,6 +71,16 @@ class Article < ActiveRecord::Base
         return record
       end
     #intro
+    
+    #s-a-o
+      def self.get_saos
+        records = self.all
+        records = records.joins(:article_categories).where(article_categories: {name: "S-A-O"})
+        record = records.order("created_at DESC").first
+        
+        return record
+      end
+    #intro
   
   ##get article
   

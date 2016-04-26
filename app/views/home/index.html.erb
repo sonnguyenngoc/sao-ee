@@ -68,86 +68,8 @@
 
 
 <div id="home">
-
-	<!-- Slider
-======================================= -->
-
-	<div class="container_full">
-
-		<!--<!--<div class="fullwidthbanner-container">-->-->
-		<!--<!---->-->
-		<!--<!--	<div class="fullwidthbanner">-->-->
-		<!--		-->
-		<!--		<!---->
-		<!--		<ul>-->
-		<!--			<!-- SLIDE 1 -->-->
-		<!--			<!--<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->
-		<!---->
-		<!--				<img src="http://placehold.it/1920x580" alt="" />-->
-		<!---->
-		<!--				<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>-->
-		<!---->
-		<!--				<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">Look at <b>featured</b></div>-->
-		<!---->
-		<!--				<div class="caption sfr stb small_text" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">website themes all of joosa.</div>-->
-		<!---->
-		<!--				<div class="caption sfr stb vary_small_text" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">We hope that you enjoy it.</div>-->
-		<!---->
-		<!--				<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider">get started <i class="fa fa-chevron-circle-right"></i></a></div>-->
-		<!---->
-		<!--			</li>-->-->
-		<!---->
-		<!--			<!-- SLIDE 2 -->-->
-		<!--			<!--<li data-transition="slideleft" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
-		<!--			<!---->-->
-		<!--			<!--	<img src="http://placehold.it/1920x580" alt="" />-->-->
-		<!--			<!---->-->
-		<!--			<!--	<div class="caption sfb" data-x="570" data-y="0" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>-->-->
-		<!--			<!---->-->
-		<!--			<!--	<div class="caption sfr stb large_text two" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">5 Diffrent <b>Websites</b></div>-->-->
-		<!--			<!---->-->
-		<!--			<!--	<div class="caption sfr stb small_text two" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">Corporate. Creative. Medical. </div>-->-->
-		<!--			<!---->-->
-		<!--			<!--	<div class="caption sfr stb small_text two" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">Hosting. One Page Themes</div>-->-->
-		<!--			<!---->-->
-		<!--			<!--	<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider two">get started <i class="fa fa-chevron-circle-right"></i></a></div>-->-->
-		<!--			<!---->-->
-		<!--			<!--</li>-->-->
-		<!---->
-		<!---->
-		<!---->
-		<!--			<!-- SLIDE 3 -->-->
-		<!--		<!--	<li data-transition="papercut" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
-		<!--		<!---->-->
-		<!--		<!--		<img src="http://placehold.it/1920x580" alt="" />-->-->
-		<!--		<!---->-->
-		<!--		<!--		<div class="caption sfb" data-x="0" data-y="240" data-speed="900" data-start="900" data-easing="easeOutSine">-->-->
-		<!--		<!--			<div class="display_text_center"><img src="http://placehold.it/600x580" alt="" /></div>-->-->
-		<!--		<!--		</div>-->-->
-		<!--		<!---->-->
-		<!--		<!--		<div class="caption sfb stb" data-x="0" data-y="80" data-speed="900" data-start="700" data-easing="easeOutExpo">-->-->
-		<!--		<!--			<div class="display_text_center">-->-->
-		<!--		<!--				<h3>Find the Benefits of Using Joosa. &amp; Recommended Highly</h3></div>-->-->
-		<!--		<!--		</div>-->-->
-		<!--		<!---->-->
-		<!--		<!--		<div class="caption sfb stb" data-x="0" data-y="130" data-speed="900" data-start="1200" data-easing="easeOutExpo">-->-->
-		<!--		<!--			<div class="display_text_center">-->-->
-		<!--		<!--				<h2>We Build Smarter Stuff! on TF</h2></div>-->-->
-		<!--		<!--		</div>-->-->
-		<!--		<!---->-->
-		<!--		<!---->-->
-		<!--		<!--	</li>-->-->
-		<!--		<!---->-->
-		<!--		<!--</ul>-->-->
-		<!---->
-		<!--	</div>-->
-		<!---->
-		<!--</div>-->
-
-	</div>
-	<!-- end slider -->
-
-	<div class="clearfix"></div>
+	
+	<!--render 'slide'-->
 
 	<div>
 
@@ -220,16 +142,12 @@
 
 											</div>
 
-
 										</div>
 									</div>
 
 								</div>
 
 							</div>
-
-
-						
 
 						</div>
 
@@ -243,6 +161,33 @@
 		</div>
 	</div>
 	<!-- end services -->
+	
+	<div class="clearfix"></div>
+	
+	<div>
+
+		<div class="aboutpage_section">
+
+			<div id="about_us" class="joosa">
+				<div class="container">
+
+					<div class="article-sao">
+
+						<h3><%= @saos.display_title(params[:locale]) %></h3>
+
+						<p class="font-content"><img src="<%= @saos.image_url %>" alt="Full" /></p>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- end features section 2 -->
+
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+	<!-- end about -->
 
 	<div class="clearfix"></div>
 
@@ -339,7 +284,7 @@
 
 					<div class="one_half">
 
-						<h3><%= t(:fr_company) %></h3>
+						<h3><%= t(:company_name) %></h3>
 
 						<div class="clearfix"></div>
 
@@ -349,7 +294,7 @@
 
 								<ul class="address">
 
-									<li><i class="fa fa-map-marker fa-lg"></i> 901, 9th Fl., 68 Nguyen Hue Blvd., Ben Nghe Ward, District 1</li>
+									<li><i class="fa fa-map-marker fa-lg"></i> <%= t(:company_address) %></li>
 
 									<li class="last"><i class="fa fa-envelope"></i> <a href="mailto:info@sao-ee.vn">info@sao-ee.vn</a></li>
 
@@ -379,16 +324,45 @@
 
 						<h3>LIÊN KẾT TRANG</h3>
 
-						<ul class="footer_social_links">
-							<li><a href="#facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
-							<li><a href="#twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
-							<li><a href="#google_plus"><i class="fa fa-google-plus"></i> Google +</a></li>
-							<li><a href="#linkedin"><i class="fa fa-linkedin"></i> Linkedin</a></li>
-							<li><a href="#skype"><i class="fa fa-skype"></i> Skype</a></li>
-							<li><a href="#flickr"><i class="fa fa-flickr"></i> Flickr</a></li>
-							<li><a href="#youtube"><i class="fa fa-youtube"></i> Youtube</a></li>
-							<li><a href="#rss"><i class="fa fa-rss"></i> RSS</a></li>
-						</ul>
+						<!--<ul class="footer_social_links">-->
+						<!--	<li><a href="#facebook"><i class="fa fa-facebook"></i> Facebook</a></li>-->
+						<!--	<li><a href="#twitter"><i class="fa fa-twitter"></i> Twitter</a></li>-->
+						<!--	<li><a href="#google_plus"><i class="fa fa-google-plus"></i> Google +</a></li>-->
+						<!--	<li><a href="#linkedin"><i class="fa fa-linkedin"></i> Linkedin</a></li>-->
+						<!--	<li><a href="#skype"><i class="fa fa-skype"></i> Skype</a></li>-->
+						<!--	<li><a href="#flickr"><i class="fa fa-flickr"></i> Flickr</a></li>-->
+						<!--	<li><a href="#youtube"><i class="fa fa-youtube"></i> Youtube</a></li>-->
+						<!--	<li><a href="#rss"><i class="fa fa-rss"></i> RSS</a></li>-->
+						<!--</ul>-->
+						<form action="" method="post">
+    
+							<fieldset>
+								<label for="name" class="blocklabel">Your Name*</label>
+								<p class="input-contact"><input name="yourname" class="input_bg" type="text" id="name" value="" placeholder="Your Name"></p>
+						
+								
+								<label for="email" class="blocklabel">E-Mail*</label>
+								<p class="input-contact"><input name="email" class="input_bg" type="text" id="email" value="" placeholder="Email"></p>
+								
+								
+								<label for="website" class="blocklabel">Phone</label>
+								<p class="input-contact"><input name="phone" class="input_bg" type="text" id="website" value="" placeholder="Phone"></p>
+								
+								
+								<label for="message" class="blocklabel">Your Message*</label>
+								<p class="input-contact"><textarea name="message" class="textarea_bg" id="message" cols="20" rows="7" placeholder="Message"></textarea></p><p>
+								</p><div class="clearfix"></div>
+								<input name="Send" type="submit" value="SUBMIT" class="comment_submit" id="send"><p></p>
+								<!---->
+								<!--<div class="success">-->
+								<!--	<div class="message-box-wrap">-->
+								<!--	   Your message has been <strong>Received Successfully!</strong> Thank you!-->
+								<!--	</div>-->
+								<!--</div>-->
+							
+							</fieldset>
+							
+						</form>
 
 					</div>
 
