@@ -51,6 +51,7 @@ COPY article_categories (id, name, description, created_at, updated_at, level) F
 3	About Us		2016-04-22 03:20:07.813214	2016-04-22 03:20:09.038108	1
 4	Intro		2016-04-22 03:20:58.399486	2016-04-22 03:21:00.15553	1
 5	Slideshow		2016-04-22 03:21:34.114513	2016-04-22 03:21:35.558661	1
+7	S-A-O		2016-04-26 09:37:04.921058	2016-04-26 09:37:04.921058	\N
 \.
 
 
@@ -60,12 +61,12 @@ COPY article_categories (id, name, description, created_at, updated_at, level) F
 
 COPY article_categories_articles (id, article_id, article_category_id, created_at, updated_at) FROM stdin;
 5	4	5	2016-04-22 03:50:29.447831	2016-04-22 03:50:29.447831
-21	3	1	2016-04-23 02:42:38.995905	2016-04-23 02:42:38.995905
-22	3	5	2016-04-23 02:42:39.020016	2016-04-23 02:42:39.020016
 39	5	2	2016-04-26 05:41:09.311846	2016-04-26 05:41:09.311846
 41	12	4	2016-04-26 06:29:12.409578	2016-04-26 06:29:12.409578
 43	7	3	2016-04-26 06:39:16.246486	2016-04-26 06:39:16.246486
-44	11	1	2016-04-26 06:58:17.199511	2016-04-26 06:58:17.199511
+45	3	1	2016-04-26 08:23:30.743303	2016-04-26 08:23:30.743303
+46	11	1	2016-04-26 08:24:23.262707	2016-04-26 08:24:23.262707
+48	13	7	2016-04-26 09:38:16.657796	2016-04-26 09:38:16.657796
 \.
 
 
@@ -73,14 +74,14 @@ COPY article_categories_articles (id, article_id, article_category_id, created_a
 -- Name: article_categories_articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
 --
 
-SELECT pg_catalog.setval('article_categories_articles_id_seq', 44, true);
+SELECT pg_catalog.setval('article_categories_articles_id_seq', 48, true);
 
 
 --
 -- Name: article_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
 --
 
-SELECT pg_catalog.setval('article_categories_id_seq', 6, true);
+SELECT pg_catalog.setval('article_categories_id_seq', 7, true);
 
 
 --
@@ -98,6 +99,7 @@ COPY article_list_images (id, article_id, image_url, created_at, updated_at) FRO
 8	11	Picture15_fixed.jpg	2016-04-26 06:58:47.382799	2016-04-26 06:58:47.382799
 9	11	Picture16_fixed.jpg	2016-04-26 06:58:47.449912	2016-04-26 06:58:47.449912
 10	11	Picture17_fixed.jpg	2016-04-26 06:58:47.512209	2016-04-26 06:58:47.512209
+11	13	bai1.png	2016-04-26 09:37:53.798121	2016-04-26 09:37:53.798121
 \.
 
 
@@ -105,7 +107,7 @@ COPY article_list_images (id, article_id, image_url, created_at, updated_at) FRO
 -- Name: article_list_images_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
 --
 
-SELECT pg_catalog.setval('article_list_images_id_seq', 10, true);
+SELECT pg_catalog.setval('article_list_images_id_seq', 11, true);
 
 
 --
@@ -114,11 +116,12 @@ SELECT pg_catalog.setval('article_list_images_id_seq', 10, true);
 
 COPY articles (id, image_url, title, content, tags, article_category_id, created_at, updated_at, code, location, title_vi, content_vi) FROM stdin;
 4	001.jpg	Công trình nhà máy Heineken – Phnom Penh – Cambodia		\N	\N	2016-04-22 03:50:29.44626	2016-04-22 03:50:29.44626	\N	\N	\N	\N
-3	003.jpg	Công trình nhà máy Heineken		\N	\N	2016-04-22 03:48:29.752415	2016-04-23 02:15:04.539373	\N	\N	\N	\N
+3	003.jpg	 Project Heineken Factory - Phnom Penh - Combodia 		\N	\N	2016-04-22 03:48:29.752415	2016-04-26 08:23:30.778342	\N	Phnom Penh - Combodia	Công trình nhà máy Heineken - Phnom Penh - Combodia 	<p>C&ocirc;ng tr&igrave;nh Heineken - Phnom Penh - Combodia</p>\r\n
 5	_7E6D64F902D172C5C866291360ACB6B16907661DFC1DAC9181_pimgpsh_fullsize_distr.jpg	Saving water saves energy	<p>When talking about saving energy for building, hotel&hellip; most of us will think about the system which consume a lot of energy like HVAC system or Lighting system &hellip; but almost forgot that plumbing system also consumes a considerable amount of energy too. There were many solutions for saving water like change old genration valve/shower system (consuming flow about 2.642gallon/min) to the newer generation (which using mechanism that mix small air bubbles into water and make user still feel fully water impulsiveness) that saving 35% amount of water; or change the toilet has flush tank(cap. 3.17 gallon/min) to water-efficient toilet that help reduce the noise and save 20% amount of water. Moreover, one of saving water solutions is recycling water or utilizing rainwater. The diagram below show a solution that use underground rainwater storage tank for toilet, unrinal and watering plants.</p>\r\n	\N	\N	2016-04-22 04:31:53.437525	2016-04-26 05:41:09.378815	\N		Tiết kiệm nước tiết kiệm năng lượng	<p style="text-align:justify">Khi n&oacute;i đến tiềm năng tiết kiệm năng lượng tại c&aacute;c t&ograve;a nh&agrave;, kh&aacute;ch sạn, ch&uacute;ng ta thường nghĩ ngay đến c&aacute;c hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu s&aacute;ng, &hellip; m&agrave; &iacute;t ai biết rằng hệ thống sử dụng nước cũng l&agrave; một khu vực ti&ecirc;u thụ năng lượng đ&aacute;ng kể.<br />\r\nC&oacute; nhiều giải ph&aacute;p để tiết kiệm nước như thay thế hệ thống v&ograve;i sen thế hệ cũ với lưu lượng nước ti&ecirc;u tốn 10 l&iacute;t/ph&uacute;t bằng loại v&ograve;i tắm c&ocirc;ng nghệ mới (sử dụng cơ chế h&ograve;a trộn c&aacute;c bọt kh&iacute; nhỏ v&agrave;o trong nước l&agrave;m cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ gi&uacute;p tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế b&agrave;n cầu c&oacute; dung t&iacute;ch bồn xả l&agrave; 12 l&iacute;t/ph&uacute;t bằng bằng b&agrave;n cầu ứng dụng hệ thống xả tiết kiệm v&agrave; hiệu quả sẽ kh&ocirc;ng chỉ gi&uacute;p giảm tiếng ồn m&agrave; c&ograve;n tiết kiệm đến 20% lượng nước sử dụng.<br />\r\nNgo&agrave;i ra, một trong những c&aacute;ch tiết kiệm nước cũng rất hiệu quả l&agrave; việc t&aacute;i sử dụng nước hoặc tận dụng nguồn nước mưa.<br />\r\nSơ đồ h&igrave;nh b&ecirc;n dưới l&agrave; 1 &yacute; tưởng d&ugrave;ng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu v&agrave; tưới c&acirc;y ngo&agrave;i vườn.</p>\r\n
 12	intros.png	Introduce	<p>Design, built and manage an energy saving building may be a hard and complicated task. Energy simulating can help you analyze the movement of energy through space and volume. The result can help designer make better choice to decrease price, improve efficiency, and decrease the affect to environment of buildings.</p>\r\n\r\n<p>In a whole life-cycle of a building (about 30 years), the initial costs for design &amp; construction take 36%, but the cost for operation and maintenance take 64%.</p>\r\n\r\n<p>The costs for maintenance and operation more important than the total cost for designing and construction at least 2 times.</p>\r\n\r\n<p>This clearly prove to us about the important of designing and managerment a energy efficient building</p>\r\n	\N	\N	2016-04-26 06:22:58.854886	2016-04-26 06:29:14.962303	\N		Giới thiệu	<p>Thiết kế, x&acirc;y dựng v&agrave; quản l&yacute; một t&ograve;a nh&agrave; tiết kiệm năng lượng c&oacute; thể l&agrave; một nhiệm vụ phức tạp v&agrave; kh&oacute; khăn. M&ocirc; phỏng năng lượng c&oacute; thể gi&uacute;p bạn ph&acirc;n t&iacute;ch chuyển động ra v&agrave;o của năng lượng th&ocirc;ng qua kh&ocirc;ng gian v&agrave; khối t&iacute;ch trong m&ocirc; h&igrave;nh. Th&ocirc;ng tin n&agrave;y c&oacute; thể gi&uacute;p c&aacute;c nh&agrave; thiết kế đưa ra quyết định tốt hơn l&agrave;m giảm chi ph&iacute;, cải thiện hiệu quả, hiệu suất v&agrave; giảm thiểu t&aacute;c động m&ocirc;i trường của c&aacute;c t&ograve;a nh&agrave;.</p>\r\n\r\n<p>X&eacute;t toàn v&ograve;ng đời trong khoảng 30 năm, c&aacute;c chi ph&iacute; ban đầu cho thiết kế v&agrave; x&acirc;y dựng c&ocirc;ng tr&igrave;nh chỉ chiếm khoảng 36% tr&ecirc;n tổng chi ph&iacute;, trong khi đ&oacute; c&aacute;c chi ph&iacute; về vận h&agrave;nh v&agrave; bảo tr&igrave; tương đương 64%</p>\r\n\r\n<p>C&aacute;c chi ph&iacute; về vận h&agrave;nh v&agrave; bảo tr&igrave; quan trọng hơn gấp 2 lần so với tổng c&aacute;c chi ph&iacute; về thiết kế v&agrave; thi c&ocirc;ng cộng lại.<br />\r\nĐiều n&agrave;y chứng minh một c&aacute;ch r&otilde; r&agrave;ng về tầm quan trọng của việc thiết kế v&agrave; quản l&yacute; t&ograve;a nh&agrave; tiết kiệm năng lượng.</p>\r\n
-11	NPDN-150x150.jpg	Project town house – Da Nang – Vietnam	<p>Project town house &ndash; Da Nang &ndash; Vietnam</p>\r\n	\N	\N	2016-04-23 03:18:25.304408	2016-04-26 06:58:46.90794	\N	Da Nang – Vietnam	Công trình nhà phố	<p>C&ocirc;ng tr&igrave;nh nh&agrave; phố - Đ&agrave; Nẵng - Việt Nam</p>\r\n
+11	NPDN-150x150.jpg	Project town house – Da Nang – Vietnam	<p>Project town house &ndash; Da Nang &ndash; Vietnam</p>\r\n	\N	\N	2016-04-23 03:18:25.304408	2016-04-26 08:24:23.387174	\N	Da Nang – Vietnam	Công trình nhà phố - Đà Nẵng - Việt Nam	<p>C&ocirc;ng tr&igrave;nh nh&agrave; phố - Đ&agrave; Nẵng - Việt Nam</p>\r\n
 7	mau-thiet-ke-nha-pho-hien-dai.jpg	About Us	<p style="text-align:justify">Currently the inefficiency in using energy has led to many bad consequences. Therefore the human living standards are increasing day by day but potentially a profound risk to the future plus an unnecessary wasting of resources and money. Previously, almost people didn&rsquo;t think about anything like &ldquo;Green&rdquo;, &ldquo;Enviroment&rdquo;, &ldquo;the concept of Green Building&rdquo;, &ldquo;Environmental sustainability architecture&rdquo;&hellip; while designing or constructing. People think these are the concepts for the lack of practical and economical. However, in crisis of the energy, natural resources and the natural environment today, &ldquo;The Green Architecture&rdquo; is the inspiration closer to humans. Share a desire to help the people lives become better and limited resources at the lowest possible, we have regrouped and established SAO with an intense expectation that SAO&lsquo;ll become a leader in Simulation&ndash;Analysis&ndash;Optimization.</p>\r\n	\N	\N	2016-04-22 08:27:19.35031	2016-04-26 06:39:16.324942	\N		Về chúng tôi	
+13	bai1.png	Energy Analysis		\N	\N	2016-04-26 09:37:53.758293	2016-04-26 09:38:21.775269	\N		Phân tích năng lượng	
 \.
 
 
@@ -126,7 +129,7 @@ COPY articles (id, image_url, title, content, tags, article_category_id, created
 -- Name: articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
 --
 
-SELECT pg_catalog.setval('articles_id_seq', 12, true);
+SELECT pg_catalog.setval('articles_id_seq', 13, true);
 
 
 --
@@ -167,6 +170,8 @@ COPY carts (id, created_at, updated_at) FROM stdin;
 16	2016-04-26 02:07:59.623387	2016-04-26 02:07:59.623387
 17	2016-04-26 02:07:59.774968	2016-04-26 02:07:59.774968
 18	2016-04-26 06:31:42.219499	2016-04-26 06:31:42.219499
+19	2016-04-26 09:34:41.933476	2016-04-26 09:34:41.933476
+20	2016-04-26 12:38:55.939815	2016-04-26 12:38:55.939815
 \.
 
 
@@ -174,7 +179,7 @@ COPY carts (id, created_at, updated_at) FROM stdin;
 -- Name: carts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
 --
 
-SELECT pg_catalog.setval('carts_id_seq', 18, true);
+SELECT pg_catalog.setval('carts_id_seq', 20, true);
 
 
 --
@@ -230,6 +235,8 @@ COPY compares (id, created_at, updated_at) FROM stdin;
 16	2016-04-26 02:07:59.644201	2016-04-26 02:07:59.644201
 17	2016-04-26 02:07:59.795212	2016-04-26 02:07:59.795212
 18	2016-04-26 06:31:42.244045	2016-04-26 06:31:42.244045
+19	2016-04-26 09:34:41.952576	2016-04-26 09:34:41.952576
+20	2016-04-26 12:38:56.020484	2016-04-26 12:38:56.020484
 \.
 
 
@@ -237,7 +244,7 @@ COPY compares (id, created_at, updated_at) FROM stdin;
 -- Name: compares_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hungnt
 --
 
-SELECT pg_catalog.setval('compares_id_seq', 18, true);
+SELECT pg_catalog.setval('compares_id_seq', 20, true);
 
 
 --
