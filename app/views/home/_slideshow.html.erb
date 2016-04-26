@@ -7,10 +7,11 @@
 			<div class="fullwidthbanner">
 				
 				<ul>
+                  <% @slides.each do |item| %>
 					<!-- SLIDE 1 -->
 					<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
 		
-						<img src="/frontend/images/slide-01.bmp" alt="1920x580" />
+						<img src="<%= item.image_url.slider_image %>" alt="1920x580" />
 		
 						<!--<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/frontend/images/slide-02.jpg" alt="600x580" /></div>-->
 		
@@ -20,9 +21,10 @@
 		
 						<div class="caption sfr stb vary_small_text" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo"></div>
 		
-						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider">S-A-O <i class="fa fa-chevron-circle-right"></i></a></div>
+						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#sao" class="button_slider">S-A-O <i class="fa fa-chevron-circle-right"></i></a></div>
 		
                     </li>
+                  <% end %>
 		
 					<!-- SLIDE 2 -->-->
 					<!--<li data-transition="slideleft" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
