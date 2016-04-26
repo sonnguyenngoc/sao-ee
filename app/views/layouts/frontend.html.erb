@@ -2,62 +2,71 @@
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
 
 <head>
-	<title>Simulation-Analysis-Optimization Energy Efficiency</title>
-	
-	<meta charset="utf-8">
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-    
-    <!-- Favicon --> 
-	<link rel="shortcut icon" href="/frontend/images/favicon.ico">
-    
+    <title>Simulation-Analysis-Optimization | Simulation-Analysis-Optimization Energy Efficiency</title>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
     <!-- this styles only adds some repairs on idevices  -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <!-- Google fonts - witch you want to use - (rest you can just remove) -->
-    <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,800,700italic,700,600italic,600,400italic,300italic,300|Roboto:100,300,400,500,700&amp;subset=latin,latin-ext' %>
-	
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700italic,700,600italic,600,400italic,300italic,300|Roboto:100,300,400,500,700&amp;subset=latin,latin-ext' type='text/css' />
+
     <!--[if lt IE 9]>
-	<%= javascript_include_tag 'http://html5shim.googlecode.com/svn/trunk/html5.js' %>
-	<![endif]-->
-    
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <!-- ######### CSS STYLES ######### -->
+	<%= stylesheet_link_tag "/frontend/css/reset.css" %>
+	<%= stylesheet_link_tag "/frontend/css/style.css" %>
 	
-	<%= stylesheet_link_tag '/frontend/css/reset.css' %>
-	<%= stylesheet_link_tag '/frontend/css/style.css' %>
-	<%= stylesheet_link_tag '/frontend/css/isotope.css' %>
-	<%= stylesheet_link_tag '/frontend/js/portfolio/source/jquery.fancybox.css' %>
-    
-	<%= stylesheet_link_tag '/frontend/css/font-awesome/css/font-awesome.min.css' %>
-    
+	<%= stylesheet_link_tag "/frontend/css/font-awesome/css/font-awesome.min.css" %>
+
     <!-- responsive devices styles -->
-	<%= stylesheet_link_tag '/frontend/css/responsive-leyouts.css' %>
+	<%= stylesheet_link_tag "/frontend/css/responsive-leyouts.css" %>
+
+    <!-- custom stylesheets -->
+	<%= stylesheet_link_tag "/frontend/stylesheets/custom.css" %>
+
+    <!-- style switcher -->
+	<%= stylesheet_link_tag "/frontend/js/style-switcher/color-switcher.css" %>
 
     <!-- sticky menu -->
-	<%= stylesheet_link_tag '/frontend/js/sticky-menu/core.css' %>
-    
+	<%= stylesheet_link_tag "/frontend/js/sticky-menu/core.css" %>
+
     <!-- REVOLUTION SLIDER -->
-	<%= stylesheet_link_tag '/frontend/js/revolutionslider/rs-plugin/css/settings.css' %>
-	<%= stylesheet_link_tag '/frontend/js/revolutionslider/css/slider_main.css' %>
-    
+	<%= stylesheet_link_tag "/frontend/js/revolutionslider/css/fullwidth.css" %>
+	<%= stylesheet_link_tag "/frontend/js/revolutionslider/rs-plugin/css/settings.css" %>
+
     <!-- jquery jcarousel -->
-	<%= stylesheet_link_tag '/frontend/js/jcarousel/skin.css' %>
-	<%= stylesheet_link_tag '/frontend/js/jcarousel/skin2.css' %>
-	<%= stylesheet_link_tag '/frontend/js/jcarousel/skin3.css' %>
-	
-	<!-- faqs -->
-	<%= stylesheet_link_tag '/frontend/js/accordion/accordion.css' %>
-	<%= stylesheet_link_tag '/frontend/css/custom.css' %>
-	<%= stylesheet_link_tag '/frontend/stylesheets/custom.css' %>
- 
+	<%= stylesheet_link_tag "/frontend/js/jcarousel/skin2.css" %>
+
+    <!-- iosslider -->
+	<%= stylesheet_link_tag "/frontend/js/iosslider/common.css" %>
+
+    <!-- tweets -->
+	<%= stylesheet_link_tag "/frontend/js/testimonials/fadeeffect.css" %>
+
+    <!-- fancyBox -->
+	<%= stylesheet_link_tag "/frontend/js/portfolio/source/jquery.fancybox.css" %>
+	<%= stylesheet_link_tag "/frontend/js/portfolio/isotope.css" %>
+
 </head>
 
 <body>
-	
-	<%= yield %>
-	
+
+    <%= yield %>
+
 </body>
+
 </html>

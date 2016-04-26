@@ -30,7 +30,7 @@ body, input, textarea {
 	font: 14px 'Open Sans', sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	line-height: 23px;
+	line-height: 22px;
 	color: #727272;
 }
 
@@ -41,9 +41,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
-	color: #404040;
+	color: #333;
 }
 h1 a, 
 h2 a, 
@@ -69,7 +69,7 @@ h2 i {
 	font-style: normal;
 }
 h2 strong {
-	font-weight: 600;
+	font-weight: normal;
 }
 h3 { 
 	font-size: 22px; 
@@ -79,10 +79,6 @@ h3 {
 }
 h3 i {
 	font-weight: normal;
-	font-style: normal;
-}
-h3 strong {
-	font-weight: 600;
 	font-style: normal;
 }
 h4 { 
@@ -113,7 +109,7 @@ h6 {
 p {
 	font: 14px 'Open Sans', sans-serif;
 	font-weight: normal;
-	line-height: 23px;
+	line-height: 22px;
 }
 
 ul, ol {
@@ -150,7 +146,7 @@ cite, em, i {
 blockquote {
 	margin: 20px 0 20px 36px;
 	font-size: 13px;
-	border-left: 5px solid #6fbe48;
+	border-left: 5px solid #3398d4;
 	padding: 5px 20px 5px 20px;
 	font-family: 'Open Sans' !important;
 	font-weight: normal;
@@ -217,12 +213,12 @@ sub {
 
 /* Links */
 a {
-	color: #0896b8;
+	color: #0cbabb;
 	text-decoration: none;
 }
 a:hover {
+	color: #333;
 	text-decoration: none;
-	color: #727272;
 }
 
 blockquote, q {
@@ -356,11 +352,6 @@ height: 0;
 	width: 100%;
 	float: left;
 }
-.mar_top13 {
-	margin-top: 94px;
-	width: 100%;
-	float: left;
-}
 .mar_top20 {
 	margin-top: 119px;
 	width: 100%;
@@ -370,9 +361,9 @@ height: 0;
 .divider_line {
 	float: left;
 	width: 100%;
-	height: 18px;
+	height: 1px;
 	padding: 0px;
-	margin: 10px 0px 50px 0px;
+	margin: 0px 0px 50px 0px;
 	border-bottom: 1px solid #f3f3f3;
 }
 .divider_line2 {

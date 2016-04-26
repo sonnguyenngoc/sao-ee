@@ -1,216 +1,869 @@
 <div class="site_wrapper">
-   
+
 
 <!-- HEADER -->
-<div class="joosa top_section">
-  
-  <%= render 'header' %>
-  
-</div><!-- end header -->
+<header id="header">
 
-<div class="clearfix mar_top13"></div>
- 
-<!-- Slider
-======================================= -->  
+	<!-- Top header bar -->
+	<div id="trueHeader">
 
-<div class="container_full">
-    
-    <%= render 'slideshow' %>
+		<div class="wrapper">
 
-</div><!-- end slider -->
+			<div class="container">
+
+				<!-- Logo -->
+				<div class="one_fourth">
+					
+					<%= link_to "", root_path, id: "logo" %>
+					
+				</div>
+
+				<!-- Menu -->
+				<div class="three_fourth last">
+
+					<div id="top-nav" class="">
+
+						<ul id="fixed-nav">
+
+							<li class="current"><a href="#home">Trang chủ</a></li>
+
+							<li><a href="#about_us">Về chúng tôi</a></li>
+
+							<li><a href="#portfolio">Dự án</a></li>
+
+							<li><a href="#news">Tin tức</a></li>
+
+							<li><a href="#contact">Liên hệ</a></li>
+
+							<li><a href="#contact"><img src="/frontend/images/gb.png"></a></li>
+
+						</ul>
+
+					</div>
+					<!-- end nav menu -->
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</header>
+<!-- end header -->
 
 
 <div class="clearfix"></div>
 
-<div class="fresh_projects">
-	<div class="container">
-    
-    	<h1><i></i>
-        <strong><%= t(:projects) %></strong>
-        </h1>
-        
-        <ul id="mycarouseltwo" class="jcarousel-skin-tango">
-          <% @projects.each do |item| %>
-            <li>
-                <div class="item">                        
-                <div class="fresh_projects_list">
-                    <section class="cheapest">
-                        <div class="display">                  
-                            <div class="small-group">        
-                                <div class="small money">
-                                        <img src="<%= item.image_url.large_project_image %>" alt="275x300">
-                                        <div class="info">
-                                            <div class="title"><%= item.title %><br /><em><%= item.location %></em>
-											</div>
-                                            <div class="additionnal">
-                                            	<%= truncate(strip_tags(item.content.html_safe), length: 130, omission: ' [..]') %><br /><br />
-                                                <b><a href="<%= url_for(controller: 'project', action: 'detail') %>">chi tiết ></a></b>
-                                            </div>
-                                        </div>
-                                        <div class="hover"></div> 
-                                </div>        
-                            </div>     
-                        </div>
-                    </section>
-                </div>
-                </div>
-            </li><!-- end item -->
-		  <% end %>
-               
-          </ul>
-        
-    </div>
-    
-	<div class="clearfix mar_top2"></div>
-    
-</div><!-- end fresh projects -->
 
-<div class="clearfix"></div>
+<div id="home">
 
-<div class="mar_top4"></div>
-
-<div class="joosa fusectio1">
-	<div class="container">
-
-	<h1><i></i>
-    <strong><%= t(:news) %></strong>
-	</h1>
-	<% @lastest_news.limit(3).each_with_index do |item, index| %>
-	  <div class="one_third <%= "last" if item == @lastest_news.limit(3).last %>">
-		  
-		  <div class="left">
-		  
-			  <h4><%= item.title %></h4>
-			  <p><%= truncate(strip_tags(item.content), :length => 65) %></p>
-			  <a href="<%= url_for(controller: 'news', action: 'detail', article_id: item.id) %>"><i class="fa fa-plus-square"></i>&nbsp; Đọc tiếp</a>
-		  
-		  </div>
-		  
-		  <div class="right one"><img src="/frontend/layout2/images/news-home-tiet-kiem-nang-luong.jpg" alt="200x250" /></div>
-  
-	  </div><!-- end section -->
-	<% end %>
-       
-</div>
-</div><!-- end features section 1 -->
-
-<div class="clearfix mar_top5"></div>
-
-
-
-<div class="clearfix mar_top4"></div>
-
-<!-- Footer
+	<!-- Slider
 ======================================= -->
 
-<%= render 'footer' %>
+	<div class="container_full">
 
-    
+		<div class="fullwidthbanner-container">
+
+			<div class="fullwidthbanner">
+
+				<ul>
+					<!-- SLIDE 1 -->
+					<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
+
+						<img src="http://placehold.it/1920x580" alt="" />
+
+						<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>
+
+						<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">Look at <b>featured</b></div>
+
+						<div class="caption sfr stb small_text" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">website themes all of joosa.</div>
+
+						<div class="caption sfr stb vary_small_text" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">We hope that you enjoy it.</div>
+
+						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider">get started <i class="fa fa-chevron-circle-right"></i></a></div>
+
+					</li>
+
+					<!-- SLIDE 2 -->
+					<li data-transition="slideleft" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
+
+						<img src="http://placehold.it/1920x580" alt="" />
+
+						<div class="caption sfb" data-x="570" data-y="0" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>
+
+						<div class="caption sfr stb large_text two" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">5 Diffrent <b>Websites</b></div>
+
+						<div class="caption sfr stb small_text two" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">Corporate. Creative. Medical. </div>
+
+						<div class="caption sfr stb small_text two" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">Hosting. One Page Themes</div>
+
+						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider two">get started <i class="fa fa-chevron-circle-right"></i></a></div>
+
+					</li>
+
+
+
+					<!-- SLIDE 3 -->
+					<li data-transition="papercut" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
+
+						<img src="http://placehold.it/1920x580" alt="" />
+
+						<div class="caption sfb" data-x="0" data-y="240" data-speed="900" data-start="900" data-easing="easeOutSine">
+							<div class="display_text_center"><img src="http://placehold.it/600x580" alt="" /></div>
+						</div>
+
+						<div class="caption sfb stb" data-x="0" data-y="80" data-speed="900" data-start="700" data-easing="easeOutExpo">
+							<div class="display_text_center">
+								<h3>Find the Benefits of Using Joosa. &amp; Recommended Highly</h3></div>
+						</div>
+
+						<div class="caption sfb stb" data-x="0" data-y="130" data-speed="900" data-start="1200" data-easing="easeOutExpo">
+							<div class="display_text_center">
+								<h2>We Build Smarter Stuff! on TF</h2></div>
+						</div>
+
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- end slider -->
+
+	<div class="clearfix"></div>
+
+	<div>
+
+		<div class="aboutpage_section">
+
+			<div id="about_us" class="joosa features2">
+				<div class="container">
+
+					<div class="left"><img src="images/siteimg-joosa1.png" alt="" /></div>
+					<!-- end left -->
+
+					<div class="right">
+
+						<h2><strong>VỀ CHÚNG TÔI</strong></h2>
+
+						<p class="font-content">Currently the inefficiency in using energy has led to many bad consequences. Therefore the human living standards are increasing day by day but potentially a profound risk to the future plus an unnecessary wasting of resources and money. Previously, almost people didn’t think about anything like “Green”, “Enviroment”, “the concept of Green Building”, “Environmental sustainability architecture”… while designing or constructing. People think these are the concepts for the lack of practical and economical. However, in crisis of the energy, natural resources and the natural environment today, “The Green Architecture” is the inspiration closer to humans. Share a desire to help the people lives become better and limited resources at the lowest possible, we have regrouped and established SAO with an intense expectation that SAO‘ll become a leader in Simulation–Analysis–Optimization.</p><br /><br />
+
+						<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; Hình ảnh dự án</a>
+						<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; Liên hệ</a>
+
+					</div>
+					<!-- end right -->
+
+				</div>
+			</div>
+			<!-- end features section 2 -->
+
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+	<!-- end about -->
+
+	<div class="clearfix"></div>
+
+	<div>
+
+		<div class="joosa fusection1 container">
+
+				<div class="one_fourth">
+
+					<i class="fa fa-desktop fa-4x"></i>
+
+					<div class="clearfix"></div>
+
+					<h2>Simulation</h2>
+
+				</div>
+				<!-- end section -->
+
+				<div class="one_fourth">
+
+					<i class="fa fa-cog fa-4x"></i>
+
+					<div class="clearfix"></div>
+
+					<h2>Analysis</h2>
+
+				</div>
+				<!-- end section -->
+
+				<div class="one_fourth last">
+
+					<i class="fa fa-leaf fa-4x"></i>
+
+					<div class="clearfix"></div>
+
+					<h2>Optimization</h2>
+
+				</div>
+				<!-- end section -->
+
+			</div>
+			<!-- end features section 1 -->
+
+			<div class="clearfix mar_top7"></div>
+
+		<div class="servicespage_section">
+
+			<div class="services_slider_sec">
+
+				<div class="container">
+
+					<div class='fluidHeight'>
+
+						<div class='sliderContainer'>
+
+							<div class='iosSlider'>
+
+								<div class='slider'>
+
+									<div class='item item1'>
+										<div class='inner'>
+
+											<div class="slide_one">
+
+												<div class="left"><img src="images/siteimg-002.png" alt="" /></div>
+												<!-- end section -->
+
+												<div class="right">
+
+													<h3>Simulation-Analysis-Optimization</h3>
+
+													<h2>Energy Efficiency</h2>
+
+													<p class="font-content">Design, built and manage an energy saving building may be a hard and complicated task. Energy simulating can help you analyze the movement of energy through space and volume. The result can help designer make better choice to decrease price, improve efficiency, and decrease the affect to environment of buildings. In a whole life-cycle of a building (about 30 years), the initial costs for design & construction take 36%, but the cost for operation and maintenance take 64%. The costs for maintenance and operation more important than the total cost for designing and construction at least 2 times. This clearly prove to us about the important of designing and managerment a energy efficient building</p>
+
+												</div>
+
+											</div>
+
+
+										</div>
+									</div>
+
+									<div class='item item2'>
+										<div class='inner'>
+
+											<div class="slide_two">
+
+												<div class="one_half left"><img src="images/siteimg4.png" alt="" /></div>
+												<!-- end section -->
+
+												<div class="one_half last">
+
+													<ul>
+
+														<li>
+															<div class="icon"><i class="fa fa-coffee fa-2x"></i></div>
+															<h2>Responsive Design</h2>
+															<p>Lorem ipsum dolor feugiat delicata liberavisse maiorum assum omnium conceptam.</p>
+														</li>
+
+														<li>
+															<div class="icon"><i class="fa fa-globe fa-2x"></i></div>
+															<h2>Best customization</h2>
+															<p>Lorem ipsum dolor feugiat delicata liberavisse maiorum assum omnium conceptam.</p>
+														</li>
+
+														<li>
+															<div class="icon"><i class="fa fa-mobile-phone fa-2x"></i></div>
+															<h2>Mobile Friendly</h2>
+															<p>Lorem ipsum dolor feugiat delicata liberavisse maiorum assum omnium conceptam.</p>
+														</li>
+
+													</ul>
+
+												</div>
+												<!-- end section -->
+
+											</div>
+
+										</div>
+									</div>
+
+									<div class='item item3'>
+										<div class='inner'>
+
+											<div class="slide_three">
+
+												<div class="one_half left"><img src="images/siteimg3.png" alt="" /></div>
+												<!-- end section -->
+
+												<div class="one_half last">
+
+													<h3>Airem Ipsum on the Internet</h3>
+
+													<h2>Generators on the Internet</h2>
+
+													<p>All the Lorem Ipsum generators on the Internet tentos repeat predefined chunks as necessary making the combined with a handful is always.</p>
+
+													<ul>
+
+														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
+
+														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
+
+														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
+
+														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
+
+													</ul>
+
+												</div>
+												<!-- end section -->
+
+											</div>
+
+										</div>
+									</div>
+
+									<div class='item item4'>
+										<div class='inner'>
+
+											<div class="slide_four">
+
+												<div class="one_fourth"><img src="images/layout-img01.jpg" alt="" /></div>
+
+												<div class="one_fourth"><img src="images/layout-img02.jpg" alt="" /></div>
+
+												<div class="one_fourth"><img src="images/layout-img03.jpg" alt="" /></div>
+
+												<div class="one_fourth last"><img src="images/layout-img04.jpg" alt="" /></div>
+
+											</div>
+
+										</div>
+									</div>
+
+
+								</div>
+
+							</div>
+
+
+							<div class='slideSelectors'>
+
+								<div class="container">
+
+									<div class='item selected'>
+										<ul class="iosslider-item-list">
+											<li>Introduce</li>
+										</ul>
+									</div>
+
+									<div class='item'>
+										<ul class="iosslider-item-list">
+											<li>product display 2</li>
+										</ul>
+									</div>
+
+									<div class='item'>
+										<ul class="iosslider-item-list">
+											<li>product display 3</li>
+										</ul>
+									</div>
+
+									<div class='item'>
+										<ul class="iosslider-item-list last">
+											<li>5 diffrent Websites</li>
+										</ul>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- end inner slider -->
+
+		</div>
+	</div>
+	<!-- end services -->
+
+	<div class="clearfix"></div>
+
+	<div id="portfolio">
+		<div class="portfoliopage_section">
+
+			<div class="container">
+
+				<div class="portfolio_page">
+
+					<h1>DỰ ÁN</strong>
+					<br />
+					<i>HÌNH ẢNH VỀ CÁC DỰ ÁN CÔNG TY ĐÃ THỰC HIỆN</i>
+					</h1>
+
+					<div class="portfolioFilter">
+
+						<a href="#" data-filter="*" class="current">Tất cả</a>
+						<a href="#" data-filter=".places">Project Heineken Factory</a>
+						<a href="#" data-filter=".people">Town house</a>
+
+					</div>
+
+					<div class="clearfix mar_top5"></div>
+
+
+					<div class="portfolioContainer">
+
+						<div class="people">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Publishing has packages and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Publishing has packages</h3></div>
+							</a>
+						</div>
+
+						<div class="people">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Typesetting industry and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Typesetting industry</h3></div>
+							</a>
+						</div>
+
+						<div class="places">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Standard dummy text and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Standard dummy text</h3></div>
+							</a>
+						</div>
+
+						<div class="people">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Passages more recently and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Passages more recently</h3></div>
+							</a>
+						</div>
+
+						<div class="places">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="Letrasets containing and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Letrasets containing</h3></div>
+							</a>
+						</div>
+
+						<div class="places">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Sentence structures</h3></div>
+							</a>
+						</div>
+
+						<div class="people people">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Professor structures</h3></div>
+							</a>
+						</div>
+
+						<div class="people">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Classical literature</h3></div>
+							</a>
+						</div>
+
+						<div class="people">
+							<a class="fancybox" href="http://placehold.it/800x450" data-fancybox-group="gallery" title="sentence structures and More text can be use here">
+								<div class="imgWrap"><img src="http://placehold.it/800x450" alt="" />
+									<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+									<h3>Many web sites</h3></div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="clearfix mar_top6"></div>
+
+		</div>
+	</div>
+	<!-- end portfolio -->
+
+	<div class="clearfix"></div>
+
+	<div>
+		<div class="contactpage_section">
+
+			<div id="news" class="twitter_feeds">
+
+				<div class="container">
+
+					<div class="faide_slider">
+
+						<div id="slider">
+
+							<div id="slide1">
+
+								<br/>
+
+								<h3>Tiết kiệm nước tiết kiệm năng lượng</h3>
+
+								<br />
+
+								<p class="font-content">Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một khu vực tiêu thụ năng lượng đáng kể. Có nhiều giải pháp để tiết kiệm nước như thay thế hệ thống vòi sen thế hệ cũ với lưu lượng nước tiêu tốn 10 lít/phút bằng loại vòi tắm công nghệ mới (sử dụng cơ chế hòa trộn các bọt khí nhỏ vào trong nước làm cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ giúp tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế bàn cầu có dung tích bồn xả là 12 lít/phút bằng bằng bàn cầu ứng dụng hệ thống xả tiết kiệm và hiệu quả sẽ không chỉ giúp giảm tiếng ồn mà còn tiết kiệm đến 20% lượng nước sử dụng. Ngoài ra, một trong những cách tiết kiệm nước cũng rất hiệu quả là việc tái sử dụng nước hoặc tận dụng nguồn nước mưa. Sơ đồ hình bên dưới là 1 ý tưởng dùng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu và tưới cây ngoài vườn.</p>
+
+								<br />
+
+								<b>// Được đăng vào lúc 08:50 26/04/2016</b>
+
+							</div>
+							<!-- end slide1 -->
+
+							<div id="slide2">
+
+								<br/>
+
+								<h3>Tiết kiệm nước tiết kiệm năng lượng</h3>
+
+								<br />
+
+								<p class="font-content">Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một khu vực tiêu thụ năng lượng đáng kể. Có nhiều giải pháp để tiết kiệm nước như thay thế hệ thống vòi sen thế hệ cũ với lưu lượng nước tiêu tốn 10 lít/phút bằng loại vòi tắm công nghệ mới (sử dụng cơ chế hòa trộn các bọt khí nhỏ vào trong nước làm cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ giúp tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế bàn cầu có dung tích bồn xả là 12 lít/phút bằng bằng bàn cầu ứng dụng hệ thống xả tiết kiệm và hiệu quả sẽ không chỉ giúp giảm tiếng ồn mà còn tiết kiệm đến 20% lượng nước sử dụng. Ngoài ra, một trong những cách tiết kiệm nước cũng rất hiệu quả là việc tái sử dụng nước hoặc tận dụng nguồn nước mưa. Sơ đồ hình bên dưới là 1 ý tưởng dùng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu và tưới cây ngoài vườn.</p>
+
+								<br />
+
+								<b>// Được đăng vào lúc 08:50 26/04/2016</b>
+
+							</div>
+							<!-- end slide2 -->
+
+						</div>
+
+						<div class="clearfix mar_top3"></div>
+
+						<ul class="controlls">
+
+							<li>
+								<a href="#" class="slide1"></a>
+							</li>
+
+							<li>
+								<a href="#" class="slide2"></a>
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div id="contact" class="contact_info">
+
+				<div class="container">
+
+					<div class="one_half">
+
+						<h3>CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ SAO</h3>
+
+						<div class="clearfix"></div>
+
+						<div class="one_full">
+
+							<div class="one_half">
+
+								<ul class="address">
+
+									<li><i class="fa fa-map-marker fa-lg"></i> 901, 9th Fl., 68 Nguyen Hue Blvd., Ben Nghe Ward, District 1</li>
+
+									<li class="last"><i class="fa fa-envelope"></i> <a href="mailto:info@sao-ee.vn">info@sao-ee.vn</a></li>
+
+									<li><i class="fa fa-phone"></i> +84 8 6682 2233</li>
+
+								</ul>
+
+							</div>
+
+							<div class="one_half last">
+
+								<div class="map">
+
+									<iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=WA,+United+States&amp;aq=0&amp;oq=WA&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=7&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=WA,+United+States&amp;aq=0&amp;oq=WA&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=7&amp;iwloc=A">View Larger Map</a></small>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+					<!-- end section -->
+
+
+					<div class="one_half last">
+
+						<h3>LIÊN KẾT TRANG</h3>
+
+						<ul class="footer_social_links">
+							<li><a href="#facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+							<li><a href="#twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+							<li><a href="#google_plus"><i class="fa fa-google-plus"></i> Google +</a></li>
+							<li><a href="#linkedin"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+							<li><a href="#skype"><i class="fa fa-skype"></i> Skype</a></li>
+							<li><a href="#flickr"><i class="fa fa-flickr"></i> Flickr</a></li>
+							<li><a href="#youtube"><i class="fa fa-youtube"></i> Youtube</a></li>
+							<li><a href="#rss"><i class="fa fa-rss"></i> RSS</a></li>
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- copyright info -->
+			<div class="copyright_info">
+
+				Copyright &copy; 2016 SAO-EE.VN - All Rights Reserved. Developed by Hoang Khang Incotech
+
+			</div>
+			<!-- end copyright info -->
+
+		</div>
+	</div>
+	<!-- end contact -->
+
+	<a href="#" class="scrollup">Scroll</a>
+	<!-- end scroll to top of the page-->
+
+
+</div>
+
+
 <!-- ######### JS FILES ######### -->
-
 <!-- get jQuery from the google apis -->
-<%= javascript_include_tag '/frontend/js/universal/jquery.js' %>
+<%= javascript_include_tag "/frontend/js/universal/jquery.js" %>
 
 <!-- style switcher -->
-<%= javascript_include_tag '/frontend/js/style-switcher/jquery-1.js' %>
-<%= javascript_include_tag '/frontend/js/style-switcher/styleselector.js' %>
+<%= javascript_include_tag "/frontend/js/style-switcher/jquery-1.js" %>
+<%= javascript_include_tag "/frontend/js/style-switcher/styleselector.js" %>
+
+<!-- fancyBox -->
+<%= javascript_include_tag "/frontend/js/portfolio/lib/jquery-1.9.0.min.js" %>
+<%= javascript_include_tag "/frontend/js/portfolio/source/jquery.fancybox.js" %>
+<%= javascript_include_tag "/frontend/js/portfolio/source/helpers/jquery.fancybox-media.js" %>
+
+<!-- isotope -->
+<%= javascript_include_tag "/frontend/js/portfolio/jquery.isotope.js" %>
+
+<!-- iosSlider plugin -->
+<%= javascript_include_tag "/frontend/js/iosslider/_src/jquery.iosslider.js" %>
+<%= javascript_include_tag "/frontend/js/iosslider/_lib/jquery.easing-1.3.js" %>
+<%= javascript_include_tag "/frontend/js/iosslider/_src/custom.js" %>
+
+<!-- scrollto -->
+<%= javascript_include_tag "/frontend/js/jquery.scrollto.min.js" %>
+<%= javascript_include_tag "/frontend/js/jquery.nav.js" %>
+<%= javascript_include_tag "/frontend/js/main.js" %>
+
+<!-- isotope -->
+<script type="text/javascript">
+	$(window).load(function() {
+		var $container = $('.portfolioContainer');
+		$container.isotope({
+			filter: '*',
+			animationOptions: {
+				duration: 750,
+				easing: 'linear',
+				queue: false
+			}
+		});
+
+		$('.portfolioFilter a').click(function() {
+			$('.portfolioFilter .current').removeClass('current');
+			$(this).addClass('current');
+
+			var selector = $(this).attr('data-filter');
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false
+				}
+			});
+			return false;
+		});
+	});
+</script>
 
 <!-- main menu -->
-<%= javascript_include_tag '/frontend/js/mainmenu/ddsmoothmenu.js' %>
-<%= javascript_include_tag '/frontend/js/mainmenu/selectnav.js' %>
+<%= javascript_include_tag "/frontend/js/mainmenu/jquery-1.7.1.min.js" %>
 
 <!-- jquery jcarousel -->
-<%= javascript_include_tag '/frontend/js/jcarousel/jquery.jcarousel.min.js' %>
+<%= javascript_include_tag "/frontend/js/jcarousel/jquery.jcarousel.min.js" %>
 
-<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-<%= javascript_include_tag '/frontend/js/revolutionslider/rs-plugin/js/jquery.themepunch.plugins.min.js' %>
-<%= javascript_include_tag '/frontend/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js' %>
-
-<%= javascript_include_tag '/frontend/js/mainmenu/scripts.js' %>
+<!-- REVOLUTION SLIDER -->
+<%= javascript_include_tag "/frontend/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js" %>
 
 <!-- scroll up -->
 <script type="text/javascript">
-    $(document).ready(function(){
- 
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > 100) {
-                $('.scrollup').fadeIn();
-            } else {
-                $('.scrollup').fadeOut();
-            }
-        });
- 
-        $('.scrollup').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, 500);
-            return false;
-        });
- 
-    });
+	$(document).ready(function() {
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+		});
+
+		$('.scrollup').click(function() {
+			$("html, body").animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+		});
+
+	});
+</script>
+
+<!-- tweets -->
+<script type="text/javascript">
+	//<![CDATA[ 
+	$(window).load(function() {
+		$(".controlls li a").click(function(e) {
+			e.preventDefault();
+			var id = $(this).attr('class');
+			$('#slider div:visible').fadeOut(500, function() {
+				$('div#' + id).fadeIn();
+			})
+		});
+	}); //]]>
 </script>
 
 <!-- jquery jcarousel -->
 <script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('#mycarousel').jcarousel();
+	});
 
 	jQuery(document).ready(function() {
-			jQuery('#mycarousel').jcarousel();
+		jQuery('#mycarouseltwo').jcarousel();
 	});
-	
+
 	jQuery(document).ready(function() {
-			jQuery('#mycarouseltwo').jcarousel();
+		jQuery('#mycarouselthree').jcarousel();
 	});
-	
+
 	jQuery(document).ready(function() {
-			jQuery('#mycarouselthree').jcarousel();
+		jQuery('#mycarouselfour').jcarousel();
 	});
-	
-	jQuery(document).ready(function() {
-			jQuery('#mycarouselfour').jcarousel();
-	});
-	
 </script>
-
-<!-- accordion -->
-<%= javascript_include_tag '/frontend/js/accordion/custom.js' %>
 
 <!-- REVOLUTION SLIDER -->
 <script type="text/javascript">
+	var tpj = jQuery;
+	tpj.noConflict();
 
-	var revapi;
+	tpj(document).ready(function() {
 
-	jQuery(document).ready(function() {
+		if (tpj.fn.cssOriginal != undefined)
+			tpj.fn.css = tpj.fn.cssOriginal;
 
-		   revapi = jQuery('.tp-banner').revolution(
-			{
-				delay:9000,
-				startwidth:1170,
-				startheight:500,
-				hideThumbs:10,
-				fullWidth:"on",
-				forceFullWidth:"on"
+		var api = tpj('.fullwidthbanner').revolution({
+			delay: 9000,
+			startwidth: 1170,
+			startheight: 580,
+
+			onHoverStop: "on", // Stop Banner Timet at Hover on Slide on/off
+
+			thumbWidth: 100, // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+			thumbHeight: 50,
+			thumbAmount: 3,
+
+			hideThumbs: 200,
+			navigationType: "none", // bullet, thumb, none
+			navigationArrows: "solo", // nexttobullets, solo (old name verticalcentered), none
+
+			navigationStyle: "round", // round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+
+
+			navigationHAlign: "center", // Vertical Align top,center,bottom
+			navigationVAlign: "bottom", // Horizontal Align left,center,right
+			navigationHOffset: 30,
+			navigationVOffset: -40,
+
+			soloArrowLeftHalign: "left",
+			soloArrowLeftValign: "center",
+			soloArrowLeftHOffset: 0,
+			soloArrowLeftVOffset: 0,
+
+			soloArrowRightHalign: "right",
+			soloArrowRightValign: "center",
+			soloArrowRightHOffset: 0,
+			soloArrowRightVOffset: 0,
+
+			touchenabled: "on", // Enable Swipe Function : on/off
+
+
+			stopAtSlide: -1, // Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+			stopAfterLoops: -1, // Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+
+			hideCaptionAtLimit: 0, // It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+			hideAllCaptionAtLilmit: 0, // Hide all The Captions if Width of Browser is less then this value
+			hideSliderAtLimit: 0, // Hide the whole slider, and stop also functions if Width of Browser is less than this value
+
+
+			fullWidth: "on",
+
+			shadow: 0 //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+
+		});
+
+	});
+</script>
+
+<%= javascript_include_tag "/frontend/js/sticky-menu/core.js" %>
+<%= javascript_include_tag "/frontend/js/sticky-menu/modernizr.custom.75180.js" %>
+
+<!-- fancyBox -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		/* Simple image gallery. Uses default settings */
+		$('.fancybox').fancybox();
+
+		/* media effects*/
+		$(document).ready(function() {
+			$('.fancybox-media').fancybox({
+				openEffect: 'none',
+				closeEffect: 'none',
+				helpers: {
+					media: {}
+				}
 			});
+		});
 
-	});	//ready
-
+	});
 </script>
-
-<!-- fade news -->
-<script type="application/javascript">
-(function() {
-    var quotes = $(".quotes");
-    var quoteIndex = -1;
-    
-    function showNextQuote() {
-        ++quoteIndex;
-        quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(1000)
-            .delay(4000)
-            .fadeOut(1000, showNextQuote);
-    }
-    
-    showNextQuote();
-	
-})();
-</script>
-
-<%= javascript_include_tag '/frontend/js/sticky-menu/core.js' %>
-<%= javascript_include_tag '/frontend/js/sticky-menu/modernizr.custom.75180.js' %>

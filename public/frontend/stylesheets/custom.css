@@ -1,3 +1,29 @@
-.img-flags {
-    margin-left: 10px
+.font-content {
+	font-weight: normal;
+    text-transform: none;
+    text-align: justify;
+    display: block;
+}
+.joosa.fusection1 .one_fourth {
+	margin-right: 18.33%;
+}
+.servicespage_section {
+	padding: 0px 0px;
+}
+@media only screen and (max-width: 479px){
+	#top-nav #fixed-nav li a {
+		height: 28px;
+	    line-height: 50px;
+	    padding: 0 3px;
+	    font-size: 12px;
+	}
+}
+.portfolioFilter {
+	display: none;
+}
+.mar_top5 {
+	margin-top: 0px;
+}
+#trueHeader #logo {
+	background: url(../images/logo.png) no-repeat left -19px/83px;
 }
