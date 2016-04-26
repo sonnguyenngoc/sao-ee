@@ -1,0 +1,59 @@
+<div class="tp-banner-container">
+    <div class="tp-banner" >
+    
+        <ul>
+			
+            <% @slides.each do |item| %>
+			
+                <!-- SLIDE -->
+            
+                <li data-transition="slidedown" data-slotamount="7" data-masterspeed="800" >
+                
+                    <!-- MAIN IMAGE -->
+                    <img src="<%= item.image_url.slider_image %>" alt="slidebg1"  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+                    
+                    <div class="tp-caption mediumlarge_light_white skewfromleft customout"
+						data-x="0"
+						data-y="125"
+						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-speed="800"
+						data-start="900"
+						data-easing="Power4.easeOut"
+						data-endspeed="300"
+						data-endeasing="Power1.easeIn"
+						data-captionhidden="on"
+						style="z-index: 6; color: #fff; font-size: 30pt;"><%= item.title %>
+					</div>
+                     
+                    <div class="tp-caption customin ltl"
+                        data-x="0"
+                        data-y="340"
+                        data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                        data-speed="1000"
+                        data-start="2200"
+                        data-easing="Back.easeInOut"
+                        data-endspeed="400"
+                        data-endeasing="Back.easeIn"
+                        style="z-index: 16"><%= link_to '<i class="fa fa-hand-o-right"></i>'.html_safe + " " + t(:about_us), { controller: "about_us", action: "index" }, class: "button_slider" %>
+                    </div>
+                    
+                    <div class="tp-caption customin ltl"
+                        data-x="200"
+                        data-y="340"
+                        data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                        data-speed="1000"
+                        data-start="2300"
+                        data-easing="Back.easeInOut"
+                        data-endspeed="400"
+                        data-endeasing="Back.easeIn"
+                        style="z-index: 16"><%= link_to '<i class="fa fa-hand-o-right"></i>'.html_safe + " " + t(:contact), { controller: "contact", action: "index" }, class: "button_slider_02" %>
+                    </div>
+                    
+                </li>
+                
+            <% end %>
+               
+        </ul>
+
+    </div>
+</div>

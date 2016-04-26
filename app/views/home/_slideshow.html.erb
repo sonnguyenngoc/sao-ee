@@ -1,59 +1,77 @@
-<div class="tp-banner-container">
-    <div class="tp-banner" >
-    
-        <ul>
-			
-            <% @slides.each do |item| %>
-			
-                <!-- SLIDE -->
-            
-                <li data-transition="slidedown" data-slotamount="7" data-masterspeed="800" >
-                
-                    <!-- MAIN IMAGE -->
-                    <img src="<%= item.image_url.slider_image %>" alt="slidebg1"  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
-                    
-                    <div class="tp-caption mediumlarge_light_white skewfromleft customout"
-						data-x="0"
-						data-y="125"
-						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-						data-speed="800"
-						data-start="900"
-						data-easing="Power4.easeOut"
-						data-endspeed="300"
-						data-endeasing="Power1.easeIn"
-						data-captionhidden="on"
-						style="z-index: 6; color: #fff; font-size: 30pt;"><%= item.title %>
-					</div>
-                     
-                    <div class="tp-caption customin ltl"
-                        data-x="0"
-                        data-y="340"
-                        data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                        data-speed="1000"
-                        data-start="2200"
-                        data-easing="Back.easeInOut"
-                        data-endspeed="400"
-                        data-endeasing="Back.easeIn"
-                        style="z-index: 16"><%= link_to '<i class="fa fa-hand-o-right"></i>'.html_safe + " " + t(:about_us), { controller: "about_us", action: "index" }, class: "button_slider" %>
-                    </div>
-                    
-                    <div class="tp-caption customin ltl"
-                        data-x="200"
-                        data-y="340"
-                        data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                        data-speed="1000"
-                        data-start="2300"
-                        data-easing="Back.easeInOut"
-                        data-endspeed="400"
-                        data-endeasing="Back.easeIn"
-                        style="z-index: 16"><%= link_to '<i class="fa fa-hand-o-right"></i>'.html_safe + " " + t(:contact), { controller: "contact", action: "index" }, class: "button_slider_02" %>
-                    </div>
-                    
-                </li>
-                
-            <% end %>
-               
-        </ul>
+<!-- Slider -->
 
-    </div>
-</div>
+	<div class="container_full">
+
+		<div class="fullwidthbanner-container">
+		
+			<div class="fullwidthbanner">
+				
+				<ul>
+					<!-- SLIDE 1 -->
+					<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
+		
+						<img src="/frontend/images/slide-01.bmp" alt="1920x580" />
+		
+						<!--<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/frontend/images/slide-02.jpg" alt="600x580" /></div>-->
+		
+						<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo"> <b style="color: #83B618">Simulation-Analysis-Optimization</b></div>
+		
+						<div class="caption sfr stb small_text" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo" style="color: #ff0000">Energy Efficiency</div>
+		
+						<div class="caption sfr stb vary_small_text" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo"></div>
+		
+						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider">S-A-O <i class="fa fa-chevron-circle-right"></i></a></div>
+		
+                    </li>
+		
+					<!-- SLIDE 2 -->-->
+					<!--<li data-transition="slideleft" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
+					<!---->-->
+					<!--	<img src="http://placehold.it/1920x580" alt="" />-->-->
+					<!---->-->
+					<!--	<div class="caption sfb" data-x="570" data-y="0" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>-->-->
+					<!---->-->
+					<!--	<div class="caption sfr stb large_text two" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">5 Diffrent <b>Websites</b></div>-->-->
+					<!---->-->
+					<!--	<div class="caption sfr stb small_text two" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">Corporate. Creative. Medical. </div>-->-->
+					<!---->-->
+					<!--	<div class="caption sfr stb small_text two" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">Hosting. One Page Themes</div>-->-->
+					<!---->-->
+					<!--	<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider two">get started <i class="fa fa-chevron-circle-right"></i></a></div>-->-->
+					<!---->-->
+					<!--</li>-->-->
+		
+		
+		
+				<!-- SLIDE 3 -->-->
+				<!--	<li data-transition="papercut" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
+				<!---->-->
+				<!--		<img src="http://placehold.it/1920x580" alt="" />-->-->
+				<!---->-->
+				<!--		<div class="caption sfb" data-x="0" data-y="240" data-speed="900" data-start="900" data-easing="easeOutSine">-->-->
+				<!--			<div class="display_text_center"><img src="http://placehold.it/600x580" alt="" /></div>-->-->
+				<!--		</div>-->-->
+				<!---->-->
+				<!--		<div class="caption sfb stb" data-x="0" data-y="80" data-speed="900" data-start="700" data-easing="easeOutExpo">-->-->
+				<!--			<div class="display_text_center">-->-->
+				<!--				<h3>Find the Benefits of Using Joosa. &amp; Recommended Highly</h3></div>-->-->
+				<!--		</div>-->-->
+				<!---->-->
+			<!--		<div class="caption sfb stb" data-x="0" data-y="130" data-speed="900" data-start="1200" data-easing="easeOutExpo">-->-->
+				<!--			<div class="display_text_center">-->-->
+				<!--				<h2>We Build Smarter Stuff! on TF</h2></div>-->-->
+				<!--		</div>-->-->
+				<!---->-->
+				<!---->-->
+				<!--	</li>-->-->
+				<!---->-->
+				</ul>
+		
+			</div>
+		
+		</div>
+
+	</div>
+	<!-- end slider -->
+
+	<div class="clearfix"></div>
