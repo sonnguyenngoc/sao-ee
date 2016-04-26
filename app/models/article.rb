@@ -45,9 +45,9 @@ class Article < ActiveRecord::Base
       def self.get_all_news
         records = self.all
         records = records.joins(:article_categories).where(article_categories: {name: "News"})
-        records.order("created_at DESC").first
+        record = records.order("created_at DESC").first
         
-        return records
+        return record
       end
     #news
     
@@ -65,9 +65,9 @@ class Article < ActiveRecord::Base
       def self.get_intro
         records = self.all
         records = records.joins(:article_categories).where(article_categories: {name: "Intro"})
-        records.order("created_at DESC").first
+        record = records.order("created_at DESC").first
         
-        return records
+        return record
       end
     #intro
   
@@ -116,6 +116,14 @@ class Article < ActiveRecord::Base
     records = records.order("#{sort_by} #{sort_order}")
     
     return records   
+  end
+  
+  def display_title(lang)
+    lang == 'vi' ? title_vi : title
+  end
+  
+  def display_content(lang)
+    lang == 'vi' ? content_vi : content
   end
   
 end

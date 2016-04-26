@@ -35,7 +35,17 @@
 
 							<li><a href="#contact">Liên hệ</a></li>
 
-							<li><a href="#contact"><img src="/frontend/images/gb.png"></a></li>
+							<li>
+								<% if params[:locale] == "en" %>
+									
+							<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
+						
+						<% else %>
+						
+							<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
+						
+						<% end %>
+							</li>
 
 						</ul>
 
@@ -64,74 +74,75 @@
 
 	<div class="container_full">
 
-		<div class="fullwidthbanner-container">
-
-			<div class="fullwidthbanner">
-
-				<ul>
-					<!-- SLIDE 1 -->
-					<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
-
-						<img src="http://placehold.it/1920x580" alt="" />
-
-						<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>
-
-						<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">Look at <b>featured</b></div>
-
-						<div class="caption sfr stb small_text" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">website themes all of joosa.</div>
-
-						<div class="caption sfr stb vary_small_text" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">We hope that you enjoy it.</div>
-
-						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider">get started <i class="fa fa-chevron-circle-right"></i></a></div>
-
-					</li>
-
-					<!-- SLIDE 2 -->
-					<li data-transition="slideleft" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
-
-						<img src="http://placehold.it/1920x580" alt="" />
-
-						<div class="caption sfb" data-x="570" data-y="0" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>
-
-						<div class="caption sfr stb large_text two" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">5 Diffrent <b>Websites</b></div>
-
-						<div class="caption sfr stb small_text two" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">Corporate. Creative. Medical. </div>
-
-						<div class="caption sfr stb small_text two" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">Hosting. One Page Themes</div>
-
-						<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider two">get started <i class="fa fa-chevron-circle-right"></i></a></div>
-
-					</li>
-
-
-
-					<!-- SLIDE 3 -->
-					<li data-transition="papercut" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
-
-						<img src="http://placehold.it/1920x580" alt="" />
-
-						<div class="caption sfb" data-x="0" data-y="240" data-speed="900" data-start="900" data-easing="easeOutSine">
-							<div class="display_text_center"><img src="http://placehold.it/600x580" alt="" /></div>
-						</div>
-
-						<div class="caption sfb stb" data-x="0" data-y="80" data-speed="900" data-start="700" data-easing="easeOutExpo">
-							<div class="display_text_center">
-								<h3>Find the Benefits of Using Joosa. &amp; Recommended Highly</h3></div>
-						</div>
-
-						<div class="caption sfb stb" data-x="0" data-y="130" data-speed="900" data-start="1200" data-easing="easeOutExpo">
-							<div class="display_text_center">
-								<h2>We Build Smarter Stuff! on TF</h2></div>
-						</div>
-
-
-					</li>
-
-				</ul>
-
-			</div>
-
-		</div>
+		<!--<!--<div class="fullwidthbanner-container">-->-->
+		<!--<!---->-->
+		<!--<!--	<div class="fullwidthbanner">-->-->
+		<!--		-->
+		<!--		<!---->
+		<!--		<ul>-->
+		<!--			<!-- SLIDE 1 -->-->
+		<!--			<!--<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->
+		<!---->
+		<!--				<img src="http://placehold.it/1920x580" alt="" />-->
+		<!---->
+		<!--				<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>-->
+		<!---->
+		<!--				<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">Look at <b>featured</b></div>-->
+		<!---->
+		<!--				<div class="caption sfr stb small_text" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">website themes all of joosa.</div>-->
+		<!---->
+		<!--				<div class="caption sfr stb vary_small_text" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">We hope that you enjoy it.</div>-->
+		<!---->
+		<!--				<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider">get started <i class="fa fa-chevron-circle-right"></i></a></div>-->
+		<!---->
+		<!--			</li>-->-->
+		<!---->
+		<!--			<!-- SLIDE 2 -->-->
+		<!--			<!--<li data-transition="slideleft" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
+		<!--			<!---->-->
+		<!--			<!--	<img src="http://placehold.it/1920x580" alt="" />-->-->
+		<!--			<!---->-->
+		<!--			<!--	<div class="caption sfb" data-x="570" data-y="0" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="http://placehold.it/600x580" alt="" /></div>-->-->
+		<!--			<!---->-->
+		<!--			<!--	<div class="caption sfr stb large_text two" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo">5 Diffrent <b>Websites</b></div>-->-->
+		<!--			<!---->-->
+		<!--			<!--	<div class="caption sfr stb small_text two" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo">Corporate. Creative. Medical. </div>-->-->
+		<!--			<!---->-->
+		<!--			<!--	<div class="caption sfr stb small_text two" data-x="0" data-y="297" data-speed="900" data-start="1700" data-easing="easeOutExpo">Hosting. One Page Themes</div>-->-->
+		<!--			<!---->-->
+		<!--			<!--	<div class="caption lfb" data-x="0" data-y="370" data-speed="900" data-start="2200" data-easing="easeOutExpo"><a href="#" class="button_slider two">get started <i class="fa fa-chevron-circle-right"></i></a></div>-->-->
+		<!--			<!---->-->
+		<!--			<!--</li>-->-->
+		<!---->
+		<!---->
+		<!---->
+		<!--			<!-- SLIDE 3 -->-->
+		<!--		<!--	<li data-transition="papercut" data-slotamount="9" data-thumb="http://placehold.it/1920x580">-->-->
+		<!--		<!---->-->
+		<!--		<!--		<img src="http://placehold.it/1920x580" alt="" />-->-->
+		<!--		<!---->-->
+		<!--		<!--		<div class="caption sfb" data-x="0" data-y="240" data-speed="900" data-start="900" data-easing="easeOutSine">-->-->
+		<!--		<!--			<div class="display_text_center"><img src="http://placehold.it/600x580" alt="" /></div>-->-->
+		<!--		<!--		</div>-->-->
+		<!--		<!---->-->
+		<!--		<!--		<div class="caption sfb stb" data-x="0" data-y="80" data-speed="900" data-start="700" data-easing="easeOutExpo">-->-->
+		<!--		<!--			<div class="display_text_center">-->-->
+		<!--		<!--				<h3>Find the Benefits of Using Joosa. &amp; Recommended Highly</h3></div>-->-->
+		<!--		<!--		</div>-->-->
+		<!--		<!---->-->
+		<!--		<!--		<div class="caption sfb stb" data-x="0" data-y="130" data-speed="900" data-start="1200" data-easing="easeOutExpo">-->-->
+		<!--		<!--			<div class="display_text_center">-->-->
+		<!--		<!--				<h2>We Build Smarter Stuff! on TF</h2></div>-->-->
+		<!--		<!--		</div>-->-->
+		<!--		<!---->-->
+		<!--		<!---->-->
+		<!--		<!--	</li>-->-->
+		<!--		<!---->-->
+		<!--		<!--</ul>-->-->
+		<!---->
+		<!--	</div>-->
+		<!---->
+		<!--</div>-->
 
 	</div>
 	<!-- end slider -->
@@ -145,14 +156,14 @@
 			<div id="about_us" class="joosa features2">
 				<div class="container">
 
-					<div class="left"><img src="images/siteimg-joosa1.png" alt="" /></div>
+					<div class="left"><img src="<%= @about_us.image_url.aboutus_square_image %>" alt="385x310" /></div>
 					<!-- end left -->
 
 					<div class="right">
 
-						<h2><strong>VỀ CHÚNG TÔI</strong></h2>
+						<h2><strong><%= @about_us.display_title(params[:locale]) %></strong></h2>
 
-						<p class="font-content">Currently the inefficiency in using energy has led to many bad consequences. Therefore the human living standards are increasing day by day but potentially a profound risk to the future plus an unnecessary wasting of resources and money. Previously, almost people didn’t think about anything like “Green”, “Enviroment”, “the concept of Green Building”, “Environmental sustainability architecture”… while designing or constructing. People think these are the concepts for the lack of practical and economical. However, in crisis of the energy, natural resources and the natural environment today, “The Green Architecture” is the inspiration closer to humans. Share a desire to help the people lives become better and limited resources at the lowest possible, we have regrouped and established SAO with an intense expectation that SAO‘ll become a leader in Simulation–Analysis–Optimization.</p><br /><br />
+						<p class="font-content"><%= @about_us.display_content(params[:locale]).html_safe %></p><br /><br />
 
 						<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; Hình ảnh dự án</a>
 						<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; Liên hệ</a>
@@ -173,47 +184,8 @@
 	<div class="clearfix"></div>
 
 	<div>
-
-		<div class="joosa fusection1 container">
-
-				<div class="one_fourth">
-
-					<i class="fa fa-desktop fa-4x"></i>
-
-					<div class="clearfix"></div>
-
-					<h2>Simulation</h2>
-
-				</div>
-				<!-- end section -->
-
-				<div class="one_fourth">
-
-					<i class="fa fa-cog fa-4x"></i>
-
-					<div class="clearfix"></div>
-
-					<h2>Analysis</h2>
-
-				</div>
-				<!-- end section -->
-
-				<div class="one_fourth last">
-
-					<i class="fa fa-leaf fa-4x"></i>
-
-					<div class="clearfix"></div>
-
-					<h2>Optimization</h2>
-
-				</div>
-				<!-- end section -->
-
-			</div>
-			<!-- end features section 1 -->
-
-			<div class="clearfix mar_top7"></div>
-
+		<!-- end features section 1 -->
+		
 		<div class="servicespage_section">
 
 			<div class="services_slider_sec">
@@ -233,7 +205,7 @@
 
 											<div class="slide_one">
 
-												<div class="left"><img src="images/siteimg-002.png" alt="" /></div>
+												<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="415x325" /></div>
 												<!-- end section -->
 
 												<div class="right">
@@ -242,7 +214,7 @@
 
 													<h2>Energy Efficiency</h2>
 
-													<p class="font-content">Design, built and manage an energy saving building may be a hard and complicated task. Energy simulating can help you analyze the movement of energy through space and volume. The result can help designer make better choice to decrease price, improve efficiency, and decrease the affect to environment of buildings. In a whole life-cycle of a building (about 30 years), the initial costs for design & construction take 36%, but the cost for operation and maintenance take 64%. The costs for maintenance and operation more important than the total cost for designing and construction at least 2 times. This clearly prove to us about the important of designing and managerment a energy efficient building</p>
+													<p class="font-content"><%= @intros.display_content(params[:locale]).html_safe %></p>
 
 												</div>
 
@@ -251,138 +223,13 @@
 
 										</div>
 									</div>
-
-									<div class='item item2'>
-										<div class='inner'>
-
-											<div class="slide_two">
-
-												<div class="one_half left"><img src="images/siteimg4.png" alt="" /></div>
-												<!-- end section -->
-
-												<div class="one_half last">
-
-													<ul>
-
-														<li>
-															<div class="icon"><i class="fa fa-coffee fa-2x"></i></div>
-															<h2>Responsive Design</h2>
-															<p>Lorem ipsum dolor feugiat delicata liberavisse maiorum assum omnium conceptam.</p>
-														</li>
-
-														<li>
-															<div class="icon"><i class="fa fa-globe fa-2x"></i></div>
-															<h2>Best customization</h2>
-															<p>Lorem ipsum dolor feugiat delicata liberavisse maiorum assum omnium conceptam.</p>
-														</li>
-
-														<li>
-															<div class="icon"><i class="fa fa-mobile-phone fa-2x"></i></div>
-															<h2>Mobile Friendly</h2>
-															<p>Lorem ipsum dolor feugiat delicata liberavisse maiorum assum omnium conceptam.</p>
-														</li>
-
-													</ul>
-
-												</div>
-												<!-- end section -->
-
-											</div>
-
-										</div>
-									</div>
-
-									<div class='item item3'>
-										<div class='inner'>
-
-											<div class="slide_three">
-
-												<div class="one_half left"><img src="images/siteimg3.png" alt="" /></div>
-												<!-- end section -->
-
-												<div class="one_half last">
-
-													<h3>Airem Ipsum on the Internet</h3>
-
-													<h2>Generators on the Internet</h2>
-
-													<p>All the Lorem Ipsum generators on the Internet tentos repeat predefined chunks as necessary making the combined with a handful is always.</p>
-
-													<ul>
-
-														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
-
-														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
-
-														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
-
-														<li><i class="fa fa-check"></i> Lorem predefined chunks as Ipsum generators necessary</li>
-
-													</ul>
-
-												</div>
-												<!-- end section -->
-
-											</div>
-
-										</div>
-									</div>
-
-									<div class='item item4'>
-										<div class='inner'>
-
-											<div class="slide_four">
-
-												<div class="one_fourth"><img src="images/layout-img01.jpg" alt="" /></div>
-
-												<div class="one_fourth"><img src="images/layout-img02.jpg" alt="" /></div>
-
-												<div class="one_fourth"><img src="images/layout-img03.jpg" alt="" /></div>
-
-												<div class="one_fourth last"><img src="images/layout-img04.jpg" alt="" /></div>
-
-											</div>
-
-										</div>
-									</div>
-
 
 								</div>
 
 							</div>
 
 
-							<div class='slideSelectors'>
-
-								<div class="container">
-
-									<div class='item selected'>
-										<ul class="iosslider-item-list">
-											<li>Introduce</li>
-										</ul>
-									</div>
-
-									<div class='item'>
-										<ul class="iosslider-item-list">
-											<li>product display 2</li>
-										</ul>
-									</div>
-
-									<div class='item'>
-										<ul class="iosslider-item-list">
-											<li>product display 3</li>
-										</ul>
-									</div>
-
-									<div class='item'>
-										<ul class="iosslider-item-list last">
-											<li>5 diffrent Websites</li>
-										</ul>
-									</div>
-
-								</div>
-
-							</div>
+						
 
 						</div>
 
@@ -508,74 +355,41 @@
 	</div>
 	<!-- end portfolio -->
 
+	<div>
+
+		<div class="aboutpage_section">
+
+			<div id="news" class="joosa features2">
+				<div class="container">
+
+					<div class="left"><img src="<%= @news.image_url.news_square_image %>" alt="385x310" /></div>
+					<!-- end left -->
+
+					<div class="right">
+
+						<h2><strong><%= @news.display_title(params[:locale]) %></strong></h2>
+
+						<p class="font-content"> <%= @news.display_content(params[:locale]).html_safe %></p>
+
+					</div>
+					<!-- end right -->
+
+				</div>
+			</div>
+			<!-- end features section 2 -->
+
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+	<!-- end about -->
+
 	<div class="clearfix"></div>
 
 	<div>
 		<div class="contactpage_section">
 
-			<div id="news" class="twitter_feeds">
-
-				<div class="container">
-
-					<div class="faide_slider">
-
-						<div id="slider">
-
-							<div id="slide1">
-
-								<br/>
-
-								<h3>Tiết kiệm nước tiết kiệm năng lượng</h3>
-
-								<br />
-
-								<p class="font-content">Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một khu vực tiêu thụ năng lượng đáng kể. Có nhiều giải pháp để tiết kiệm nước như thay thế hệ thống vòi sen thế hệ cũ với lưu lượng nước tiêu tốn 10 lít/phút bằng loại vòi tắm công nghệ mới (sử dụng cơ chế hòa trộn các bọt khí nhỏ vào trong nước làm cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ giúp tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế bàn cầu có dung tích bồn xả là 12 lít/phút bằng bằng bàn cầu ứng dụng hệ thống xả tiết kiệm và hiệu quả sẽ không chỉ giúp giảm tiếng ồn mà còn tiết kiệm đến 20% lượng nước sử dụng. Ngoài ra, một trong những cách tiết kiệm nước cũng rất hiệu quả là việc tái sử dụng nước hoặc tận dụng nguồn nước mưa. Sơ đồ hình bên dưới là 1 ý tưởng dùng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu và tưới cây ngoài vườn.</p>
-
-								<br />
-
-								<b>// Được đăng vào lúc 08:50 26/04/2016</b>
-
-							</div>
-							<!-- end slide1 -->
-
-							<div id="slide2">
-
-								<br/>
-
-								<h3>Tiết kiệm nước tiết kiệm năng lượng</h3>
-
-								<br />
-
-								<p class="font-content">Khi nói đến tiềm năng tiết kiệm năng lượng tại các tòa nhà, khách sạn, chúng ta thường nghĩ ngay đến các hệ thống sử dụng điện lớn như hệ thống lạnh, chiếu sáng, … mà ít ai biết rằng hệ thống sử dụng nước cũng là một khu vực tiêu thụ năng lượng đáng kể. Có nhiều giải pháp để tiết kiệm nước như thay thế hệ thống vòi sen thế hệ cũ với lưu lượng nước tiêu tốn 10 lít/phút bằng loại vòi tắm công nghệ mới (sử dụng cơ chế hòa trộn các bọt khí nhỏ vào trong nước làm cho người sử dụng vẫn tận hưởng đầy đủ xung lực của nước) sẽ giúp tiết kiệm đến 35% lượng nước sử dụng hoặc thay thế bàn cầu có dung tích bồn xả là 12 lít/phút bằng bằng bàn cầu ứng dụng hệ thống xả tiết kiệm và hiệu quả sẽ không chỉ giúp giảm tiếng ồn mà còn tiết kiệm đến 20% lượng nước sử dụng. Ngoài ra, một trong những cách tiết kiệm nước cũng rất hiệu quả là việc tái sử dụng nước hoặc tận dụng nguồn nước mưa. Sơ đồ hình bên dưới là 1 ý tưởng dùng bể chứa nước mưa ngầm, sử dụng cho việc dội bồn cầu, bồn tiểu và tưới cây ngoài vườn.</p>
-
-								<br />
-
-								<b>// Được đăng vào lúc 08:50 26/04/2016</b>
-
-							</div>
-							<!-- end slide2 -->
-
-						</div>
-
-						<div class="clearfix mar_top3"></div>
-
-						<ul class="controlls">
-
-							<li>
-								<a href="#" class="slide1"></a>
-							</li>
-
-							<li>
-								<a href="#" class="slide2"></a>
-							</li>
-
-						</ul>
-
-					</div>
-
-				</div>
-
-			</div>
+		
 
 			<div class="clearfix"></div>
 
@@ -609,8 +423,8 @@
 
 								<div class="map">
 
-									<iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=WA,+United+States&amp;aq=0&amp;oq=WA&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=7&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=WA,+United+States&amp;aq=0&amp;oq=WA&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=7&amp;iwloc=A">View Larger Map</a></small>
-
+									<iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4800097463913!2d106.70093661429713!3d10.774500362176694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46e196af35%3A0x4c91d3cfa5250cfe!2zNjggTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCA3MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1461649427453"></iframe>
+								
 								</div>
 
 							</div>

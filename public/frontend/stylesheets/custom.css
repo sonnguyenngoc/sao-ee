@@ -27,3 +27,9 @@
 #trueHeader #logo {
 	background: url(../images/logo.png) no-repeat left -19px/83px;
 }
+.fluidHeight {
+	margin-top: 0 !important;
+}
+.iosSlider .slide_one {
+	padding-top: 0 !important;
+}

@@ -65,6 +65,15 @@ class ArticleUploader < CarrierWave::Uploader::Base
   version :small_square_image do
     process :resize_to_fill => [50, 50]
   end
+  version :aboutus_square_image do
+    process :resize_to_fit => [385, 310]
+  end
+  version :news_square_image do
+    process :resize_to_fit => [385, 400]
+  end
+  version :intros_square_image do
+    process :resize_to_fit => [415, 325]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
