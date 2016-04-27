@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>-------- Original message --------</p>
+    <p>
+      From: <%= @contact.email %>
+    </p>
+    <p>
+      To: sonnn@hoangkhang.com.vn
+    </p>
+    <p>
+      Name: <%= @contact.name %>
+    </p>
+    <p>
+      Phone: <%= @contact.phone %>
+    </p>
+    <p>
+      Message: <%= @contact.message.html_safe %>
+    </p>
+    <p>
+      Date: <%= @contact.created_at.in_time_zone("Asia/Bangkok").strftime("%d/%m/%Y %H:%M") %> (GMT+07:00)
+    </p>
+  </body>
+</html>

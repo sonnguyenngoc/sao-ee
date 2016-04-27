@@ -302,39 +302,9 @@
 					<!-- end section -->
 
 
-					<div class="one_half last">
+					<div class="one_half last ajax_loading_form_contact">
 
-						<h3><%= t(:contact) %></TT></h3>
-						
-						<form action="" method="post">
-    
-							<fieldset>
-								<label for="name" class="blocklabel"><%= t(:yourname) %>*</label>
-								<p class="input-contact"><input name="yourname" class="input_bg" type="text" id="name" value="" placeholder="<%= t(:yourname) %>"></p>
-						
-								
-								<label for="email" class="blocklabel"><%= t(:email) %>*</label>
-								<p class="input-contact"><input name="email" class="input_bg" type="text" id="email" value="" placeholder="<%= t(:email) %>"></p>
-								
-								
-								<label for="website" class="blocklabel"><%= t(:phone) %></label>
-								<p class="input-contact"><input name="phone" class="input_bg" type="text" id="website" value="" placeholder="<%= t(:phone) %>"></p>
-								
-								
-								<label for="message" class="blocklabel"><%= t(:message) %>*</label>
-								<p class="input-contact"><textarea name="message" class="textarea_bg" id="message" cols="20" rows="7" placeholder="<%= t(:message) %>"></textarea></p><p>
-								</p><div class="clearfix"></div>
-								<input name="Send" type="submit" value="<%= t(:submit) %>" class="comment_submit" id="send"><p></p>
-								<!---->
-								<!--<div class="success">-->
-								<!--	<div class="message-box-wrap">-->
-								<!--	   Your message has been <strong>Received Successfully!</strong> Thank you!-->
-								<!--	</div>-->
-								<!--</div>-->
-							
-							</fieldset>
-							
-						</form>
+						<%= render "form_contact" %>
 
 					</div>
 
@@ -566,4 +536,19 @@
 		});
 
 	});
+</script>
+
+<!-- Loading form -->
+<script>
+	//$(document).on("click",".submit_button", function()
+	//{
+	//	$.ajax({
+	//		method: "GET",
+	//		url: url,
+	//		data: {  }
+	//	})
+	//	.done(function( msg ) {
+	//	  $(".ajax_loading_form_contact").html(msg);
+	//	});
+	//});
 </script>
