@@ -38,15 +38,15 @@
 							<li><a href="#contact"><%= t(:fr_contact) %></a></li>
 
 							<li>
-								<% if params[:locale] == "en" %>
+								<% if params[:locale] == "vi" %>
 									
-							<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
-						
-						<% else %>
-						
-							<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
-						
-						<% end %>
+									<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
+								
+								<% else %>
+								
+									<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
+								
+								<% end %>
 							</li>
 
 						</ul>
