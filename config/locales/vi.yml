@@ -18,6 +18,11 @@ vi:
   find_the_address: "Tìm địa chỉ"
   message_us: "Gửi tin cho chúng tôi"
   send: "Gửi"
+  yourname: "Họ tên"
+  email: "E-Mail"
+  phone: "Điện thoại"
+  message: "Lời nhắn"
+  submit: "GỬI"
   
   #translate backend
   dashboard: "Bảng điều khiển"

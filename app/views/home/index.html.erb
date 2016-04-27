@@ -26,6 +26,8 @@
 						<ul id="fixed-nav">
 
 							<li class="current"><a href="#home"><%= t(:fr_home) %></a></li>
+							
+							<li><a href="#sao">S-A-O</a></li>
 
 							<li><a href="#about_us"><%= t(:fr_about) %></a></li>
 
@@ -86,9 +88,13 @@
 						<h2><strong><%= @about_us.display_title(params[:locale]) %></strong></h2>
 
 						<p class="font-content"><%= @about_us.display_content(params[:locale]).html_safe %></p><br /><br />
-
-						<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; <%= t(:fr_project_image) %></a>
-						<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; <%= t(:fr_contact) %></a>
+						
+						<div class="button1">
+							
+							<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; <%= t(:fr_project_image) %></a>
+							<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; <%= t(:fr_contact) %></a>
+							
+						</div>
 
 					</div>
 					<!-- end right -->
@@ -104,84 +110,60 @@
 	<!-- end about -->
 
 	<div class="clearfix"></div>
-
+	
 	<div>
-		<!-- end features section 1 -->
-		
+
 		<div class="servicespage_section">
 
-			<div class="services_slider_sec">
-
+			<div id="sao" class="joosa features2 services_slider_sec1">
 				<div class="container">
 
-					<div class='fluidHeight'>
+					<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="385x310" /></div>
+					<!-- end left -->
 
-						<div class='sliderContainer'>
+					<div class="right">
 
-							<div class='iosSlider'>
+						<h2 style="color: #098a00">Simulation-Analysis-Optimization</h2>
 
-								<div class='slider'>
-
-									<div class='item item1'>
-										<div class='inner'>
-
-											<div class="slide_one">
-
-												<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="415x325" /></div>
-												<!-- end section -->
-
-												<div class="right">
-
-													<h3>Simulation-Analysis-Optimization</h3>
-
-													<h2>Energy Efficiency</h2>
-
-													<p class="font-content"><%= @intros.display_content(params[:locale]).html_safe %></p>
-
-												</div>
-
-											</div>
-
-										</div>
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
+						<h3 style="color: #ff0000">Energy Efficiency</h3>
+			
+						<p class=""><%= @intros.display_content(params[:locale]).html_safe %></p>
 
 					</div>
+					<!-- end right -->
 
 				</div>
-
 			</div>
-			<!-- end inner slider -->
+			<!-- end features section 2 -->
+
+			<div class="clearfix"></div>
 
 		</div>
 	</div>
-	<!-- end services -->
+	<!-- end about -->
 	
 	<div class="clearfix"></div>
 	
 	<div>
 
 		<div class="aboutpage_section">
-
-			<div id="sao" class="joosa">
-				<div class="container">
-
-					<div class="article-sao">
-
-						<h3><%= @saos.display_title(params[:locale]) %></h3>
-
-						<p class="font-content"><img src="<%= @saos.image_url %>" alt="Full" /></p>
-
+			<% @saos.each do |sao_item| %>
+				<div id="" class="joosa">
+					
+					<div class="container">
+	
+						<div class="">
+	
+							<h3><%= sao_item.display_title(params[:locale]) %></h3>
+	
+							<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
+	
+						</div>
+	
 					</div>
-
 				</div>
-			</div>
-			<!-- end features section 2 -->
+				<!-- end features section 2 -->
+			<% end %>
 
 			<div class="clearfix"></div>
 
@@ -322,37 +304,27 @@
 
 					<div class="one_half last">
 
-						<h3>LIÊN KẾT TRANG</h3>
-
-						<!--<ul class="footer_social_links">-->
-						<!--	<li><a href="#facebook"><i class="fa fa-facebook"></i> Facebook</a></li>-->
-						<!--	<li><a href="#twitter"><i class="fa fa-twitter"></i> Twitter</a></li>-->
-						<!--	<li><a href="#google_plus"><i class="fa fa-google-plus"></i> Google +</a></li>-->
-						<!--	<li><a href="#linkedin"><i class="fa fa-linkedin"></i> Linkedin</a></li>-->
-						<!--	<li><a href="#skype"><i class="fa fa-skype"></i> Skype</a></li>-->
-						<!--	<li><a href="#flickr"><i class="fa fa-flickr"></i> Flickr</a></li>-->
-						<!--	<li><a href="#youtube"><i class="fa fa-youtube"></i> Youtube</a></li>-->
-						<!--	<li><a href="#rss"><i class="fa fa-rss"></i> RSS</a></li>-->
-						<!--</ul>-->
+						<h3><%= t(:contact) %></TT></h3>
+						
 						<form action="" method="post">
     
 							<fieldset>
-								<label for="name" class="blocklabel">Your Name*</label>
-								<p class="input-contact"><input name="yourname" class="input_bg" type="text" id="name" value="" placeholder="Your Name"></p>
+								<label for="name" class="blocklabel"><%= t(:yourname) %>*</label>
+								<p class="input-contact"><input name="yourname" class="input_bg" type="text" id="name" value="" placeholder="<%= t(:yourname) %>"></p>
 						
 								
-								<label for="email" class="blocklabel">E-Mail*</label>
-								<p class="input-contact"><input name="email" class="input_bg" type="text" id="email" value="" placeholder="Email"></p>
+								<label for="email" class="blocklabel"><%= t(:email) %>*</label>
+								<p class="input-contact"><input name="email" class="input_bg" type="text" id="email" value="" placeholder="<%= t(:email) %>"></p>
 								
 								
-								<label for="website" class="blocklabel">Phone</label>
-								<p class="input-contact"><input name="phone" class="input_bg" type="text" id="website" value="" placeholder="Phone"></p>
+								<label for="website" class="blocklabel"><%= t(:phone) %></label>
+								<p class="input-contact"><input name="phone" class="input_bg" type="text" id="website" value="" placeholder="<%= t(:phone) %>"></p>
 								
 								
-								<label for="message" class="blocklabel">Your Message*</label>
-								<p class="input-contact"><textarea name="message" class="textarea_bg" id="message" cols="20" rows="7" placeholder="Message"></textarea></p><p>
+								<label for="message" class="blocklabel"><%= t(:message) %>*</label>
+								<p class="input-contact"><textarea name="message" class="textarea_bg" id="message" cols="20" rows="7" placeholder="<%= t(:message) %>"></textarea></p><p>
 								</p><div class="clearfix"></div>
-								<input name="Send" type="submit" value="SUBMIT" class="comment_submit" id="send"><p></p>
+								<input name="Send" type="submit" value="<%= t(:submit) %>" class="comment_submit" id="send"><p></p>
 								<!---->
 								<!--<div class="success">-->
 								<!--	<div class="message-box-wrap">-->

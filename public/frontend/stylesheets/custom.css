@@ -90,3 +90,60 @@
     text-transform: uppercase;
 	float: right;
 }
+.joosa.features2.services_slider_sec1 {
+    background-color: #83b618;
+}
+.joosa.features2.services_slider_sec1 .container .right h3 {
+	font-weight: 400;
+    color: #fff;
+}
+.joosa.features2.services_slider_sec1 .container .right h2 {
+	font-weight: bold;
+}
+.joosa.features2 .right p {
+	
+}
+.joosa .container h3 {
+	font-weight: bold;
+}
+div#contact .container .one_half.last h3 {
+    text-transform: uppercase;
+}
+#top-nav #fixed-nav li a {
+	font-weight: 500;
+}
+.aboutpage_section .joosa .container p img {
+    max-width: 100%;
+}
+.joosa.featrures2 .container .right .button1 a.more_but {
+    max-width: 100%;
+}
+.joosa.features2 .right .more_but {
+	max-width: 100%;
+}
+@media only screen and (max-width: 479px){
+	.joosa.features2 .right .more_but {
+		font-size: 11px;
+	}
+	#top-nav #fixed-nav li a {
+		font-size: 10px;
+	}	
+	#trueHeader #logo {
+		height: 40px;
+	}
+	#trueHeader #logo {
+		background: url(../images/logo.png) no-repeat left -18px/80px;
+	}
+	#header .one_fourth {
+		margin-bottom: 0px;
+		padding-left: 105px;/*?*/
+	}
+	.blocklabel, .input_bg {
+		width: 100%;
+		padding: 0px;
+	}
+	.textarea_bg {
+		width: 96%;
+		padding: 7px 0px 0px 10px;
+	}
+}

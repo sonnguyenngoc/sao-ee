@@ -76,9 +76,9 @@ class Article < ActiveRecord::Base
       def self.get_saos
         records = self.all
         records = records.joins(:article_categories).where(article_categories: {name: "S-A-O"})
-        record = records.order("created_at DESC").first
+        records = records.order("created_at ASC")
         
-        return record
+        return records
       end
     #intro
   

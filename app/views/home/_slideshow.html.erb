@@ -9,13 +9,13 @@
 				<ul>
                   <% @slides.each do |item| %>
 					<!-- SLIDE 1 -->
-					<li data-transition="fade" data-slotamount="9" data-thumb="http://placehold.it/1920x580">
+					<li data-transition="fade" data-slotamount="9" data-thumb="<%= item.image_url.slider_image %>">
 		
 						<img src="<%= item.image_url.slider_image %>" alt="1920x580" />
 		
 						<!--<div class="caption sfr" data-x="735" data-y="80" data-speed="900" data-start="900" data-easing="easeOutSine"><img src="/frontend/images/slide-02.jpg" alt="600x580" /></div>-->
 		
-						<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo"> <b style="color: #83B618">Simulation-Analysis-Optimization</b></div>
+						<div class="caption sfr stb large_text" data-x="0" data-y="175" data-speed="900" data-start="700" data-easing="easeOutExpo"> <b style="color: #098a00">Simulation-Analysis-Optimization</b></div>
 		
 						<div class="caption sfr stb small_text" data-x="0" data-y="246" data-speed="900" data-start="1200" data-easing="easeOutExpo" style="color: #ff0000">Energy Efficiency</div>
 		

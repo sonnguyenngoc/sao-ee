@@ -17,6 +17,11 @@ en:
   contact_info: "Contact Info"
   find_the_address: "Find the Address"
   message_us: "Send Us A Message"
+  yourname: "Your Name"
+  email: "E-Mail"
+  phone: "Phone"
+  message: "Your Message"
+  submit: "SUBMIT"
   
   #translate backend
   dashboard: "Dashboard"
