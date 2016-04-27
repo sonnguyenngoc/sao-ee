@@ -170,3 +170,12 @@ div#contact .container .one_half.last h3 {
 .margin_sao {
     margin-top: 4%;
 }
+.caption .sfr .stb .large_text b {
+	text-transform: capitalize;
+	font-size: 90%;
+}
+a.button_slider {
+	color: #fff;
+    background-color: #343635;
+    border: 1px solid #ffffff;
+}
