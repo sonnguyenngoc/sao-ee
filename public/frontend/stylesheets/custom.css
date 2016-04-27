@@ -25,7 +25,11 @@
 	margin-top: 0px;
 }
 #trueHeader #logo {
-	background: url(../images/logo.png) no-repeat left -19px/83px;
+	background: url(../images/logo.png) no-repeat left -28px/134px;
+}
+#trueHeader #logo {
+    height: 70px;
+    margin-top: 0;
 }
 .fluidHeight {
 	margin-top: 0 !important;
