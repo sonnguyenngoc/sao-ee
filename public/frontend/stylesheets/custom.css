@@ -90,6 +90,26 @@
     text-transform: uppercase;
 	float: right;
 }
+.comment_submit:hover {
+	background-color: #f9f9f9;
+	cursor: pointer;
+}
+.success {
+	color: #1ea133;
+	border-color: #a9ecb4;
+	background-color: #dffbe4;
+}
+.success {
+	margin-top: 50px;
+    border-radius: 0px;
+    border: 1px solid #bbb;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.message-box-wrap {
+    border: 0px solid #fff;
+    padding: 10px;
+}
 .joosa.features2.services_slider_sec1 {
     background-color: #83b618;
 }
