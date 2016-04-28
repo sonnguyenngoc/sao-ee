@@ -195,3 +195,14 @@ label.error {
 .textarea_bg {
 	margin-bottom: 0;
 }
+.caption-slider b {
+    color: #098a00 !important;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    font-size: 90%;
+    text-transform: capitalize;
+}
+.caption-slider span {
+    color: #ff0000 !important;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	font-weight: bold;
+}
