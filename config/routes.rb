@@ -11,7 +11,13 @@ Rails.application.routes.draw do
     
     # resources
     resources :newsletters
-    resources :contacts
+    
+    #post "contacts/send" => "contacts#contact", as: :send
+    resources :contacts do
+      collection do
+        post "send"
+      end
+    end
     devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords' }
     resources :carts
     resources :line_items

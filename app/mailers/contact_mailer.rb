@@ -1,8 +1,8 @@
 class ContactMailer < ApplicationMailer
-  default from: 'sonnn@hoangkhang.com.vn'
+  default from: 'info@sao-ee.vn'
   
   def contact_email(contact)
     @contact = contact
-    mail(to: "sonnn@hoangkhang.com.vn", subject: "Contact - SAO-EE.VN")
+    mail(to: "info@sao-ee.vn", subject: "Contact - SAO-EE.VN")
   end
 end
