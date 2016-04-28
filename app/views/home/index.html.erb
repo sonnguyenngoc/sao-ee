@@ -576,7 +576,9 @@
 	{
 		event.preventDefault();
 		
+		
 		if ($(this).parents('form').valid()) {
+			$(this).attr('value','<%= t(:sending).html_safe %>');
             var data = $(this).parents('form').serialize();
 			url = "<%= send_email_contacts_path %>"
 			$.ajax({
