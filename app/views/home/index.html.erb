@@ -78,6 +78,7 @@
 		<div class="aboutpage_section">
 
 			<div id="about_us" class="joosa features2">
+				
 				<div class="container">
 
 					<div class="left"><img src="<%= @about_us.image_url.aboutus_square_image %>" alt="385x310" /></div>
@@ -100,12 +101,14 @@
 					<!-- end right -->
 
 				</div>
+			
 			</div>
 			<!-- end features section 2 -->
 
 			<div class="clearfix"></div>
 
 		</div>
+	
 	</div>
 	<!-- end about -->
 
@@ -116,6 +119,7 @@
 		<div class="servicespage_section">
 
 			<div id="sao" class="joosa features2 services_slider_sec1">
+				
 				<div class="container">
 
 					<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="385x310" /></div>
@@ -133,6 +137,7 @@
 					<!-- end right -->
 
 				</div>
+			
 			</div>
 			<!-- end features section 2 -->
 
@@ -147,7 +152,9 @@
 	<div>
 
 		<div class="aboutpage_section">
+			
 			<% @saos.each do |sao_item| %>
+				
 				<div id="" class="joosa margin_sao">
 					
 					<div class="container">
@@ -161,8 +168,10 @@
 						</div>
 	
 					</div>
+				
 				</div>
 				<!-- end features section 2 -->
+			
 			<% end %>
 
 			<div class="clearfix"></div>
@@ -174,6 +183,7 @@
 	<div class="clearfix"></div>
 
 	<div id="portfolio">
+		
 		<div class="portfoliopage_section">
 
 			<div class="container">
@@ -181,14 +191,19 @@
 				<div class="portfolio_page">
 
 					<h1><%= t(:fr_project) %></strong>
+					
 					<br />
+					
 					<i><%= t(:fr_project_title) %></i>
+					
 					</h1>
 
 					<div class="portfolioFilter">
 
 						<a href="#" data-filter="*" class="current">Tất cả</a>
+						
 						<a href="#" data-filter=".places">Project Heineken Factory</a>
+						
 						<a href="#" data-filter=".people">Town house</a>
 
 					</div>
@@ -199,15 +214,27 @@
 					<div class="portfolioContainer">
 						
 						<% @projects.each do |project| %>
+							
 							<% project.article_list_images.each do |image| %>
+								
 								<div class="people">
+									
 									<a class="fancybox" href="<%= image.image_url.larger_rectangle_image %>" data-fancybox-group="gallery" title="<%= project.display_title(params[:locale]) %>">
+										
 										<div class="imgWrap"><img src="<%= image.image_url.larger_rectangle_image %>" alt="" />
+											
 											<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
-											<h3><%= project.display_title(params[:locale]) %></h3></div>
+											
+											<h3><%= project.display_title(params[:locale]) %></h3>
+										
+										</div>
+									
 									</a>
+								
 								</div>
+							
 							<% end %>						
+						
 						<% end %>
 
 					</div>
@@ -540,15 +567,17 @@
 
 <!-- Loading form -->
 <script>
-	//$(document).on("click",".submit_button", function()
-	//{
-	//	$.ajax({
-	//		method: "GET",
-	//		url: url,
-	//		data: {  }
-	//	})
-	//	.done(function( msg ) {
-	//	  $(".ajax_loading_form_contact").html(msg);
-	//	});
-	//});
+	$(document).on("click",".submit_button", function()
+	{
+		var data = $(this).parents('form').serialize();
+		url = "<%= send_contacts_path %>"
+		$.ajax({
+			method: "POST",
+			url: url,
+			data: data
+		})
+		.done(function( msg ) {
+		  $(".ajax_loading_form_contact").html(msg);
+		});
+	});
 </script>

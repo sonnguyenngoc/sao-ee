@@ -1,12 +1,10 @@
 class ContactsController < ApplicationController
 
-  # POST /contacts
-  # POST /contacts.json
-  def create
+  def send
     @contact = Contact.new(contact_params)
     if @contact.save
-      ContactMailer.contact_email(@contact).deliver_now
-      redirect_to root_path
+      #ContactMailer.contact_email(@contact).deliver_now
+      render "/home/_form_contact", layout: nil
       @success = true
     else
       @success = false
