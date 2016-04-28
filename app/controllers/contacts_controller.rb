@@ -1,17 +1,17 @@
 class ContactsController < ApplicationController
 
-  def send
+  def send_email
     @contact = Contact.new(contact_params)
     if @contact.save
-      #ContactMailer.contact_email(@contact).deliver_now
-      render "/home/_form_contact", layout: nil
-      @success = true
+      ContactMailer.contact_email(@contact).deliver_now
+      @success = true          
     else
       @success = false
     end
+    render "/home/_form_contact", layout: nil  
   end
   
-   #def create
+  #def create
   #  @contact = Contact.new(contact_params)
   #  if @contact.save
   #    @success = true

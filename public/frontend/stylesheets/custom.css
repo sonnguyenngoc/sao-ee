@@ -179,3 +179,19 @@ a.button_slider {
     background-color: #343635;
     border: 1px solid #ffffff;
 }
+label.error {
+    color: red;
+    display: block;
+    margin-left: 22%;
+	display: none !important;
+}
+.input-contact {
+	height: auto;
+	min-height: 35px;
+}
+.input-contact input.error, .input-contact textarea.error {
+	border-color: red;
+}
+.textarea_bg {
+	margin-bottom: 0;
+}

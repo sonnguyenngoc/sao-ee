@@ -38,15 +38,15 @@
 							<li><a href="#contact"><%= t(:fr_contact) %></a></li>
 
 							<li>
-								<% if params[:locale] == "en" %>
+								<% if !params[:locale].present? or params[:locale] == "en" %>
 									
-							<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
-						
-						<% else %>
-						
-							<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
-						
-						<% end %>
+									<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
+								
+								<% else %>
+								
+									<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
+								
+								<% end %>
 							</li>
 
 						</ul>
@@ -384,6 +384,9 @@
 <%= javascript_include_tag "/frontend/js/jquery.nav.js" %>
 <%= javascript_include_tag "/frontend/js/main.js" %>
 
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
+
 <!-- isotope -->
 <script type="text/javascript">
 	$(window).load(function() {
@@ -417,12 +420,13 @@
 
 <!-- main menu -->
 <%= javascript_include_tag "/frontend/js/mainmenu/jquery-1.7.1.min.js" %>
-
 <!-- jquery jcarousel -->
 <%= javascript_include_tag "/frontend/js/jcarousel/jquery.jcarousel.min.js" %>
 
 <!-- REVOLUTION SLIDER -->
 <%= javascript_include_tag "/frontend/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js" %>
+
+
 
 <!-- scroll up -->
 <script type="text/javascript">
@@ -567,17 +571,22 @@
 
 <!-- Loading form -->
 <script>
-	$(document).on("click",".submit_button", function()
+	$(document).on("click",".submit_button", function(event)
 	{
-		var data = $(this).parents('form').serialize();
-		url = "<%= send_contacts_path %>"
-		$.ajax({
-			method: "POST",
-			url: url,
-			data: data
-		})
-		.done(function( msg ) {
-		  $(".ajax_loading_form_contact").html(msg);
-		});
+		event.preventDefault();
+		
+		if ($(this).parents('form').valid()) {
+            var data = $(this).parents('form').serialize();
+			url = "<%= send_email_contacts_path %>"
+			$.ajax({
+				method: "POST",
+				url: url,
+				data: data
+			})
+			.done(function( msg ) {
+			  $(".ajax_loading_form_contact").html(msg);
+			});
+        }
+			
 	});
 </script>
