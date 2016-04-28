@@ -26,10 +26,10 @@
 						<ul id="fixed-nav">
 
 							<li class="current"><a href="#home"><%= t(:fr_home) %></a></li>
-							
-							<li><a href="#sao">S-A-O</a></li>
 
 							<li><a href="#about_us"><%= t(:fr_about) %></a></li>
+							
+							<li><a href="#sao">S-A-O</a></li>
 
 							<li><a href="#portfolio"><%= t(:fr_project) %></a></li>
 
@@ -38,6 +38,7 @@
 							<li><a href="#contact"><%= t(:fr_contact) %></a></li>
 
 							<li>
+
 								<% if !params[:locale].present? or params[:locale] == "en" %>
 									
 									<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
@@ -45,7 +46,7 @@
 								<% else %>
 								
 									<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
-								
+
 								<% end %>
 							</li>
 
@@ -494,7 +495,7 @@
 			tpj.fn.css = tpj.fn.cssOriginal;
 
 		var api = tpj('.fullwidthbanner').revolution({
-			delay: 9000,
+			delay: 6000,
 			startwidth: 1170,
 			startheight: 580,
 
