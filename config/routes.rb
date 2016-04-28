@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     #post "contacts/send" => "contacts#contact", as: :send
     resources :contacts do
       collection do
-        post "send"
+        post "send_email"
       end
     end
     devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords' }
