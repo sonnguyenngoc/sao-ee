@@ -226,7 +226,7 @@
 											
 											<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
 											
-											<h3><%= project.display_title(params[:locale]) %></h3>
+											<h3><%= image.display_title(params[:locale]).present? ? image.display_title(params[:locale]) : project.display_title(params[:locale]) %></h3>
 										
 										</div>
 									
