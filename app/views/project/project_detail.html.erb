@@ -71,115 +71,6 @@
 
 
 <div id="home">
-	
-	<%= render 'slideshow' %>
-
-	<div>
-
-		<div class="aboutpage_section">
-
-			<div id="about_us" class="joosa features2">
-				
-				<div class="container">
-
-					<div class="left"><img src="<%= @about_us.image_url.aboutus_square_image %>" alt="385x310" /></div>
-					<!-- end left -->
-
-					<div class="right">
-
-						<h2><strong><%= @about_us.display_title(params[:locale]) %></strong></h2>
-
-						<p class="font-content"><%= @about_us.display_content(params[:locale]).html_safe %></p><br /><br />
-						
-						<div class="button1">
-							
-							<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; <%= t(:fr_project_image) %></a>
-							<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; <%= t(:fr_contact) %></a>
-							
-						</div>
-
-					</div>
-					<!-- end right -->
-
-				</div>
-			
-			</div>
-			<!-- end features section 2 -->
-
-			<div class="clearfix"></div>
-
-		</div>
-	
-	</div>
-	<!-- end about -->
-
-	<div class="clearfix"></div>
-	
-	<div>
-
-		<div class="servicespage_section">
-
-			<div id="sao" class="joosa features2 services_slider_sec1">
-				
-				<div class="container">
-
-					<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="385x310" /></div>
-					<!-- end left -->
-
-					<div class="right">
-
-						<h2 style="color: #098a00">Simulation-Analysis-Optimization</h2>
-
-						<h3 style="color: #ff0000">Energy Efficiency</h3>
-			
-						<p class=""><%= @intros.display_content(params[:locale]).html_safe %></p>
-
-					</div>
-					<!-- end right -->
-
-				</div>
-			
-			</div>
-			<!-- end features section 2 -->
-
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- end about -->
-	
-	<div class="clearfix"></div>
-	
-	<div>
-
-		<div class="aboutpage_section">
-			
-			<% @saos.each do |sao_item| %>
-				
-				<div id="" class="joosa margin_sao">
-					
-					<div class="container">
-	
-						<div class="">
-	
-							<h3><%= sao_item.display_title(params[:locale]) %></h3>
-	
-							<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
-	
-						</div>
-	
-					</div>
-				
-				</div>
-				<!-- end features section 2 -->
-			
-			<% end %>
-
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- end about -->
 
 	<div class="clearfix"></div>
 
@@ -195,42 +86,32 @@
 					
 					<br />
 					
-					<i><%= t(:fr_project_title) %></i>
+					<i><%= @project.display_title(params[:locale]) %></i>
 					
 					</h1>
-
-					<div class="portfolioFilter">
-
-						<a href="#" data-filter="*" class="current">Tất cả</a>
-						
-						<a href="#" data-filter=".places">Project Heineken Factory</a>
-						
-						<a href="#" data-filter=".people">Town house</a>
-
-					</div>
 
 					<div class="clearfix mar_top5"></div>
 
 
 					<div class="portfolioContainer">
 						
-						<% @projects.each do |project| %>
-							
-							<div class="people">
-									
-								<a class="" href="<%= url_for(controller: 'project', action: 'project_detail', article_id: project.id) %>" data-fancybox-group="gallery" title="<%= project.display_title(params[:locale]) %>">
+						<% @project.article_list_images.each do |image| %>
 								
-									<div class="imgWrap"><img src="<%= project.image_url.larger_rectangle_image %>" alt="" />
-										
-										<p class="imgDescription"></p>
-										
-										<h3><a href="<%= url_for(controller: 'project', action: 'project_detail') %>"><%= project.display_title(params[:locale]) %></a></h3>
+								<div class="people">
 									
-									</div>
+									<a class="fancybox" href="<%= image.image_url.larger_rectangle_image %>" data-fancybox-group="gallery" title="<%= image.display_title(params[:locale]) %>">
+										
+										<div class="imgWrap"><img src="<%= image.image_url.larger_rectangle_image %>" alt="" />
+											
+											<p class="imgDescription"><i class="fa fa-search fa-4x"></i></p>
+											
+											<h3><%= image.display_title(params[:locale]) %></h3>
+										
+										</div>
+									
+									</a>
 								
-								</a>
-							
-							</div>
+								</div>			
 						
 						<% end %>
 
@@ -245,35 +126,6 @@
 		</div>
 	</div>
 	<!-- end portfolio -->
-
-	<div>
-
-		<div class="aboutpage_section">
-
-			<div id="news" class="joosa features2">
-				<div class="container">
-
-					<div class="left"><img src="<%= @news.image_url.news_square_image %>" alt="385x310" /></div>
-					<!-- end left -->
-
-					<div class="right">
-
-						<h2><strong><%= @news.display_title(params[:locale]) %></strong></h2>
-
-						<p class="font-content"> <%= @news.display_content(params[:locale]).html_safe %></p>
-
-					</div>
-					<!-- end right -->
-
-				</div>
-			</div>
-			<!-- end features section 2 -->
-
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- end about -->
 
 	<div class="clearfix"></div>
 
@@ -328,7 +180,7 @@
 
 					<div class="one_half last ajax_loading_form_contact">
 
-						<%= render "form_contact" %>
+						<%= render "home/form_contact" %>
 
 					</div>
 

@@ -206,3 +206,7 @@ label.error {
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 	font-weight: bold;
 }
+.map iframe.google-map {
+	width: 98% !important;
+    height: 300px !important;
+}

@@ -36,9 +36,9 @@ class Article < ActiveRecord::Base
       def self.get_all_projects
         records = self.all
         records = records.joins(:article_categories).where(article_categories: {name: "Projects"})
-        records = records.order("created_at DESC")
+        record = records.order("created_at DESC")
         
-        return records
+        return record
       end
     #projects
     

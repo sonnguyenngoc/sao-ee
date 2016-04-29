@@ -3,7 +3,9 @@ class ProjectController < ApplicationController
     @lastest_news = Article.get_all_news
     @projects = Article.get_all_projects
   end
-  def detail
+  def project_detail
     @lastest_news = Article.get_all_news
+    @projects = Article.get_all_projects
+    @project = Article.find(params[:article_id])
   end
 end
