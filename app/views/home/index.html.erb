@@ -162,13 +162,13 @@
 	
 						<div class="">
 							
-							<div class="images-box-<%= sao_item.article_list_images.count  %>">
+							<div class="images-box-<%= sao_item.article_list_images.count %>">
 							
 								<div>
 									
 									<h3><%= sao_item.display_title(params[:locale]) %></h3>
 									
-									<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
+										<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
 									
 								</div>
 								
@@ -177,9 +177,7 @@
 									<div>
 										
 										<h3><%= image.display_title(params[:locale]) %></h3>
-										
-										<p class="font-content"><img src="<%= image.image_url %>" alt="Full" /></p>
-										
+											<p class="font-content"><img src="<%= image.image_url %>" alt="Full" /></p>
 									</div>
 									
 								<% end %>

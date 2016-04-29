@@ -215,3 +215,7 @@ label.error {
 	width: 48%;
 	margin-right: 1%;
 }
+.images-box-1 div p img {
+	height: 375px;
+	width: 100%;
+}
