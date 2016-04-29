@@ -221,10 +221,10 @@
 								<a class="" href="<%= url_for(controller: 'project', action: 'project_detail', article_id: project.id) %>" data-fancybox-group="gallery" title="<%= project.display_title(params[:locale]) %>">
 								
 									<div class="imgWrap"><img src="<%= project.image_url.larger_rectangle_image %>" alt="" />
-										
+									
 										<p class="imgDescription"></p>
 										
-										<h3><a href="<%= url_for(controller: 'project', action: 'project_detail') %>"><%= project.display_title(params[:locale]) %></a></h3>
+										<h3><a href="<%= url_for(controller: 'project', action: 'project_detail', article_id: project.id ) %>"><%= project.display_title(params[:locale]) %></a></h3>
 									
 									</div>
 								

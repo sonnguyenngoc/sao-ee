@@ -25,17 +25,17 @@
 
 						<ul id="fixed-nav">
 
-							<li class="current"><a href="#home"><%= t(:fr_home) %></a></li>
+							<li class="current"><a onclick="window.location='<%= url_for("/") %>#home'" href="#home"><%= t(:fr_home) %></a></li>
 
-							<li><a href="#about_us"><%= t(:fr_about) %></a></li>
+							<li><a onclick="window.location='<%= url_for("/") %>#about_us'" href="<%= url_for("/") %>#about_us"><%= t(:fr_about) %></a></li>
 							
-							<li><a href="#sao">S-A-O</a></li>
+							<li><a onclick="window.location='<%= url_for("/") %>#sao'" href="<%= url_for("/") %>#sao">S-A-O</a></li>
 
-							<li><a href="#portfolio"><%= t(:fr_project) %></a></li>
+							<li><a onclick="window.location='<%= url_for("/") %>#portfolio'" href="<%= url_for("/") %>#portfolio"><%= t(:fr_project) %></a></li>
 
-							<li><a href="#news"><%= t(:fr_news) %></a></li>
+							<li><a onclick="window.location='<%= url_for("/") %>#news'" href="<%= url_for("/") %>#news"><%= t(:fr_news) %></a></li>
 
-							<li><a href="#contact"><%= t(:fr_contact) %></a></li>
+							<li><a onclick="window.location='<%= url_for("/") %>#contact'" href="<%= url_for("/") %>#contact"><%= t(:fr_contact) %></a></li>
 
 							<li>
 
