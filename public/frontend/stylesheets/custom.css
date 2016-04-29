@@ -210,3 +210,8 @@ label.error {
 	width: 98% !important;
     height: 300px !important;
 }
+.images-box-1 p {
+	display: inline-block;
+	width: 48%;
+	margin-right: 1%;
+}
