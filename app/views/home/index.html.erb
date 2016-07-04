@@ -270,12 +270,6 @@
 
 			<div id="news" class="joosa features2">
 				
-				<div class="container">
-
-					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/tin-tuc-1-2-en.jpg" alt="full-with" style="width: 100%" /></div>
-
-				</div>
-				
 				<% if params[:locale] == "vi" %>
 				
 				<div class="container">
@@ -293,6 +287,13 @@
 					</div>
 					
 				<% end %>
+				
+				<div class="container">
+
+					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/tin-tuc-1-2-en.jpg" alt="full-with" style="width: 100%" /></div>
+
+				</div>
+				
 				<div class="container">
 
 					<div class="left"><img src="<%= @news.image_url.news_square_image %>" alt="385x310" /></div>
