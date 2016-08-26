@@ -122,8 +122,12 @@
 			<div id="sao" class="joosa features2 services_slider_sec1">
 				
 				<div class="container">
-
-					<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="385x310" /></div>
+					
+					<% if params[:locale] == "vi" and @intros.image_url_vi.present? %>
+						<div class="left"><img src="<%= @intros.image_url_vi.intros_square_image %>" alt="385x310" /></div>
+					<% else %>
+						<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="385x310" /></div>
+					<% end %>
 					<!-- end left -->
 
 					<div class="right">
