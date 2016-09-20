@@ -137,6 +137,70 @@
 						<h3 style="color: #ff0000">Energy Efficiency</h3>
 			
 						<p class=""><%= @intros.display_content(params[:locale]).html_safe %></p>
+						
+						<br />
+						
+						<h3 class="sao_service"><i class="fa fa-hand-o-right"></i> <a href="#sao">Architecture Services</a></h3>
+						
+						<ul>
+										
+							<li><i class="fa fa-check"></i> <%= t(:architecture_service_1) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:architecture_service_2) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:architecture_service_3) %></li>
+						
+						</ul>
+						<ul>
+										
+							<li><i class="fa fa-check"></i> <%= t(:architecture_service_4) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:architecture_service_5) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:architecture_service_6) %></li> 
+						
+						</ul>
+						
+						
+						<h3 class="sao_service"><i class="fa fa-hand-o-right"></i> <a href="<%= sao_path %>">Energy Services (S-A-O)</a></h3>
+						
+						<ul>
+										
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_1) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_2) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_3) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_4) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_5) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_6) %></li>
+						
+						</ul>
+						<ul>
+										
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_7) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_8) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_9) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_10) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_11) %></li>
+							
+							<li><i class="fa fa-check"></i> <%= t(:energy_service_12) %></li>
+						
+						</ul>
+						
+						<!--<div class="button1">
+							
+							<a href="#sao" class="more_but two"><i class="fa fa-hand-o-right"></i>&nbsp; <%= t(:fr_architecture_services) %></a>
+							<a href="<%= sao_path %>" class="more_but two"><i class="fa fa-hand-o-right"></i>&nbsp; <%= t(:fr_energy_services) %></a>
+							
+						</div>-->
 
 					</div>
 					<!-- end right -->
@@ -152,56 +216,7 @@
 	</div>
 	<!-- end about -->
 	
-	<div class="clearfix"></div>
 	
-	<div>
-
-		<div class="aboutpage_section">
-			
-			<% @saos.each do |sao_item| %>
-				
-				<div id="" class="joosa margin_sao">
-					
-					<div class="container">
-	
-						<div class="">
-							
-							<div class="images-box-<%= sao_item.article_list_images.count %>">
-							
-								<div>
-									
-									<h3><%= sao_item.display_title(params[:locale]) %></h3>
-									
-										<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
-									
-								</div>
-								
-								<% sao_item.article_list_images.each do |image| %>
-								
-									<div>
-										
-										<h3><%= image.display_title(params[:locale]) %></h3>
-											<p class="font-content"><img src="<%= image.image_url %>" alt="Full" /></p>
-									</div>
-									
-								<% end %>
-								
-							</div>
-							
-						</div>
-	
-					</div>
-				
-				</div>
-				<!-- end features section 2 -->
-			
-			<% end %>
-
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- end about -->
 
 	<div class="clearfix"></div>
 
@@ -213,7 +228,7 @@
 
 				<div class="portfolio_page">
 
-					<h1><%= t(:fr_project) %></strong>
+					<h1><%= t(:fr_projects) %></strong>
 					
 					<br />
 					

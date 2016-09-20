@@ -8,10 +8,11 @@ class HomeController < ApplicationController
     @intros = Article.get_intro
     @projects = Article.get_all_projects
     @about_us = Article.get_about_us
-    @saos = Article.get_saos
+    
     @contact = Contact.new
   end
   def sao
     @lastest_news = Article.get_all_news
+    @saos = Article.get_saos
   end
 end
