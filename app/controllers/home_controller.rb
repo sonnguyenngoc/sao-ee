@@ -11,8 +11,11 @@ class HomeController < ApplicationController
     
     @contact = Contact.new
   end
-  def sao
+  def energy_services
     @lastest_news = Article.get_all_news
     @saos = Article.get_saos
+  end
+  def architecture_services
+    
   end
 end

@@ -82,52 +82,24 @@
 
 				<div class="portfolio_page">
 
-					<h1><%= t(:fr_energy_services) %></strong></h1>
+					<h1><%= t(:fr_architecture_services) %></strong></h1>
 						
 					<div class="clearfix"></div>
 
 						<div class="aboutpage_section">
 							
-							<% @saos.each do |sao_item| %>
-								
-								<div id="" class="joosa"><!--margin_sao-->
-									
-									<div class="container">
-					
-										<div class="">
-											
-											<div class="images-box-<%= sao_item.article_list_images.count %>">
-											
-												<div>
-													
-													<h3 class="sao_page"><%= sao_item.display_title(params[:locale]) %></h3>
-													
-														<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
-													
-												</div>
-												
-												<% sao_item.article_list_images.each do |image| %>
-												
-													<div>
-														
-														<h3><%= image.display_title(params[:locale]) %></h3>
-															<p class="font-content"><img src="<%= image.image_url %>" alt="Full" /></p>
-													</div>
-													
-												<% end %>
-												
-											</div>
-											
-										</div>
-					
-									</div>
-								
+							<div class="one_full">
+								<div class="one_fifth only last">
+									<ul class="list1">
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:architecture_service_1) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:architecture_service_2) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:architecture_service_3) %></li>
+                                        <li><i class="fa fa-chevron-circle-right"></i> <%= t(:architecture_service_4) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:architecture_service_5) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:architecture_service_6) %></li>
+									</ul>
 								</div>
-								<!-- end features section 2 -->
-							
-							<% end %>
-				
-							<div class="clearfix"></div>
+							</div>
 				
 						</div>
 					<!-- end about -->
@@ -136,7 +108,7 @@
 
 			</div>
 
-			<div class="clearfix mar_top6"></div>
+			<!--<div class="clearfix mar_top6"></div>-->
 
 		</div>
 	</div>

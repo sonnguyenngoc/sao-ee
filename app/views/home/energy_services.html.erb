@@ -20,53 +20,40 @@
 
 				<!-- Menu -->
 				<div class="three_fourth last">
-					
-					<nav id="access" class="access" role="navigation">
 
-						<div id="top-nav" class="">
-	
-							<ul id="fixed-nav">
-	
-								<li class="current"><a href="#home"><%= t(:fr_home) %></a></li>
-	
-								<li><a href="#about_us"><%= t(:fr_about) %></a></li>
+					<div id="top-nav" class="">
+
+						<ul id="fixed-nav">
+
+							<li class="current"><a onclick="window.location='<%= url_for("/") %>#home'" href="#home"><%= t(:fr_home) %></a></li>
+
+							<li><a onclick="window.location='<%= url_for("/") %>#about_us'" href="<%= url_for("/") %>#about_us"><%= t(:fr_about) %></a></li>
+							
+							<li><a onclick="window.location='<%= url_for("/") %>#sao'" href="<%= url_for("/") %>#sao">S-A-O</a></li>
+
+							<li><a onclick="window.location='<%= url_for("/") %>#portfolio'" href="<%= url_for("/") %>#portfolio"><%= t(:fr_project) %></a></li>
+
+							<li><a onclick="window.location='<%= url_for("/") %>#news'" href="<%= url_for("/") %>#news"><%= t(:fr_news) %></a></li>
+
+							<li><a onclick="window.location='<%= url_for("/") %>#contact'" href="<%= url_for("/") %>#contact"><%= t(:fr_contact) %></a></li>
+
+							<li>
+
+								<% if !params[:locale].present? or params[:locale] == "en" %>
+									
+									<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
 								
-								<li>
-									<a href="#sao">S-A-O <i class="fa fa-angle-down"></i></a>
-									<ul>
-										<li>
-											<%= link_to "Architecture Services", architecture_path %>
-										</li>					
-										<li>
-											<%= link_to "Energy Services", energy_path %>
-											<!--<a onclick="true" href="<%= energy_path %>"></a>-->
-										</li>
-									</ul>
-								</li>
-	
-								<li><a href="#portfolio"><%= t(:fr_project) %></a></li>
-	
-								<li><a href="#news"><%= t(:fr_news) %></a></li>
-	
-								<li><a href="#contact"><%= t(:fr_contact) %></a></li>
-	
-								<li>
-	
-									<% if !params[:locale].present? or params[:locale] == "en" %>
-										
-										<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
-									
-									<% else %>
-									
-										<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
-	
-									<% end %>
-								</li>
-	
-							</ul>
-	
-						</div>
-					</nav>
+								<% else %>
+								
+									<a onclick="window.location='<%= url_for( :locale => 'en' ) %>'" href="<%= url_for( :locale => 'en' ) %>"><img src="/frontend/images/gb.png" class="img-flags" ></a>
+
+								<% end %>
+							</li>
+
+						</ul>
+
+					</div>
+					<!-- end nav menu -->
 
 				</div>
 
@@ -84,88 +71,6 @@
 
 
 <div id="home">
-	
-	<%= render 'slideshow' %>
-
-	<div>
-
-		<div class="aboutpage_section">
-
-			<div id="about_us" class="joosa features2">
-				
-				<div class="container">
-
-					<div class="left"><img src="<%= @about_us.image_url.aboutus_square_image %>" alt="385x310" /></div>
-					<!-- end left -->
-
-					<div class="right">
-
-						<h2><strong><%= @about_us.display_title(params[:locale]) %></strong></h2>
-
-						<p class="font-content"><%= @about_us.display_content(params[:locale]).html_safe %></p><br /><br />
-						
-						<div class="button1">
-							
-							<a href="#portfolio" class="more_but"><i class="fa fa-arrow-circle-right"></i>&nbsp; <%= t(:fr_project_image) %></a>
-							<a href="#contact" class="more_but two"><i class="fa fa-globe"></i>&nbsp; <%= t(:fr_contact) %></a>
-							
-						</div>
-
-					</div>
-					<!-- end right -->
-
-				</div>
-			
-			</div>
-			<!-- end features section 2 -->
-
-			<div class="clearfix"></div>
-
-		</div>
-	
-	</div>
-	<!-- end about -->
-
-	<div class="clearfix"></div>
-	
-	<div>
-
-		<div class="servicespage_section">
-
-			<div id="sao" class="joosa features2 services_slider_sec1">
-				
-				<div class="container">
-					
-					<% if params[:locale] == "vi" and @intros.image_url_vi.present? %>
-						<div class="left"><img src="<%= @intros.image_url_vi.intros_square_image %>" alt="385x310" /></div>
-					<% else %>
-						<div class="left"><img src="<%= @intros.image_url.intros_square_image %>" alt="385x310" /></div>
-					<% end %>
-					<!-- end left -->
-
-					<div class="right">
-
-						<h2 style="color: #098a00">Simulation-Analysis-Optimization</h2>
-
-						<h3 style="color: #ff0000">Energy Efficiency</h3>
-			
-						<p class=""><%= @intros.display_content(params[:locale]).html_safe %></p>
-
-					</div>
-					<!-- end right -->
-
-				</div>
-			
-			</div>
-			<!-- end features section 2 -->
-
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- end about -->
-	
-	
 
 	<div class="clearfix"></div>
 
@@ -177,50 +82,89 @@
 
 				<div class="portfolio_page">
 
-					<h1><%= t(:fr_projects) %></strong>
-					
-					<br />
-					
-					<i><%= t(:fr_project_title) %></i>
-					
-					</h1>
-
-					<div class="portfolioFilter">
-
-						<a href="#" data-filter="*" class="current">Tất cả</a>
+					<h1><%= t(:fr_energy_services) %></strong></h1>
 						
-						<a href="#" data-filter=".places">Project Heineken Factory</a>
-						
-						<a href="#" data-filter=".people">Town house</a>
+					<div class="clearfix"></div>
 
-					</div>
-
-					<div class="clearfix mar_top5"></div>
-
-
-					<div class="portfolioContainer">
-						
-						<% @projects.each do |project| %>
-							
-							<div class="people">
-									
-								<a class="" href="<%= url_for(controller: 'project', action: 'project_detail', article_id: project.id) %>" data-fancybox-group="gallery" title="<%= project.display_title(params[:locale]) %>">
+						<div class="aboutpage_section">
+							<div class="one_full">
+								<div class="one_fifth">
+									<ul class="list1">
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_1) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_2) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_3) %></li>
+									</ul>
+								</div>
 								
-									<div class="imgWrap"><img src="<%= project.image_url.larger_rectangle_image %>" alt="" />
+								<div class="one_fifth">
+									<ul class="list1">
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_4) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_5) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_6) %></li>
+									</ul>
+								</div>
+								
+								<div class="one_fifth">
+									<ul class="list1">
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_7) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_8) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_9) %></li>
+									</ul>
+								</div>
+								
+								<div class="one_fifth last">
+									<ul class="list1">
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_10) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_11) %></li>
+										<li><i class="fa fa-chevron-circle-right"></i> <%= t(:energy_service_12) %></li>
+									</ul>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							
+							<% @saos.each do |sao_item| %>
+								
+								<div id="" class="joosa"><!--margin_sao-->
 									
-										<p class="imgDescription"></p>
-										
-										<h3><a href="<%= url_for(controller: 'project', action: 'project_detail', article_id: project.id ) %>"><%= project.display_title(params[:locale]) %></a></h3>
-									
+									<div class="container">
+					
+										<div class="">
+											
+											<div class="images-box-<%= sao_item.article_list_images.count %>">
+											
+												<div>
+													
+													<h3 class="sao_page"><%= sao_item.display_title(params[:locale]) %></h3>
+													
+														<p class="font-content"><img src="<%= sao_item.image_url %>" alt="Full" /></p>
+													
+												</div>
+												
+												<% sao_item.article_list_images.each do |image| %>
+												
+													<div>
+														
+														<h3><%= image.display_title(params[:locale]) %></h3>
+															<p class="font-content"><img src="<%= image.image_url %>" alt="Full" /></p>
+													</div>
+													
+												<% end %>
+												
+											</div>
+											
+										</div>
+					
 									</div>
 								
-								</a>
+								</div>
+								<!-- end features section 2 -->
 							
-							</div>
-						
-						<% end %>
-
-					</div>
+							<% end %>
+				
+							<div class="clearfix"></div>
+				
+						</div>
+					<!-- end about -->
 
 				</div>
 
@@ -231,60 +175,6 @@
 		</div>
 	</div>
 	<!-- end portfolio -->
-
-	<div>
-
-		<div class="aboutpage_section">
-
-			<div id="news" class="joosa features2">
-				
-				<% if params[:locale] == "vi" %>
-				
-				<div class="container">
-
-					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/tin-tuc-vi.jpg" alt="full-with" style="width: 100%" /></div>
-
-				</div>
-				
-				<% else %>
-					
-					<div class="container">
-
-						<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/tin-tuc-en.jpg" alt="full-with" style="width: 100%" /></div>
-	
-					</div>
-					
-				<% end %>
-				
-				<div class="container">
-
-					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/tin-tuc-1-2-en.jpg" alt="full-with" style="width: 100%" /></div>
-
-				</div>
-				
-				<div class="container">
-
-					<div class="left"><img src="<%= @news.image_url.news_square_image %>" alt="385x310" /></div>
-					<!-- end left -->
-
-					<div class="right">
-
-						<h2><strong><%= @news.display_title(params[:locale]) %></strong></h2>
-
-						<p class="font-content"> <%= @news.display_content(params[:locale]).html_safe %></p>
-
-					</div>
-					<!-- end right -->
-
-				</div>
-			</div>
-			<!-- end features section 2 -->
-
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- end about -->
 
 	<div class="clearfix"></div>
 
@@ -339,7 +229,7 @@
 
 					<div class="one_half last ajax_loading_form_contact">
 
-						<%= render "form_contact" %>
+						<%= render "home/form_contact" %>
 
 					</div>
 
@@ -350,7 +240,7 @@
 			<!-- copyright info -->
 			<div class="copyright_info">
 
-				Copyright &copy; 2016 SAO-EE.VN - All Rights Reserved. Developed by <a href="http://hoangkhang.com.vn">Hoang Khang Incotech</a>
+				Copyright &copy; 2016 SAO-EE.VN - All Rights Reserved. Developed by Hoang Khang Incotech
 
 			</div>
 			<!-- end copyright info -->
@@ -573,12 +463,7 @@
 				}
 			});
 		});
-		
-		$("#fixed-nav li ul li a").click(function(e){
-			e.preventDefault();
-			e.stopPropagation();
-			window.location = $(this).attr("href");
-		});
+
 	});
 </script>
 
@@ -602,8 +487,6 @@
 			  $(".ajax_loading_form_contact").html(msg);
 			});
         }
-		
-		
 			
 	});
 </script>

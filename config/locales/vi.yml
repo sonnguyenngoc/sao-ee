@@ -166,6 +166,7 @@ vi:
   sending: "ĐANG GỬI..."
   
   # services for S-A-O
+  architecture_service_1: "Dịch vụ thiết kế kiến trúc"
   architecture_service_1: "Tư vấn, thiết kế kiến trúc concept"
   architecture_service_2: "Tư vấn về công trình bền vững, tiết kiệm năng lượng theo chuẩn LEED"
   architecture_service_3: "Tư vấn chiếu sáng nội thất và ngoại thất"
@@ -173,6 +174,7 @@ vi:
   architecture_service_5: "Phân tích ô nhiễm ánh sáng"
   architecture_service_6: "Phân tích chố lóa"
   
+  energy_service: "Dịch vụ xây dựng mô hình năng lượng"
   energy_service_1: "Xây dựng mô hình năng lượng theo chuẩn LEED"
   energy_service_2: "Dựng mô hình năng lượng"
   energy_service_3: "Tối ưu năng lương tuân thủ theo tiêu chuẩn"

@@ -167,6 +167,7 @@ en:
   sending: "SENDING..."
   
   # services for S-A-O
+  architecture_service_1: "Architecture Services"
   architecture_service_1: "3D Concept Design"
   architecture_service_2: "Energy Saving, LEED and Sustainable Building Consulting"
   architecture_service_3: "Lighting Design Consulting"
@@ -174,6 +175,7 @@ en:
   architecture_service_5: "Light Polution Analysis"
   architecture_service_6: "Reflection Analysis"
   
+  energy_service: "Energy Services (S-A-O)"
   energy_service_1: "LEED Energy Modeling"
   energy_service_2: "Building Energy Modeling"
   energy_service_3: "Energy Compliance"

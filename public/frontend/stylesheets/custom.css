@@ -244,3 +244,41 @@ h3.sao_page {
 .sao_service {
 	margin-bottom: 0;
 }
+
+/*update children menu*/
+#top-nav ul li ul {
+    visibility: visible;
+    width: 200px;
+    display: none;
+	position: absolute;
+	z-index: 1000;
+}
+#top-nav ul li ul li a {
+    border: none;
+    background: #fff;
+    width: 159px;
+    border-bottom: 1px solid #f0f0f0;
+}
+#top-nav ul li ul li {
+	height: auto;
+}
+#top-nav #fixed-nav li ul li a {
+	text-transform: capitalize;
+    text-align: left;
+    font-size: 15px;
+	height: 50px;
+    line-height: 50px;
+}
+#fixed-nav li:hover ul {
+	display: block !important;
+}
+
+.one_full .one_fifth ul.list1 li {
+	text-align: left;
+}
+.one_full .one_fifth {
+	margin-right: 10%;
+}
+.one_full .only {
+	width: 100%;
+}

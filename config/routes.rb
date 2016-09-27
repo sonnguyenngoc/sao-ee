@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /vi|en/ do
     root "home#index"
-    get "sao/energy_services" => "home#sao", as: :sao
+    get "sao/energy_services" => "home#energy_services", as: :energy
+    get "sao/architecture_services" => "home#architecture_services", as: :architecture
     get "contact" => "contact#index", as: :contact
     get "about_us" => "about_us#index", as: :about_us
     get "project" => "project#index", as: :project
