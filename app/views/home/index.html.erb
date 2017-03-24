@@ -264,7 +264,7 @@
 				
 				<div class="container">
 
-					<div class="left"><img src="<%= @news.image_url.news_square_image %>" alt="385x310" /></div>
+					<div class="left" style="margin-bottom: 40px;"><img src="<%= @news.image_url.news_square_image %>" alt="385x310" /></div>
 					<!-- end left -->
 
 					<div class="right">
@@ -275,6 +275,46 @@
 
 					</div>
 					<!-- end right -->
+
+				</div>
+				<hr>
+				<div class="servicespage_section background_no_color">
+					<div class="joosa fusection1 container">
+							<% if params[:locale] == "vi" %>
+								<h2><strong>Mô phỏng thoát hiểm khẩn cấp</strong></h2>
+								<p class="font-content">
+									“Có thể họ chưa quan tâm đến vấn đề tiết kiệm năng lượng (nên không quan tâm mô phỏng năng lượng), chính là tiết kiệm tiền vì họ có quá nhiều tiền.
+									Có thể họ không để ý lắm đến mức độ tiện nghi trong căn nhà họ đang ở (nên không cần mô phỏng ánh sáng, nhiệt độ, gió, CO2, ...).
+									Nhưng chắc chắn họ sẽ rất quý tính mạng của họ nên sẽ phải cần tới mô phỏng thoát hiểm.
+									Đến với <strong>SAO-EE</strong> là đến với sự an toàn tiện nghi và tiết kiệm”
+								</p>
+							<% else %>
+								<h2><strong>Emergency evacuation simulating</strong></h2>
+								<p class="font-content">
+									“May be they don't mind about saving energy (so don’t mind about energy simulation) and saving money is not a big deal with them (some people just have way too much money).
+									They don't have to think about comfortable as well (so don’t need to simulate daylight, temperature, air, CO2, ... either).
+									But people surely treasure their lives so just do emergency evacuation simulating.
+									To <strong>SAO-EE</strong>, To safeness, To comfort, To Saving.”
+								</p>
+							<% end %>
+					</div>
+				</div>
+				
+				<div class="container">
+
+					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/sao-mo-phong-thoat-hiem-1.gif" alt="full-with" style="width: 100%" /></div>
+
+				</div>
+				
+				<div class="container">
+
+					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/sao-mo-phong-thoat-hiem-2.gif" alt="full-with" style="width: 100%" /></div>
+
+				</div>
+				
+				<div class="container">
+
+					<div class="center"><img src="/frontend/images/blog/sao-mo-phong-thoat-hiem-3.gif" alt="full-with" style="width: 100%" /></div>
 
 				</div>
 			</div>
@@ -350,7 +390,7 @@
 			<!-- copyright info -->
 			<div class="copyright_info">
 
-				Copyright &copy; 2016 SAO-EE.VN - All Rights Reserved. Developed by <a href="http://hoangkhang.com.vn">Hoang Khang Incotech</a>
+				Copyright &copy; 2016 SAO-EE.VN - All Rights Reserved. Developed by <a href="http://hoangkhang.com.vn" target="_blank">Hoang Khang Incotech</a>
 
 			</div>
 			<!-- end copyright info -->
@@ -602,8 +642,6 @@
 			  $(".ajax_loading_form_contact").html(msg);
 			});
         }
-		
-		
 			
 	});
 </script>

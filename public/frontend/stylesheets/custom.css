@@ -282,3 +282,20 @@ h3.sao_page {
 .one_full .only {
 	width: 100%;
 }
+.background_no_color {
+    background-color: rgba(0, 0, 0, 0);
+}
+.background_no_color .container {
+	padding-top: 20px;
+}
+.background_no_color .font-content {
+	font-size: 16px;
+    line-height: 25px;
+}
+.background_no_color h2 {
+    color: #a4d53c;
+    font-weight: 300;
+    line-height: 38px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
