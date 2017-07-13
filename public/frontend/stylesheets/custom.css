@@ -230,6 +230,7 @@ h3.sao_page {
 	color: #333;
 	background-color: #fff;
 	text-align: left;
+	width: auto;
 }
 .right > h3 > a:hover {
 	color: #d4cbcb;
