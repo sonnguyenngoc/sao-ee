@@ -51,7 +51,7 @@
 								<li><a href="#contact"><%= t(:fr_contact) %></a></li>
 	
 								<li>
-	
+
 									<% if !params[:locale].present? or params[:locale] == "en" %>
 										
 										<a onclick="window.location='<%= url_for( :locale => 'vi' ) %>'" href="<%= url_for( :locale => 'vi' ) %>"><img src="/frontend/images/vn.png" class="img-flags" ></a>
@@ -277,46 +277,7 @@
 					<!-- end right -->
 
 				</div>
-				<hr>
-				<div class="servicespage_section background_no_color">
-					<div class="joosa fusection1 container">
-							<% if params[:locale] == "vi" %>
-								<h2><strong>Mô phỏng thoát hiểm khẩn cấp</strong></h2>
-								<p class="font-content">
-									“Có thể họ chưa quan tâm đến vấn đề tiết kiệm năng lượng (nên không quan tâm mô phỏng năng lượng), chính là tiết kiệm tiền vì họ có quá nhiều tiền.
-									Có thể họ không để ý lắm đến mức độ tiện nghi trong căn nhà họ đang ở (nên không cần mô phỏng ánh sáng, nhiệt độ, gió, CO2, ...).
-									Nhưng chắc chắn họ sẽ rất quý tính mạng của họ nên sẽ phải cần tới mô phỏng thoát hiểm.
-									Đến với <strong>SAO-EE</strong> là đến với sự an toàn tiện nghi và tiết kiệm”
-								</p>
-							<% else %>
-								<h2><strong>Emergency evacuation simulating</strong></h2>
-								<p class="font-content">
-									“May be they don't mind about saving energy (so don’t mind about energy simulation) and saving money is not a big deal with them (some people just have way too much money).
-									They don't have to think about comfortable as well (so don’t need to simulate daylight, temperature, air, CO2, ... either).
-									But people surely treasure their lives so just do emergency evacuation simulating.
-									To <strong>SAO-EE</strong>, To safeness, To comfort, To Saving.”
-								</p>
-							<% end %>
-					</div>
-				</div>
 				
-				<div class="container">
-
-					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/sao-mo-phong-thoat-hiem-1.gif" alt="full-with" style="width: 100%" /></div>
-
-				</div>
-				
-				<div class="container">
-
-					<div class="center" style="margin-bottom: 40px;"><img src="/frontend/images/blog/sao-mo-phong-thoat-hiem-2.gif" alt="full-with" style="width: 100%" /></div>
-
-				</div>
-				
-				<div class="container">
-
-					<div class="center"><img src="/frontend/images/blog/sao-mo-phong-thoat-hiem-3.gif" alt="full-with" style="width: 100%" /></div>
-
-				</div>
 			</div>
 			<!-- end features section 2 -->
 
@@ -328,79 +289,7 @@
 
 	<div class="clearfix"></div>
 
-	<div>
-		<div class="contactpage_section">
-
-		
-
-			<div class="clearfix"></div>
-
-			<div id="contact" class="contact_info">
-
-				<div class="container">
-
-					<div class="one_half">
-
-						<h3><%= t(:company_name) %></h3>
-
-						<div class="clearfix"></div>
-
-						<div class="one_full">
-
-							<div class="one_half">
-
-								<ul class="address">
-
-									<li><i class="fa fa-map-marker fa-lg"></i> <%= t(:company_address) %></li>
-
-									<li class="last"><i class="fa fa-envelope"></i> <a href="mailto:info@sao-ee.vn">info@sao-ee.vn</a></li>
-
-									<li><i class="fa fa-phone"></i> +84 8 6682 2233</li>
-
-								</ul>
-
-							</div>
-
-							<div class="one_half last">
-
-								<div class="map">
-
-									<iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4800097463913!2d106.70093661429713!3d10.774500362176694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46e196af35%3A0x4c91d3cfa5250cfe!2zNjggTmd1ecOqzINuIEh1w6rMoywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBI4buTIENow60gTWluaCA3MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1461649427453"></iframe>
-								
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-					<!-- end section -->
-
-
-					<div class="one_half last ajax_loading_form_contact">
-
-						<%= render "form_contact" %>
-
-					</div>
-
-				</div>
-
-			</div>
-
-			<!-- copyright info -->
-			<div class="copyright_info">
-
-				Copyright &copy; 2016 SAO-EE.VN - All Rights Reserved. Developed by <a href="http://hoangkhang.com.vn" target="_blank">Hoang Khang Incotech</a>
-
-			</div>
-			<!-- end copyright info -->
-
-		</div>
-	</div>
-	<!-- end contact -->
-
-	<a href="#" class="scrollup">Scroll</a>
-	<!-- end scroll to top of the page-->
+	<%= render 'modules/footer' %>
 
 
 </div>

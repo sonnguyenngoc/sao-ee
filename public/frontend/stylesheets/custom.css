@@ -299,3 +299,6 @@ h3.sao_page {
     margin-bottom: 13px;
     text-transform: uppercase;
 }
+.portfolio_page.services_page {
+	padding: 40px 0 0;
+}
