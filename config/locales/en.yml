@@ -158,6 +158,7 @@ en:
   fr_news: "News"
   fr_contact: "Contact"
   fr_architecture_services: "Architecture Services"
+  fr_mep_design: "MEP Design"
   fr_energy_services: "Energy Services"
   
   fr_project_image: "Pictures of Projects"
@@ -174,6 +175,14 @@ en:
   architecture_service_4: "Facade Consulting"
   architecture_service_5: "Light Polution Analysis"
   architecture_service_6: "Reflection Analysis"
+  
+  mep_design_service_1: "High voltage system"
+  mep_design_service_2: "Low voltage system"
+  mep_design_service_3: "Computer network system"
+  mep_design_service_4: "Sercurity system"
+  mep_design_service_5: "Air conditioning system"
+  mep_design_service_6: "Ventilation system"
+  mep_design_service_7: "Plumbing system"
   
   energy_service: "Energy Services (S-A-O)"
   energy_service_1: "LEED Energy Modeling"

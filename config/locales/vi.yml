@@ -156,8 +156,9 @@ vi:
   fr_project: "Dự án"
   fr_news: "Tin tức"
   fr_contact: "Liên hệ"
-  fr_architecture_services: "Dịch vụ thiết kế kiến trúc"
-  fr_energy_services: "Dịch vụ xây dựng mô hình năng lượng"
+  fr_architecture_services: "Thiết kế kiến trúc"
+  fr_mep_design: "Thiết kế hệ thống cơ điện"
+  fr_energy_services: "Xây dựng mô hình năng lượng"
   
   fr_project_image: "Hình ảnh dự án"
   fr_project_title: "HÌNH ẢNH VỀ CÁC DỰ ÁN CÔNG TY ĐÃ THỰC HIỆN"
@@ -173,6 +174,14 @@ vi:
   architecture_service_4: "Tư vấn mặt dựng công trình"
   architecture_service_5: "Phân tích ô nhiễm ánh sáng"
   architecture_service_6: "Phân tích chói lóa"
+  
+  mep_design_service_1: "Thiết kế Hệ thống Điện cao thế"
+  mep_design_service_2: "Thiết kế Hệ thống Điện hạ thế"
+  mep_design_service_3: "Thiết kế Hệ thống Mạng Máy tính"
+  mep_design_service_4: "Thiết kế Hệ thống An ninh"
+  mep_design_service_5: "Thiết kế Hệ thống Điều hoà Không khí"
+  mep_design_service_6: "Thiết kế Hệ thống Thông gió"
+  mep_design_service_7: "Thiết kế Hệ thống Cấp thoát nước"
   
   energy_service: "Dịch vụ xây dựng mô hình năng lượng"
   energy_service_1: "Xây dựng mô hình năng lượng theo chuẩn LEED"

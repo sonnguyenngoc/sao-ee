@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     root "home#index"
     get "sao/energy_services" => "home#energy_services", as: :energy
     get "sao/architecture_services" => "home#architecture_services", as: :architecture
+    get "sao/mep_design_services" => "home#mep_design_services", as: :mep_design
     get "contact" => "contact#index", as: :contact
     get "about_us" => "about_us#index", as: :about_us
     get "project" => "project#index", as: :project
